@@ -1,0 +1,104 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import { services } from "@/app/lib/data";
+
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateStaticParams() {
+  return services
+    .filter((s) => s.slug)
+    .map((s) => ({ slug: s.slug as string }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
+  if (!service) return {};
+  return {
+    title: `${service.title} — GetyoTeam | Kumar Katariya`,
+    description: service.shortDesc,
+  };
+}
+
+export default async function ServicePage({ params }: Props) {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
+  if (!service) notFound();
+
+  return (
+    <div className="pt-24 pb-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <Breadcrumb crumbs={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: service.title },
+        ]} />
+
+        {/* Hero */}
+        <div className="mt-10 mb-12">
+          <div className="text-5xl mb-4">{service.icon}</div>
+          <h1 className="section-heading text-white mb-4">{service.title}</h1>
+          <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">{service.shortDesc}</p>
+        </div>
+
+        {/* Description */}
+        <div className="card-glass p-6 border border-purple-900/20 mb-8">
+          <h2 className="text-base font-bold text-white mb-3">Overview</h2>
+          <p className="text-slate-400 leading-relaxed">{service.longDesc}</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Tech stack */}
+          <div className="card-glass p-6 border border-purple-900/20">
+            <h2 className="text-base font-bold text-white mb-4">Tech Stack</h2>
+            <div className="flex flex-wrap gap-2">
+              {service.tech.map((t) => (
+                <span key={t} className="text-xs px-3 py-1.5 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30 font-medium">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Use cases */}
+          <div className="card-glass p-6 border border-purple-900/20">
+            <h2 className="text-base font-bold text-white mb-4">Use Cases</h2>
+            <ul className="space-y-2">
+              {service.useCases.map((u) => (
+                <li key={u} className="flex items-start gap-2 text-sm text-slate-400">
+                  <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
+                  {u}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="rounded-2xl border border-purple-900/20 bg-white/[0.02] p-8 text-center">
+          <h2 className="text-xl font-bold text-white mb-2">Ready to build with {service.title}?</h2>
+          <p className="text-slate-400 text-sm mb-6">
+            Tell me about your project and I&apos;ll get back to you within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/contact"
+              className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm"
+            >
+              Hire Me for This →
+            </Link>
+            <Link
+              href="/portfolio"
+              className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
+            >
+              See Related Work
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
