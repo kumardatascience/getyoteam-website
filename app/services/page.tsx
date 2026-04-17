@@ -4,7 +4,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 import { services } from "@/app/lib/data";
 
 export const metadata: Metadata = {
-  title: "AI & ML Services — GetyoTeam | Kumar Katariya",
+  title: "AI & ML Services — getyoteam | Kumar Katariya",
   description:
     "Full-stack AI/ML services: AI agents, RAG pipelines, machine learning, deep learning, computer vision, NLP, data science, and speech AI. Top Rated Plus on Upwork.",
 };

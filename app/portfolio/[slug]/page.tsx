@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
   return {
-    title: `${project.title} — Case Study | GetyoTeam`,
+    title: `${project.title} — Case Study | getyoteam`,
     description: project.shortDesc,
   };
 }

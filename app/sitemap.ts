@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { services, projects, blogPosts } from "@/app/lib/data";
 
+export const dynamic = "force-static";
+
 const BASE = "https://getyoteam.com";
 const now  = new Date();
 

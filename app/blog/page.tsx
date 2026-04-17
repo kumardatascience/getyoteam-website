@@ -4,7 +4,7 @@ import BlogList from "@/app/components/BlogList";
 import { blogPosts } from "@/app/lib/data";
 
 export const metadata: Metadata = {
-  title: "AI & ML Blog — GetyoTeam | Kumar Katariya",
+  title: "AI & ML Blog — getyoteam | Kumar Katariya",
   description:
     "Practical insights on AI agents, RAG, machine learning, deep learning, and NLP from Kumar Katariya — Top Rated Plus AI/ML Engineer on Upwork.",
 };
