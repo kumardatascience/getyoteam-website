@@ -34,3 +34,4 @@ jobs:
           local-dir: ./out/
           server-dir: /public_html/new/
           dangerous-clean-slate: true
+          state-name: .ftp-deploy-sync-state-disabled
