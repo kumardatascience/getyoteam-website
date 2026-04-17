@@ -126,7 +126,7 @@ export default function Hero() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
           <span className="text-white">Building the Future</span>
           <br />
-          <span className="gradient-text-animate">with Artificial Intelligence</span>
+          <span className="gradient-text-animate">with AI &amp; Machine Learning</span>
         </h1>
 
         {/* Typing subtitle */}
