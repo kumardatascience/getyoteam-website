@@ -859,3 +859,108 @@ export const kaggleMedals = [
   { emoji: "🏅", label: "10 Competitions",      sub: "Completed end-to-end" },
   { emoji: "📓", label: "Expert Notebooks",     sub: "High-vote ML notebooks" },
 ] as const;
+
+// ─── Mobile Apps ─────────────────────────────────────────────────────────────
+
+export type MobileApp = {
+  title: string;
+  shortDesc: string;
+  highlights: Array<{ value: string; label: string }>;
+  tech: string[];
+  iosUrl: string | null;
+  androidUrl: string | null;
+  gradient: string;
+};
+
+export const mobileApps: MobileApp[] = [
+  {
+    title: "Mindfulness Greece",
+    shortDesc:
+      "Meditation and mindfulness app that reached No.1 on Google Play Store in the Wellness category.",
+    highlights: [
+      { value: "#1",         label: "Google Play Wellness" },
+      { value: "iOS+Android", label: "Platforms" },
+      { value: "Meditation",  label: "App Type" },
+      { value: "Greece",      label: "Primary Market" },
+    ],
+    tech: ["iOS", "Android", "Swift", "Kotlin"],
+    iosUrl: "https://apps.apple.com/gr/app/mindfulness-greece/id1481828213",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.mindfulness.greece.meditation",
+    gradient: "from-teal-600 to-emerald-800",
+  },
+  {
+    title: "MyTrucking 2.0",
+    shortDesc:
+      "Fleet management and trucking logistics platform built for the New Zealand market.",
+    highlights: [
+      { value: "Fleet",       label: "Management" },
+      { value: "NZ Market",   label: "Region" },
+      { value: "iOS+Android", label: "Platforms" },
+      { value: "Logistics",   label: "Category" },
+    ],
+    tech: ["iOS", "Android", "Swift", "Kotlin", "Logistics"],
+    iosUrl: "https://apps.apple.com/nz/app/mytrucking-2-0/id1645525031",
+    androidUrl: "https://play.google.com/store/apps/details?id=go_MyTrucking.com",
+    gradient: "from-zinc-600 to-blue-900",
+  },
+  {
+    title: "Bicycle Exchange Sprocket",
+    shortDesc:
+      "Bicycle marketplace for buying and selling bikes and parts globally.",
+    highlights: [
+      { value: "Marketplace", label: "Type" },
+      { value: "iOS+Android", label: "Platforms" },
+      { value: "Bicycles",    label: "Category" },
+      { value: "Global",      label: "Reach" },
+    ],
+    tech: ["iOS", "Android", "Marketplace"],
+    iosUrl: "https://apps.apple.com/in/app/sprocket-bicycle-market-place/id899907986",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.retrographic.sprocket",
+    gradient: "from-orange-600 to-red-800",
+  },
+  {
+    title: "ABC Observe",
+    shortDesc:
+      "Behavior observation and tracking tool designed for educators and therapists.",
+    highlights: [
+      { value: "Education",   label: "Sector" },
+      { value: "iOS",         label: "Platform" },
+      { value: "Behavior",    label: "Tracking" },
+      { value: "Clinical",    label: "Use Case" },
+    ],
+    tech: ["iOS", "Swift", "Education"],
+    iosUrl: "https://apps.apple.com/us/app/abc-observe/id1545908680",
+    androidUrl: null,
+    gradient: "from-violet-600 to-purple-900",
+  },
+  {
+    title: "Behavior Observation Made Easy",
+    shortDesc:
+      "Professional behavior observation and data collection tool for clinical settings.",
+    highlights: [
+      { value: "Healthcare",  label: "Sector" },
+      { value: "iOS+Android", label: "Platforms" },
+      { value: "Clinical",    label: "Use Case" },
+      { value: "Education",   label: "Also Used In" },
+    ],
+    tech: ["iOS", "Android", "Healthcare"],
+    iosUrl: "https://apps.apple.com/us/app/behavior-observation-made-easy/id1281984900",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.behaviorobservation",
+    gradient: "from-cyan-600 to-teal-900",
+  },
+  {
+    title: "Pre-RN Check Off",
+    shortDesc:
+      "Nursing skills checklist and verification app for nursing students preparing for practice.",
+    highlights: [
+      { value: "Nursing",     label: "Category" },
+      { value: "iOS+Android", label: "Platforms" },
+      { value: "Healthcare",  label: "Sector" },
+      { value: "Education",   label: "Use Case" },
+    ],
+    tech: ["iOS", "Android", "Healthcare", "Education"],
+    iosUrl: "https://apps.apple.com/us/app/pre-rn-check-off/id1563684557",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.pre_rn.check_off",
+    gradient: "from-rose-500 to-pink-800",
+  },
+];
