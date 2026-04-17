@@ -14,15 +14,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
+  const title = `${post.title} | getyoteam Blog`;
   return {
-    title: `${post.title} — getyoteam Blog`,
+    title,
     description: post.excerpt,
     keywords: post.tags,
+    alternates: { canonical: `https://getyoteam.com/blog/${slug}` },
     openGraph: {
-      title: post.title,
+      title,
       description: post.excerpt,
+      url: `https://getyoteam.com/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
+      authors: ["Kumar Katariya"],
+      images: [
+        {
+          url: "https://getyoteam.com/getyoteam-1.png",
+          width: 1200,
+          height: 630,
+          alt: `${post.title} — getyoteam Blog`,
+        },
+      ],
     },
   };
 }
@@ -33,6 +45,14 @@ const categoryColor: Record<string, string> = {
   "NLP":              "bg-violet-900/40 text-violet-300 border-violet-800/30",
   "Computer Vision":  "bg-indigo-900/40 text-indigo-300 border-indigo-800/30",
   "Tutorials":        "bg-teal-900/40 text-teal-300 border-teal-800/30",
+};
+
+const categoryToServices: Record<string, Array<{ label: string; href: string }>> = {
+  "AI":               [{ label: "AI Agent Development", href: "/services/ai-agents" }, { label: "RAG & LLM Applications", href: "/services/nlp-chatbots" }],
+  "Machine Learning": [{ label: "Machine Learning Solutions", href: "/services/machine-learning" }, { label: "Data Science Consulting", href: "/services/data-science" }],
+  "NLP":              [{ label: "RAG & LLM Applications", href: "/services/nlp-chatbots" }, { label: "NLP & Text Analytics", href: "/services/nlp-chatbots" }],
+  "Computer Vision":  [{ label: "Computer Vision", href: "/services/computer-vision" }, { label: "Deep Learning", href: "/services/deep-learning" }],
+  "Tutorials":        [{ label: "AI Agent Development", href: "/services/ai-agents" }, { label: "Machine Learning Solutions", href: "/services/machine-learning" }],
 };
 
 function renderBlock(block: BodyBlock, i: number) {
@@ -55,7 +75,7 @@ function renderBlock(block: BodyBlock, i: number) {
     case "callout":
       return (
         <div key={i} className="flex gap-4 p-5 rounded-xl border border-purple-800/40 bg-purple-900/10 my-6">
-          <span className="text-2xl shrink-0 mt-0.5">{block.emoji}</span>
+          <span className="text-2xl shrink-0 mt-0.5" role="img" aria-label={block.label}>{block.emoji}</span>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-purple-400 mb-1.5">{block.label}</p>
             <p className="text-sm text-slate-300 leading-relaxed">{block.text}</p>
@@ -82,9 +102,9 @@ function renderBlock(block: BodyBlock, i: number) {
         <div key={i} className="space-y-3 my-6">
           {block.items.map((item, j) => (
             <div key={j} className="flex gap-4 p-4 rounded-xl border border-purple-900/20 bg-white/[0.02] hover:border-purple-800/40 transition-colors">
-              <span className="text-2xl shrink-0 mt-0.5">{item.icon}</span>
+              <span className="text-2xl shrink-0 mt-0.5" role="img" aria-label={item.title}>{item.icon}</span>
               <div>
-                <p className="text-sm font-bold text-white mb-1">{item.title}</p>
+                <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
               </div>
             </div>
@@ -118,8 +138,48 @@ export default async function BlogPostPage({ params }: Props) {
   const prev = blogPosts[idx - 1] ?? null;
   const next = blogPosts[idx + 1] ?? null;
 
+  const relatedServices = categoryToServices[post.category] ?? categoryToServices["Tutorials"];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://getyoteam.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://getyoteam.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://getyoteam.com/blog/${slug}` },
+    ],
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Kumar Katariya",
+      url: "https://getyoteam.com/about",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "getyoteam",
+      url: "https://getyoteam.com",
+    },
+    mainEntityOfPage: `https://getyoteam.com/blog/${slug}`,
+    keywords: post.tags.join(", "),
+  };
+
   return (
     <div className="pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <Breadcrumb crumbs={[
@@ -163,17 +223,47 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </article>
 
+        {/* Related Services — internal linking */}
+        <div className="mt-10 p-6 rounded-2xl border border-purple-900/20 bg-white/[0.02]">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-4">Need This Built for Your Business?</h2>
+          <p className="text-slate-400 text-sm mb-4">
+            Kumar Katariya builds production-grade AI systems like this. Explore related services or get in touch.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {relatedServices.map((s) => (
+              <Link
+                key={s.href}
+                href={s.href}
+                className="text-xs font-semibold px-4 py-2 rounded-full border border-purple-800/40 text-purple-300 hover:border-purple-500/60 hover:text-white transition-all"
+              >
+                {s.label} →
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="text-xs font-semibold px-4 py-2 rounded-full gradient-bg text-white hover:opacity-90 transition-opacity"
+            >
+              Hire Me →
+            </Link>
+          </div>
+        </div>
+
         {/* Author card */}
-        <div className="mt-10 card-glass p-6 border border-purple-900/20 flex items-start gap-4">
-          <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold shrink-0">
+        <div className="mt-6 card-glass p-6 border border-purple-900/20 flex items-start gap-4">
+          <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold shrink-0" aria-label="Kumar Katariya">
             KK
           </div>
           <div>
             <p className="text-sm font-bold text-white">Kumar Katariya</p>
             <p className="text-xs text-slate-400 mb-2">AI/ML Engineer · Top Rated Plus on Upwork · Kaggle Expert</p>
-            <Link href="/contact" className="text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
-              Work with me →
-            </Link>
+            <div className="flex gap-4">
+              <Link href="/about" className="text-xs font-semibold text-slate-400 hover:text-white transition-colors">
+                About me →
+              </Link>
+              <Link href="/contact" className="text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                Work with me →
+              </Link>
+            </div>
           </div>
         </div>
 

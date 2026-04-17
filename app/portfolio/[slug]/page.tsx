@@ -14,9 +14,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
+  const title = `${project.title} Case Study | getyoteam`;
   return {
-    title: `${project.title} — Case Study | getyoteam`,
+    title,
     description: project.shortDesc,
+    alternates: { canonical: `https://getyoteam.com/portfolio/${slug}` },
+    openGraph: {
+      title,
+      description: project.shortDesc,
+      url: `https://getyoteam.com/portfolio/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: "https://getyoteam.com/getyoteam-1.png",
+          width: 1200,
+          height: 630,
+          alt: `${project.title} — AI/ML Case Study | getyoteam`,
+        },
+      ],
+    },
   };
 }
 
@@ -25,13 +41,26 @@ export default async function CaseStudyPage({ params }: Props) {
   const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
 
-  // Next / prev navigation
   const idx  = projects.indexOf(project);
   const prev = projects[idx - 1] ?? null;
   const next = projects[idx + 1] ?? null;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home",      item: "https://getyoteam.com" },
+      { "@type": "ListItem", position: 2, name: "Portfolio", item: "https://getyoteam.com/portfolio" },
+      { "@type": "ListItem", position: 3, name: project.title, item: `https://getyoteam.com/portfolio/${slug}` },
+    ],
+  };
+
   return (
     <div className="pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <Breadcrumb crumbs={[
@@ -56,7 +85,6 @@ export default async function CaseStudyPage({ params }: Props) {
         {/* Hero stats card */}
         <div className={`rounded-2xl bg-gradient-to-br ${project.gradient} relative overflow-hidden mb-10 border border-white/10`}>
           <div className="absolute inset-0 bg-black/40" />
-          {/* subtle grid overlay */}
           <div
             className="absolute inset-0 opacity-[0.06]"
             style={{
@@ -66,7 +94,6 @@ export default async function CaseStudyPage({ params }: Props) {
             }}
           />
           <div className="relative z-10 px-6 sm:px-10 py-8 sm:py-10">
-            {/* Category tags + icon row */}
             <div className="flex items-center justify-between mb-8">
               <div className="flex flex-wrap gap-2">
                 {project.category.filter((c) => c !== "All").map((c) => (
@@ -75,9 +102,8 @@ export default async function CaseStudyPage({ params }: Props) {
                   </span>
                 ))}
               </div>
-              <span className="text-3xl opacity-80">{project.metricIcon}</span>
+              <span className="text-3xl opacity-80" role="img" aria-label={project.title}>{project.metricIcon}</span>
             </div>
-            {/* Stats grid — mirrors the PDF cover style */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
               {project.highlights.map((h, i) => (
                 <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-4 border border-white/10">
@@ -142,11 +168,11 @@ export default async function CaseStudyPage({ params }: Props) {
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white transition-all"
               >
                 {isKaggle ? (
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
                     <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.234.118-.353.354-.353h2.431c.234 0 .351.119.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334"/>
                   </svg>
                 ) : (
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
                   </svg>
                 )}
@@ -161,7 +187,7 @@ export default async function CaseStudyPage({ params }: Props) {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-opacity"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
               Live Demo

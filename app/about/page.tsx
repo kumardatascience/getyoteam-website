@@ -3,9 +3,25 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "About Kumar Katariya — AI/ML Engineer | getyoteam",
+  title: "About Kumar Katariya | AI/ML Engineer | getyoteam",
   description:
     "Meet Kumar Katariya — Top Rated Plus AI/ML Engineer on Upwork, Kaggle Expert, IBM Certified. 117+ projects, $400K+ earned. Based in Ahmedabad, India.",
+  alternates: { canonical: "https://getyoteam.com/about" },
+  openGraph: {
+    title: "About Kumar Katariya | AI/ML Engineer | getyoteam",
+    description:
+      "Meet Kumar Katariya — Top Rated Plus AI/ML Engineer on Upwork, Kaggle Expert, IBM Certified. 117+ projects, $400K+ earned. Based in Ahmedabad, India.",
+    url: "https://getyoteam.com/about",
+    type: "profile",
+    images: [
+      {
+        url: "https://getyoteam.com/getyoteam-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Kumar Katariya — AI/ML Engineer | getyoteam",
+      },
+    ],
+  },
 };
 
 const certifications = [
@@ -25,8 +41,54 @@ const skills = [
 ];
 
 export default function AboutPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://getyoteam.com" },
+      { "@type": "ListItem", position: 2, name: "About", item: "https://getyoteam.com/about" },
+    ],
+  };
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Kumar Katariya",
+    jobTitle: "AI/ML Engineer",
+    url: "https://getyoteam.com",
+    email: "info@getyoteam.com",
+    telephone: "+91-9106939053",
+    description:
+      "Top Rated Plus AI/ML Engineer on Upwork with 117+ projects and $400K+ earned. Specialist in RAG, LLMs, LangChain, NLP, Computer Vision, and Deep Learning.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Ahmedabad",
+      addressRegion: "Gujarat",
+      postalCode: "380051",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.upwork.com/freelancers/aimlengineer",
+      "https://www.kaggle.com/kumarkatariya",
+      "https://github.com/kumardatascience",
+      "https://www.linkedin.com/in/kumar-katariya/",
+    ],
+    hasCredential: [
+      { "@type": "EducationalOccupationalCredential", name: "IBM Machine Learning & Data Science Professional" },
+      { "@type": "EducationalOccupationalCredential", name: "Upwork Top Rated Plus — Top 3% Globally" },
+    ],
+  };
+
   return (
     <div className="pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "About" }]} />
@@ -60,7 +122,7 @@ export default function AboutPage() {
                 Work with Me
               </Link>
               <a
-                href="https://www.upwork.com/freelancers/kumardatascience"
+                href="https://www.upwork.com/freelancers/aimlengineer"
                 target="_blank" rel="noopener noreferrer"
                 className="px-6 py-2.5 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
               >
@@ -93,7 +155,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {certifications.map((c) => (
               <div key={c.name} className="flex items-start gap-4 p-4 rounded-xl border border-purple-900/20 bg-white/[0.02] hover:border-purple-500/30 transition-all">
-                <span className="text-3xl shrink-0">{c.icon}</span>
+                <span className="text-3xl shrink-0" role="img" aria-label={c.name}>{c.icon}</span>
                 <div>
                   <p className="text-sm font-bold text-white">{c.name}</p>
                   <p className="text-xs text-slate-400">{c.detail}</p>
@@ -109,7 +171,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {skills.map((s) => (
               <div key={s.category} className="card-glass p-4 border border-purple-900/20">
-                <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">{s.category}</p>
+                <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">{s.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {s.items.map((item) => (
                     <span key={item} className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">
@@ -120,6 +182,19 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Internal links */}
+        <div className="flex flex-wrap gap-3 mb-14">
+          <Link href="/portfolio" className="text-sm text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+            View AI/ML Portfolio →
+          </Link>
+          <Link href="/services" className="text-sm text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+            Explore Services →
+          </Link>
+          <Link href="/blog" className="text-sm text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+            Read the Blog →
+          </Link>
         </div>
 
         {/* CTA */}

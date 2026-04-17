@@ -4,14 +4,43 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 import { projects } from "@/app/lib/data";
 
 export const metadata: Metadata = {
-  title: "Portfolio — AI/ML Projects | getyoteam | Kumar Katariya",
+  title: "AI/ML Portfolio | Kumar Katariya | getyoteam",
   description:
-    "AI and machine learning portfolio: RAG chatbots, medical imaging AI, bankruptcy prediction, speech emotion recognition, and more. Real projects with real metrics.",
+    "AI/ML portfolio by Kumar Katariya: RAG chatbots, medical imaging AI, bankruptcy prediction, and more. 117+ real projects with metrics and live demos.",
+  alternates: { canonical: "https://getyoteam.com/portfolio" },
+  openGraph: {
+    title: "AI/ML Portfolio | Kumar Katariya | getyoteam",
+    description:
+      "AI/ML portfolio by Kumar Katariya: RAG chatbots, medical imaging AI, bankruptcy prediction, and more. 117+ real projects with metrics and live demos.",
+    url: "https://getyoteam.com/portfolio",
+    type: "website",
+    images: [
+      {
+        url: "https://getyoteam.com/getyoteam-1.png",
+        width: 1200,
+        height: 630,
+        alt: "AI/ML Portfolio — Kumar Katariya | getyoteam",
+      },
+    ],
+  },
 };
 
 export default function PortfolioPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home",      item: "https://getyoteam.com" },
+      { "@type": "ListItem", position: 2, name: "Portfolio", item: "https://getyoteam.com/portfolio" },
+    ],
+  };
+
   return (
     <div className="pt-24 pb-20 bg-[#07070f]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Portfolio" }]} />
@@ -54,7 +83,7 @@ export default function PortfolioPage() {
                         </span>
                       ))}
                     </div>
-                    <span className="text-xl opacity-70">{p.metricIcon}</span>
+                    <span className="text-xl opacity-70" role="img" aria-label={p.title}>{p.metricIcon}</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2.5">
                     {p.highlights.slice(0, 4).map((h, i) => (
@@ -78,6 +107,19 @@ export default function PortfolioPage() {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Internal links */}
+        <div className="mt-12 text-center space-y-3">
+          <p className="text-slate-400 text-sm">Interested in working together?</p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/contact" className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm">
+              Start a Project →
+            </Link>
+            <Link href="/services" className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm">
+              View Services
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -1,9 +1,4 @@
-const highlights = [
-  { num: "117+", label: "Projects Delivered" },
-  { num: "$400K+", label: "Earned on Upwork" },
-  { num: "100%",  label: "Job Success Score" },
-  { num: "Top 3%", label: "Upwork Globally" },
-];
+import { aboutHighlights } from "@/app/lib/data";
 
 export default function About() {
   return (
@@ -43,7 +38,7 @@ export default function About() {
                 Start a Project
               </a>
               <a
-                href="https://www.upwork.com/freelancers/kumardatascience"
+                href="https://www.upwork.com/freelancers/aimlengineer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2.5 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
@@ -55,9 +50,8 @@ export default function About() {
 
           {/* Right — stats + detail */}
           <div className="space-y-6">
-            {/* Stat grid */}
             <div className="grid grid-cols-2 gap-4">
-              {highlights.map((h) => (
+              {aboutHighlights.map((h) => (
                 <div
                   key={h.label}
                   className="card-glass p-5 border border-purple-900/20 text-center"
@@ -68,14 +62,13 @@ export default function About() {
               ))}
             </div>
 
-            {/* Detail card */}
             <div className="card-glass p-6 border border-purple-900/20 space-y-3">
               {[
-                ["Location",   "Ahmedabad, India (GMT+5:30)"],
-                ["Email",      "info@getyoteam.com"],
-                ["Phone",      "+91-910 693 9053"],
-                ["Rate",       "$40/hr · Project-based available"],
-                ["Availability","Open to new projects"],
+                ["Location",     "Ahmedabad, India (GMT+5:30)"],
+                ["Email",        "info@getyoteam.com"],
+                ["Phone",        "+91-910 693 9053"],
+                ["Rate",         "$40/hr · Project-based available"],
+                ["Availability", "Open to new projects"],
               ].map(([k, v]) => (
                 <div key={k} className="flex justify-between text-sm">
                   <span className="text-slate-500">{k}</span>

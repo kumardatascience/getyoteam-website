@@ -42,7 +42,7 @@ export default function Contact() {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          access_key: "c6813edd-4603-4562-8831-09bd8e6f6086",
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
           subject: "New Lead from getyoteam Website",
           ...form,
         }),

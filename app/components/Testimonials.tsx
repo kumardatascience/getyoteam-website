@@ -1,41 +1,4 @@
-const testimonials = [
-  {
-    name: "Erika Shapiro",
-    role: "CEO",
-    company: "Study Song LLC",
-    text: "Kumar acted with utmost professionalism and skill, working tirelessly to complete the project according to my standards. Highly recommended for any AI or ML project.",
-    rating: 5,
-    initials: "ES",
-    color: "from-purple-600 to-violet-600",
-  },
-  {
-    name: "Zhanna Shekhtmeyster",
-    role: "Founder",
-    company: "ABC Observe",
-    text: "Kumar and his team did a wonderful job. I now consider them an extension of my team. Their expertise in AI and attention to detail is outstanding.",
-    rating: 5,
-    initials: "ZS",
-    color: "from-sky-600 to-blue-600",
-  },
-  {
-    name: "Themis Vasarmidis",
-    role: "Founder",
-    company: "Mindfulness Greece",
-    text: "Our app is No.1 in the Google Play Store in the Wellness category. Huge success from zero experience! Kumar's team delivered beyond expectations.",
-    rating: 5,
-    initials: "TV",
-    color: "from-green-600 to-emerald-600",
-  },
-  {
-    name: "Simon Islam",
-    role: "CEO",
-    company: "Fair Pattern",
-    text: "Excellent work from Kumar and Team. The AI solution they built has transformed our workflow. Will definitely hire again and again.",
-    rating: 5,
-    initials: "SI",
-    color: "from-orange-600 to-amber-600",
-  },
-];
+import { testimonials } from "@/app/lib/data";
 
 function Stars({ count }: { count: number }) {
   return (
@@ -69,8 +32,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((t) => (
             <div key={t.name} className="card-glass p-6 border border-purple-900/20 flex flex-col gap-4">
-              {/* Quote mark */}
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-purple-700/50 shrink-0">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-purple-700/50 shrink-0" aria-hidden="true">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
               </svg>
 
@@ -90,15 +52,14 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Upwork CTA */}
         <div className="mt-10 text-center">
           <a
-            href="https://www.upwork.com/freelancers/kumardatascience"
+            href="https://www.upwork.com/freelancers/aimlengineer"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-green-400 border border-green-800/40 bg-green-900/10 hover:bg-green-900/20 hover:border-green-600/50 transition-all"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
               <circle cx="12" cy="12" r="10" className="opacity-30"/>
               <path d="M8 12l3 3 5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>

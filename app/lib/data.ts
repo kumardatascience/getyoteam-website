@@ -1,5 +1,5 @@
-// Central data store — all pages import from here. To add a blog post, push a
-// new object to `blogPosts`. No other files need changing.
+// Central data store — all pages import from here.
+// Sections: Services · Projects · BlogPosts · Testimonials · Achievements · About · Kaggle
 
 export type Service = {
   slug: string | null; // null = no dedicated page
@@ -712,3 +712,150 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ];
+
+// ─── Testimonials ─────────────────────────────────────────────────────────────
+
+export type Testimonial = {
+  name: string;
+  role: string;
+  company: string;
+  text: string;
+  rating: number;
+  initials: string;
+  color: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Erika Shapiro",
+    role: "CEO",
+    company: "Study Song LLC",
+    text: "Kumar acted with utmost professionalism and skill, working tirelessly to complete the project according to my standards. Highly recommended for any AI or ML project.",
+    rating: 5,
+    initials: "ES",
+    color: "from-purple-600 to-violet-600",
+  },
+  {
+    name: "Zhanna Shekhtmeyster",
+    role: "Founder",
+    company: "ABC Observe",
+    text: "Kumar and his team did a wonderful job. I now consider them an extension of my team. Their expertise in AI and attention to detail is outstanding.",
+    rating: 5,
+    initials: "ZS",
+    color: "from-sky-600 to-blue-600",
+  },
+  {
+    name: "Themis Vasarmidis",
+    role: "Founder",
+    company: "Mindfulness Greece",
+    text: "Our app is No.1 in the Google Play Store in the Wellness category. Huge success from zero experience! Kumar's team delivered beyond expectations.",
+    rating: 5,
+    initials: "TV",
+    color: "from-green-600 to-emerald-600",
+  },
+  {
+    name: "Simon Islam",
+    role: "CEO",
+    company: "Fair Pattern",
+    text: "Excellent work from Kumar and Team. The AI solution they built has transformed our workflow. Will definitely hire again and again.",
+    rating: 5,
+    initials: "SI",
+    color: "from-orange-600 to-amber-600",
+  },
+];
+
+// ─── Achievements ─────────────────────────────────────────────────────────────
+
+export type Achievement = {
+  key: "upwork" | "jobsuccess" | "kaggle" | "ibm";
+  title: string;
+  sub: string;
+  badge: string;
+  color: string;
+  border: string;
+  glow: string;
+};
+
+export const achievements: Achievement[] = [
+  {
+    key: "upwork",
+    title: "Top Rated Plus",
+    sub: "Upwork · Top 3% Globally",
+    badge: "Verified",
+    color: "from-green-500/20 to-emerald-500/10",
+    border: "border-green-500/20",
+    glow: "shadow-green-500/10",
+  },
+  {
+    key: "jobsuccess",
+    title: "100% Job Success",
+    sub: "117 Jobs · $400K+ Earned",
+    badge: "Perfect Score",
+    color: "from-sky-500/20 to-blue-500/10",
+    border: "border-sky-500/20",
+    glow: "shadow-sky-500/10",
+  },
+  {
+    key: "kaggle",
+    title: "Kaggle Expert",
+    sub: "Rank 2,375 / 61,099 · Top 4%",
+    badge: "6 Bronze Medals",
+    color: "from-orange-500/20 to-amber-500/10",
+    border: "border-orange-500/20",
+    glow: "shadow-orange-500/10",
+  },
+  {
+    key: "ibm",
+    title: "IBM Certified",
+    sub: "Machine Learning & Data Science",
+    badge: "Professional Cert",
+    color: "from-blue-500/20 to-indigo-500/10",
+    border: "border-blue-500/20",
+    glow: "shadow-blue-500/10",
+  },
+];
+
+// ─── About highlights ─────────────────────────────────────────────────────────
+
+export const aboutHighlights = [
+  { num: "117+",   label: "Projects Delivered" },
+  { num: "$400K+", label: "Earned on Upwork" },
+  { num: "100%",   label: "Job Success Score" },
+  { num: "Top 3%", label: "Upwork Globally" },
+] as const;
+
+// ─── Kaggle ───────────────────────────────────────────────────────────────────
+
+export type KaggleCompetition = {
+  name: string;
+  rank: string;
+  total: string;
+  pct: string;
+  medal: string;
+  tag: string;
+};
+
+export const kaggleCompetitions: KaggleCompetition[] = [
+  {
+    name: "Predict Introverts vs Extroverts",
+    rank: "21",
+    total: "4,329",
+    pct: "Top 0.5%",
+    medal: "🥇",
+    tag: "Personality ML",
+  },
+  {
+    name: "Kaggle Notebooks Expert",
+    rank: "2,375",
+    total: "61,099",
+    pct: "Top 4%",
+    medal: "⭐",
+    tag: "Expert Tier",
+  },
+];
+
+export const kaggleMedals = [
+  { emoji: "🥉", label: "6× Bronze Medals",    sub: "Notebooks & Competitions" },
+  { emoji: "🏅", label: "10 Competitions",      sub: "Completed end-to-end" },
+  { emoji: "📓", label: "Expert Notebooks",     sub: "High-vote ML notebooks" },
+] as const;

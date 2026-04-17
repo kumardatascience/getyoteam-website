@@ -1,27 +1,4 @@
-const competitions = [
-  {
-    name: "Predict Introverts vs Extroverts",
-    rank: "21",
-    total: "4,329",
-    pct: "Top 0.5%",
-    medal: "🥇",
-    tag: "Personality ML",
-  },
-  {
-    name: "Kaggle Notebooks Expert",
-    rank: "2,375",
-    total: "61,099",
-    pct: "Top 4%",
-    medal: "⭐",
-    tag: "Expert Tier",
-  },
-];
-
-const medals = [
-  { emoji: "🥉", label: "6× Bronze Medals", sub: "Notebooks & Competitions" },
-  { emoji: "🏅", label: "10 Competitions", sub: "Completed end-to-end" },
-  { emoji: "📓", label: "Expert Notebooks", sub: "High-vote ML notebooks" },
-];
+import { kaggleCompetitions, kaggleMedals } from "@/app/lib/data";
 
 export default function KaggleSection() {
   return (
@@ -41,8 +18,8 @@ export default function KaggleSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-          {competitions.map((c) => {
-            const pct = Math.round((parseInt(c.rank) / parseInt(c.total.replace(",",""))) * 100);
+          {kaggleCompetitions.map((c) => {
+            const pct = Math.round((parseInt(c.rank) / parseInt(c.total.replace(",", ""))) * 100);
             const barPct = Math.max(2, 100 - pct);
             return (
               <div key={c.name} className="card-glass p-6 border border-orange-900/20 hover:border-orange-500/30">
@@ -51,7 +28,7 @@ export default function KaggleSection() {
                     <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">{c.tag}</p>
                     <h3 className="text-sm font-semibold text-white leading-snug">{c.name}</h3>
                   </div>
-                  <span className="text-3xl">{c.medal}</span>
+                  <span className="text-3xl" role="img" aria-label="medal">{c.medal}</span>
                 </div>
 
                 <div className="flex items-end gap-3 mb-4">
@@ -65,7 +42,6 @@ export default function KaggleSection() {
                   </span>
                 </div>
 
-                {/* Progress bar */}
                 <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden">
                   <div
                     className="h-full rounded-full bg-gradient-to-r from-purple-500 to-orange-400 transition-all"
@@ -78,11 +54,10 @@ export default function KaggleSection() {
           })}
         </div>
 
-        {/* Medal showcase */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {medals.map((m) => (
+          {kaggleMedals.map((m) => (
             <div key={m.label} className="flex items-center gap-4 p-4 rounded-xl border border-purple-900/20 bg-white/[0.03] hover:border-purple-500/30 transition-all">
-              <span className="text-4xl shrink-0">{m.emoji}</span>
+              <span className="text-4xl shrink-0" role="img" aria-label={m.label}>{m.emoji}</span>
               <div>
                 <p className="text-sm font-semibold text-white">{m.label}</p>
                 <p className="text-xs text-slate-400">{m.sub}</p>

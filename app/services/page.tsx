@@ -4,9 +4,25 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 import { services } from "@/app/lib/data";
 
 export const metadata: Metadata = {
-  title: "AI & ML Services — getyoteam | Kumar Katariya",
+  title: "AI & ML Services | getyoteam | Kumar Katariya",
   description:
-    "Full-stack AI/ML services: AI agents, RAG pipelines, machine learning, deep learning, computer vision, NLP, data science, and speech AI. Top Rated Plus on Upwork.",
+    "Full-stack AI/ML services: AI agents, RAG pipelines, machine learning, deep learning, computer vision, NLP, and speech AI. Top Rated Plus on Upwork.",
+  alternates: { canonical: "https://getyoteam.com/services" },
+  openGraph: {
+    title: "AI & ML Services | getyoteam | Kumar Katariya",
+    description:
+      "Full-stack AI/ML services: AI agents, RAG pipelines, machine learning, deep learning, computer vision, NLP, and speech AI. Top Rated Plus on Upwork.",
+    url: "https://getyoteam.com/services",
+    type: "website",
+    images: [
+      {
+        url: "https://getyoteam.com/getyoteam-1.png",
+        width: 1200,
+        height: 630,
+        alt: "AI & ML Services by Kumar Katariya | getyoteam",
+      },
+    ],
+  },
 };
 
 const colorMap: Record<string, { bg: string; border: string; badge: string }> = {
@@ -22,8 +38,21 @@ const colorMap: Record<string, { bg: string; border: string; badge: string }> = 
 export default function ServicesPage() {
   const featured = services.filter((s) => s.slug);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://getyoteam.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://getyoteam.com/services" },
+    ],
+  };
+
   return (
     <div className="pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Services" }]} />
@@ -50,7 +79,7 @@ export default function ServicesPage() {
                 href={`/services/${s.slug}`}
                 className={`group flex flex-col p-6 rounded-2xl bg-gradient-to-br ${c.bg} border ${c.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-900/20`}
               >
-                <div className="text-4xl mb-4">{s.icon}</div>
+                <span className="text-4xl mb-4" role="img" aria-label={s.title}>{s.icon}</span>
                 <h2 className="text-base font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   {s.title}
                 </h2>
@@ -66,6 +95,16 @@ export default function ServicesPage() {
               </Link>
             );
           })}
+        </div>
+
+        {/* Internal links */}
+        <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm">
+          <Link href="/portfolio" className="text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+            View Portfolio →
+          </Link>
+          <Link href="/about" className="text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+            About Kumar →
+          </Link>
         </div>
 
         {/* CTA */}
