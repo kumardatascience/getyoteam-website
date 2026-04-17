@@ -43,7 +43,7 @@ export default function Contact() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: "c6813edd-4603-4562-8831-09bd8e6f6086",
-          subject: "New Lead from GetyoTeam Website",
+          subject: "New Lead from getyoteam Website",
           ...form,
         }),
       });

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "About Kumar Katariya — AI/ML Engineer | GetyoTeam",
+  title: "About Kumar Katariya — AI/ML Engineer | getyoteam",
   description:
     "Meet Kumar Katariya — Top Rated Plus AI/ML Engineer on Upwork, Kaggle Expert, IBM Certified. 117+ projects, $400K+ earned. Based in Ahmedabad, India.",
 };

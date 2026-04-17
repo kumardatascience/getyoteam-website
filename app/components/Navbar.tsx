@@ -26,7 +26,7 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled,     setScrolled]     = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -66,7 +66,7 @@ export default function Navbar() {
           <Link href="/" onClick={closeAll} className="flex items-center shrink-0">
             <Image
               src="/getyoteam-1.png"
-              alt="GetyoTeam logo"
+              alt="getyoteam logo"
               width={260}
               height={68}
               priority

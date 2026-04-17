@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <p className="text-xl font-extrabold gradient-text mb-3">GetyoTeam</p>
+            <p className="text-xl font-extrabold gradient-text mb-3">getyoteam</p>
             <p className="text-sm text-slate-400 leading-relaxed mb-4 max-w-xs">
               World-class AI/ML engineering for businesses that want to move fast and build things that matter.
             </p>
@@ -116,7 +116,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-purple-900/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} GetyoTeam · Kumar Katariya. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} getyoteam · Kumar Katariya. All rights reserved.</p>
           <p>
             Top Rated Plus · Upwork · Kaggle Expert ·{" "}
             <a href="#contact" className="hover:text-purple-400 transition-colors">Hire Me</a>

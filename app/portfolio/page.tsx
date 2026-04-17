@@ -4,7 +4,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 import { projects } from "@/app/lib/data";
 
 export const metadata: Metadata = {
-  title: "Portfolio — AI/ML Projects | GetyoTeam | Kumar Katariya",
+  title: "Portfolio — AI/ML Projects | getyoteam | Kumar Katariya",
   description:
     "AI and machine learning portfolio: RAG chatbots, medical imaging AI, bankruptcy prediction, speech emotion recognition, and more. Real projects with real metrics.",
 };

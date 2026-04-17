@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "GetyoTeam | AI/ML Engineer — Kumar Katariya | Top Rated Plus Upwork",
+  title: "getyoteam | AI/ML Engineer — Kumar Katariya | Top Rated Plus Upwork",
   description:
     "Kumar Katariya — AI/ML Engineer specialising in RAG, LLMs, LangChain, NLP & Computer Vision. Top Rated Plus on Upwork (Top 3%), 117+ projects, $400K+ earned. Based in Ahmedabad, India.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "NLP engineer",
     "computer vision",
     "Kumar Katariya",
-    "GetyoTeam",
+    "getyoteam",
     "Upwork Top Rated Plus",
     "AI chatbot development",
     "machine learning consultant",
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://getyoteam.com"),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "GetyoTeam | AI/ML Engineer — Kumar Katariya",
+    title: "getyoteam | AI/ML Engineer — Kumar Katariya",
     description:
       "Top Rated Plus AI/ML Engineer on Upwork. RAG, LLMs, LangChain, NLP, Computer Vision. 117+ projects · $400K+ earned · 100% Job Success.",
     url: "https://getyoteam.com",
-    siteName: "GetyoTeam",
+    siteName: "getyoteam",
     type: "website",
     locale: "en_US",
   },
@@ -51,7 +51,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "GetyoTeam",
+    name: "getyoteam",
     description:
       "AI/ML engineering services specialising in RAG, LLMs, LangChain, NLP and Computer Vision.",
     url: "https://getyoteam.com",
