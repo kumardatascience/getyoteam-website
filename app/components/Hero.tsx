@@ -3,12 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 
 const ROLES = [
-  "AI Agent Developer",
-  "RAG & LLM Engineer",
-  "Machine Learning Expert",
-  "Deep Learning Specialist",
-  "NLP & Computer Vision",
-  "Data Science Consultant",
+  "AI Agents",
+  "RAG Systems",
+  "Predictive Models",
+  "Computer Vision",
+  "Workflow Automation",
 ];
 
 const STATS = [
