@@ -266,7 +266,7 @@ export default function RAGLLMPage() {
             <div>
               <h1 className="section-heading text-white mb-4">
                 RAG &amp; LLM Application<br />
-                <span className="gradient-text">Development Company</span>
+                <span className="gradient-text">Development Services</span>
               </h1>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-500/30 bg-sky-900/20 text-xs font-medium text-sky-300 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
@@ -274,21 +274,25 @@ export default function RAGLLMPage() {
               </div>
 
               <p className="text-slate-400 leading-relaxed mb-4">
-                Build AI chatbots and LLM applications that answer from <em>your</em> data —
-                not from guesswork. Our RAG systems connect LLMs to your documents, databases,
-                and knowledge bases, delivering accurate, cited answers with zero hallucination.
+                Build AI chatbots with RAG and custom LLM applications that answer from <em>your</em> data —
+                not from guesswork. Our RAG development services connect LLMs to your documents,
+                databases, and knowledge bases, delivering accurate, cited answers with
+                near-zero hallucination and full source citations.
               </p>
               <p className="text-slate-400 leading-relaxed mb-4">
-                I design and deploy production-grade RAG pipelines using LangChain, LlamaIndex,
-                and vector databases. Whether you need a document Q&amp;A assistant, an AI-powered
-                knowledge base, or an enterprise search system — every build is grounded,
-                observable, and production-ready. These systems pair naturally with{" "}
+                As a LangChain development company, I design and deploy production-grade RAG
+                pipelines using LangChain, LlamaIndex, and vector databases. Whether you need
+                enterprise AI solutions, an AI chatbot with RAG, or a document Q&amp;A assistant —
+                every build is grounded, observable, and production-ready. These systems pair
+                naturally with{" "}
                 <Link href="/services/ai-agents" className="text-sky-400 hover:text-sky-300 underline underline-offset-2 transition-colors">
                   AI agent workflows
-                </Link>{" "}
-                or{" "}
+                </Link>,{" "}
+                <Link href="/services/machine-learning" className="text-sky-400 hover:text-sky-300 underline underline-offset-2 transition-colors">
+                  machine learning pipelines
+                </Link>, or{" "}
                 <Link href="/services/data-science" className="text-sky-400 hover:text-sky-300 underline underline-offset-2 transition-colors">
-                  data science pipelines
+                  data science solutions
                 </Link>{" "}
                 for end-to-end intelligence.
               </p>
@@ -404,7 +408,7 @@ export default function RAGLLMPage() {
                   <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
-                  Cited Answer — Zero Hallucination
+                  Cited Answer — Near-Zero Hallucination
                 </div>
               </div>
             </div>
@@ -469,7 +473,7 @@ export default function RAGLLMPage() {
               {
                 icon: "📄",
                 label: "RAG Application",
-                points: ["Answers from your documents", "Always up to date", "Cites exact sources", "Zero hallucination on grounded facts"],
+                points: ["Answers from your documents", "Always up to date", "Cites exact sources", "Near-zero hallucination with grounded responses"],
                 accent: "border-sky-700/40",
                 bad: false,
               },
@@ -612,7 +616,7 @@ export default function RAGLLMPage() {
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Every RAG system I build follows the same rigorous pipeline — from raw
-              documents to production-grade, hallucination-free deployment.
+              documents to production-grade, near-zero-hallucination deployment.
             </p>
           </div>
 
@@ -868,6 +872,84 @@ export default function RAGLLMPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── RAG VS FINE-TUNING VS CHATBOTS ───────────────────────────────── */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-3">
+              Understand Your Options
+            </p>
+            <h2 className="section-heading text-white mb-4">
+              RAG vs Fine-Tuning <span className="gradient-text">vs Chatbots</span>
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Choosing between RAG, fine-tuning, and traditional chatbots depends on your data,
+              update frequency, and accuracy requirements. Here&apos;s the honest breakdown.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                label: "Traditional Chatbot",
+                icon: "💬",
+                color: "border-slate-700/40",
+                best: false,
+                pros: ["Simple to deploy", "Low cost to start", "Good for scripted flows"],
+                cons: ["No access to your data", "Cannot answer dynamic questions", "Breaks outside scripted paths"],
+              },
+              {
+                label: "Fine-Tuned LLM",
+                icon: "🧠",
+                color: "border-purple-700/40",
+                best: false,
+                pros: ["Deep domain knowledge", "Consistent tone & style", "Good for structured tasks"],
+                cons: ["Expensive to retrain on new data", "Cannot cite sources", "Outdated when data changes"],
+              },
+              {
+                label: "RAG System",
+                icon: "📄",
+                color: "border-sky-600/60",
+                best: true,
+                pros: ["Answers from your live documents", "Cites exact sources with references", "Updates instantly — no retraining", "Near-zero hallucination with grounded responses"],
+                cons: [],
+              },
+            ].map((opt) => (
+              <div key={opt.label} className={`card-glass p-6 border ${opt.color} ${opt.best ? "shadow-lg shadow-sky-900/20" : ""}`}>
+                <div className="text-3xl mb-3">{opt.icon}</div>
+                <h3 className="font-bold text-white mb-2">{opt.label}</h3>
+                {opt.best && (
+                  <span className="inline-block text-xs px-2.5 py-0.5 rounded-full bg-sky-900/30 text-sky-300 border border-sky-800/30 mb-3">
+                    Recommended
+                  </span>
+                )}
+                <ul className="space-y-1.5 mb-3">
+                  {opt.pros.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-xs text-slate-300">
+                      <span className="text-green-400 mt-0.5 shrink-0">✓</span>{p}
+                    </li>
+                  ))}
+                </ul>
+                {opt.cons.length > 0 && (
+                  <ul className="space-y-1.5 mt-3 pt-3 border-t border-slate-700/30">
+                    {opt.cons.map((c) => (
+                      <li key={c} className="flex items-start gap-2 text-xs text-slate-500">
+                        <span className="text-slate-600 mt-0.5 shrink-0">✗</span>{c}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-slate-500 mt-6">
+            Not sure which approach fits your use case?{" "}
+            <Link href="/contact" className="text-sky-400 hover:text-sky-300 underline underline-offset-2 transition-colors">
+              Book a free consultation →
+            </Link>
+          </p>
         </div>
       </section>
 
