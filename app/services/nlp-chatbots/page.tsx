@@ -280,7 +280,7 @@ export default function RAGLLMPage() {
                 near-zero hallucination.
               </p>
               <p className="text-slate-400 leading-relaxed mb-4">
-                As a LangChain development company, I design and deploy production-grade RAG
+                As a RAG development company, I design and deploy production-grade RAG
                 pipelines using LangChain, LlamaIndex, and vector databases. Whether you need
                 enterprise AI solutions, an AI chatbot with RAG, or a document Q&amp;A assistant —
                 every build is grounded, observable, and production-ready. These systems pair
@@ -419,7 +419,7 @@ export default function RAGLLMPage() {
             {[
               { value: "117+",   label: "Projects Delivered" },
               { value: "100%",   label: "Job Success Score" },
-              { value: "Zero",   label: "Hallucinations Tolerated" },
+              { value: "Near-Zero", label: "Hallucination Rate" },
               { value: "24h",    label: "Response Time" },
             ].map((s) => (
               <div key={s.label} className="text-center p-4 rounded-xl border border-sky-900/20 bg-white/[0.02]">
