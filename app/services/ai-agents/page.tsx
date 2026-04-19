@@ -3,26 +3,30 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "AI Agent Development Services | LangChain & CrewAI | getyoteam",
+  title: "AI Agent Development Company | LangChain, CrewAI & LLM Agents | getyoteam",
   description:
-    "Build autonomous AI agents that work 24/7. Custom multi-agent systems with LangChain, CrewAI & Claude API. Top Rated Plus engineer · 117+ projects delivered.",
+    "Top-rated AI agent development company serving USA, Europe & Australia. Custom LLM agents, multi-agent systems & AI automation services. 117+ projects · 100% JSS.",
   keywords: [
-    "AI agent development",
+    "AI agent development company",
     "custom AI agents",
     "multi-agent systems",
     "LangChain development",
     "CrewAI development",
+    "LLM agents",
     "autonomous AI workflows",
     "AI automation services",
     "hire AI agent developer",
     "AI workflow automation",
     "business process automation AI",
+    "AI agent developer USA",
+    "AI agent development Australia",
+    "autonomous LLM workflows",
   ],
   alternates: { canonical: "https://getyoteam.com/services/ai-agents" },
   openGraph: {
-    title: "AI Agent Development Services | LangChain & CrewAI | getyoteam",
+    title: "AI Agent Development Company | LangChain, CrewAI & LLM Agents | getyoteam",
     description:
-      "Build autonomous AI agents that work 24/7. Custom multi-agent systems with LangChain, CrewAI & Claude API. Top Rated Plus engineer · 117+ projects.",
+      "Top-rated AI agent development company serving USA, Europe & Australia. Custom LLM agents, multi-agent systems & AI automation services. 117+ projects.",
     url: "https://getyoteam.com/services/ai-agents",
     type: "website",
     images: [
@@ -141,7 +145,7 @@ const process = [
   {
     step: "04",
     title: "Production Deployment",
-    desc: "The system ships with retries, logging, observability, and rate-limit handling. Every agent action is traceable. You can see exactly what each agent did, when, and why.",
+    desc: "I ship every agent with retries, logging, observability, and rate-limit handling. Every action is traceable — you can see exactly what each agent did, when, and why.",
   },
   {
     step: "05",
@@ -264,23 +268,25 @@ export default function AIAgentsPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-900/20 text-xs font-medium text-purple-300 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                Available for new projects
+                Serving clients in USA · Europe · Australia
               </div>
 
               <h1 className="section-heading text-white mb-5">
                 AI Agent Development<br />
-                <span className="gradient-text">Services</span>
+                <span className="gradient-text">Company</span>
               </h1>
 
               <p className="text-slate-300 text-lg leading-relaxed mb-4">
-                Build autonomous AI agents that research, decide, and act on your behalf —
-                24 hours a day, without manual intervention.
+                Build autonomous LLM agents and AI automation services that research, decide,
+                and act on your behalf — 24 hours a day, without manual intervention.
               </p>
               <p className="text-slate-400 leading-relaxed mb-8">
                 I design and deploy production-grade multi-agent systems using LangChain, CrewAI,
-                and Claude API. From a single workflow agent to complex pipelines where specialised
-                agents collaborate in parallel — every system ships with observability, retries,
-                and graceful error handling.
+                and Claude API. Whether you need a single workflow agent or a complex pipeline
+                where specialised LLM agents collaborate in parallel — every system ships with
+                observability, retries, and graceful error handling. Clients across the
+                USA, Europe, and Australia trust getyoteam to build AI agents that work reliably
+                in production, not just in demos.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -296,13 +302,13 @@ export default function AIAgentsPage() {
                   href="/contact"
                   className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm"
                 >
-                  Get a Free Quote →
+                  Start My AI Agent Project →
                 </Link>
                 <Link
                   href="/portfolio"
                   className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
                 >
-                  View Case Studies
+                  See AI Agent Examples
                 </Link>
               </div>
             </div>
@@ -419,11 +425,24 @@ export default function AIAgentsPage() {
             <h2 className="section-heading text-white mb-4">
               What Is <span className="gradient-text">AI Agent Development?</span>
             </h2>
-            <p className="text-slate-400 text-lg leading-relaxed">
+            <p className="text-slate-400 text-lg leading-relaxed mb-6">
               AI agents go beyond question-answering. They perceive a goal, plan a sequence
               of actions, use tools to execute those actions, observe the results, and iterate
               until the goal is achieved — all without a human steering every step.
             </p>
+            <div className="p-5 rounded-2xl bg-purple-900/15 border border-purple-700/30 text-left max-w-2xl mx-auto">
+              <p className="text-sm text-slate-300 leading-relaxed">
+                <span className="font-semibold text-purple-300">New to AI agents?</span>{" "}
+                Think of it this way: if ChatGPT answers your questions, an AI agent is that
+                same intelligence — but one that can also open your browser, do the research,
+                send the email, update your CRM, and report back when it&apos;s done. It acts,
+                not just responds. Many of our clients pair AI agents with{" "}
+                <Link href="/services/nlp-chatbots" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                  RAG & LLM applications
+                </Link>{" "}
+                for even richer automation.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -573,8 +592,66 @@ export default function AIAgentsPage() {
         </div>
       </section>
 
-      {/* ── TECH STACK ────────────────────────────────────────────────────── */}
+      {/* ── WHY WORK WITH ME ──────────────────────────────────────────────── */}
       <section className="py-16 bg-[#0a0a14]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+              Why getyoteam
+            </p>
+            <h2 className="section-heading text-white mb-4">
+              Why Work With <span className="gradient-text">Us?</span>
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Businesses in the USA, Europe, and Australia choose getyoteam for one reason:
+              AI automation services that work reliably in production — not just in demos.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              {
+                icon: "🏆",
+                title: "Top Rated Plus on Upwork",
+                desc: "Independently verified Top 3% globally — 100% Job Success Score across 117+ projects. Not self-reported, not inflated. Real client outcomes.",
+              },
+              {
+                icon: "🌍",
+                title: "USA · Europe · Australia",
+                desc: "I work across time zones and am available for calls between EST and AEST. Most clients are based in the US, UK, and Australia — scheduling is never a barrier.",
+              },
+              {
+                icon: "🔒",
+                title: "Production-First, Always",
+                desc: "Every LLM agent ships with retries, observability, and error handling built in from day one — not patched on after launch. What you see in the demo is what runs in production.",
+              },
+              {
+                icon: "⚡",
+                title: "Fast, Predictable Delivery",
+                desc: "Most proof-of-concept AI automation builds complete in under a week. Full production multi-agent systems typically ship in 2–4 weeks with a clear milestone plan.",
+              },
+              {
+                icon: "🤝",
+                title: "Direct Access, No Middlemen",
+                desc: "You work directly with Kumar Katariya — not an account manager. I design, build, and deliver every system personally, or with my trusted team under my direct oversight.",
+              },
+              {
+                icon: "📞",
+                title: "30-Day Post-Launch Support",
+                desc: "Every engagement includes a 30-day support window after deployment. AI agents need real-world tuning — I stay available until your system runs exactly as expected.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="card-glass p-6 border border-purple-900/20">
+                <span className="text-2xl block mb-3">{item.icon}</span>
+                <h3 className="font-bold text-white text-sm mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TECH STACK ────────────────────────────────────────────────────── */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
@@ -635,12 +712,35 @@ export default function AIAgentsPage() {
                 <span className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">RAG Agent</span>
                 <span className="text-xs text-slate-500">Case Study</span>
               </div>
-              <h3 className="font-bold text-white mb-2">RAG Document Intelligence Agent</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-5">
-                Built a multi-step RAG agent that ingests PDF documents, chunks and embeds them
-                into ChromaDB, then answers natural-language queries with source citations —
-                deployed live on Streamlit Cloud.
-              </p>
+              <h3 className="font-bold text-white mb-4">RAG Document Intelligence Agent</h3>
+
+              <div className="space-y-4 mb-5">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-red-400 mb-1">The Problem</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    A knowledge-intensive team was spending hours manually searching dense PDF
+                    reports and contracts. Standard search found keywords but missed context —
+                    they needed natural-language answers with cited sources, instantly.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-1">The Solution</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    Built a 6-step{" "}
+                    <Link href="/services/nlp-chatbots" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                      RAG pipeline
+                    </Link>{" "}
+                    using LangChain + ChromaDB + Gemini 1.5 Flash. Documents are chunked,
+                    embedded, and stored as vectors. At query time, the top relevant chunks
+                    are retrieved and passed to the LLM with a strict grounding instruction —
+                    no guessing from training data.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-green-400 mb-1">The Results</p>
+                </div>
+              </div>
+
               <div className="grid grid-cols-2 gap-3 mb-5">
                 {[
                   { value: "80%+", label: "Faster research" },
@@ -787,25 +887,30 @@ export default function AIAgentsPage() {
                 Available for new AI agent projects
               </div>
               <h2 className="section-heading text-white mb-4">
-                Ready to Automate with<br />
-                <span className="gradient-text">AI Agents?</span>
+                Stop Doing It Manually.<br />
+                <span className="gradient-text">Let an AI Agent Do It.</span>
               </h2>
-              <p className="text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed">
-                Tell me about the business process you want to automate. I will respond within
-                24 hours with a proposed architecture and timeline — no commitment required.
+              <p className="text-slate-400 max-w-xl mx-auto mb-3 leading-relaxed">
+                Describe the repetitive process costing your team the most time.
+                I will respond within 24 hours with a proposed agent architecture,
+                estimated timeline, and a plain-English explanation of how it works —
+                no commitment, no jargon.
+              </p>
+              <p className="text-xs text-slate-500 mb-8">
+                Trusted by businesses in the USA, UK, Europe &amp; Australia · Top Rated Plus · 100% Job Success
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/contact"
                   className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm"
                 >
-                  Get a Free Quote →
+                  Start My AI Agent Project →
                 </Link>
                 <Link
                   href="/portfolio"
                   className="px-8 py-3.5 rounded-full font-semibold text-slate-300 border border-purple-700/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
                 >
-                  Browse AI Projects
+                  See AI Agent Examples
                 </Link>
                 <a
                   href="https://www.upwork.com/freelancers/aimlengineer"
@@ -813,7 +918,7 @@ export default function AIAgentsPage() {
                   rel="noopener noreferrer"
                   className="px-8 py-3.5 rounded-full font-semibold text-green-300 border border-green-800/40 hover:border-green-600/60 hover:text-green-200 transition-all text-sm"
                 >
-                  Hire on Upwork
+                  Hire on Upwork (Top Rated)
                 </a>
               </div>
             </div>
