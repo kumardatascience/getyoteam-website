@@ -271,10 +271,12 @@ export default function AIAgentsPage() {
                 Serving clients in USA · Europe · Australia
               </div>
 
-              <h1 className="section-heading text-white mb-5">
-                AI Agent Development Company<br />
-                <span className="gradient-text">for USA, Europe &amp; Australia</span>
+              <h1 className="section-heading text-white mb-2">
+                AI Agent Development <span className="gradient-text">Company</span>
               </h1>
+              <p className="text-slate-400 text-base sm:text-lg font-medium mb-5">
+                Serving clients across USA, Europe &amp; Australia
+              </p>
 
               <p className="text-slate-400 leading-relaxed mb-4">
                 Build autonomous AI agents and LLM-powered agents that research, decide,
