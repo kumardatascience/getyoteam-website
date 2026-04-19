@@ -276,7 +276,7 @@ export default function AIAgentsPage() {
                 <span className="gradient-text">Company</span>
               </h1>
 
-              <p className="text-slate-300 text-lg leading-relaxed mb-4">
+              <p className="text-slate-400 leading-relaxed mb-4">
                 Build autonomous LLM agents and AI automation services that research, decide,
                 and act on your behalf — 24 hours a day, without manual intervention.
               </p>
