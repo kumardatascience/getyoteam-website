@@ -243,7 +243,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="/contact"
               className="text-xs font-semibold px-4 py-2 rounded-full gradient-bg text-white hover:opacity-90 transition-opacity"
             >
-              Hire Me →
+              Start Your AI Project →
             </Link>
           </div>
         </div>

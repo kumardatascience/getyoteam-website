@@ -161,7 +161,7 @@ export default async function ServicePage({ params }: Props) {
               href="/contact"
               className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm"
             >
-              Hire Me for This →
+              Start Your AI Project →
             </Link>
             <Link
               href="/portfolio"

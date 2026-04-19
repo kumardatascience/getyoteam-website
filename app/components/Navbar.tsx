@@ -140,7 +140,7 @@ export default function Navbar() {
               onClick={closeAll}
               className="px-5 py-2 rounded-full text-sm font-semibold gradient-bg text-white hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 animate-pulse-glow"
             >
-              Hire Me
+              Start Your AI Project
             </Link>
           </div>
 
@@ -226,7 +226,7 @@ export default function Navbar() {
                 onClick={closeAll}
                 className="block text-center py-3 px-3 text-sm font-semibold gradient-bg text-white rounded-full hover:opacity-90 transition-opacity"
               >
-                Hire Me
+                Start Your AI Project
               </Link>
             </li>
           </ul>

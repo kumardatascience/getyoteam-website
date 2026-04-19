@@ -150,7 +150,7 @@ export default function Hero() {
             href="#contact"
             className="px-8 py-3.5 rounded-full font-semibold text-white border border-purple-500/40 bg-white/5 hover:bg-white/10 hover:border-sky-400/50 transition-all hover:-translate-y-0.5"
           >
-            Hire Me →
+            Start Your AI Project →
           </a>
         </div>
 
