@@ -56,6 +56,19 @@ export default async function ServicePage({ params }: Props) {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.useCases.map((useCase) => ({
+      "@type": "Question",
+      name: `Can you build a ${useCase.toLowerCase()}?`,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `Yes — ${service.title} is one of my core specialisations. ${useCase}. Contact me at https://getyoteam.com/contact to discuss your project.`,
+      },
+    })),
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -80,6 +93,10 @@ export default async function ServicePage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"

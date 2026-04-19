@@ -55,11 +55,31 @@ export default async function CaseStudyPage({ params }: Props) {
     ],
   };
 
+  const creativeWorkSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.title,
+    description: project.shortDesc,
+    url: `https://getyoteam.com/portfolio/${slug}`,
+    applicationCategory: "BusinessApplication",
+    creator: {
+      "@type": "Person",
+      name: "Kumar Katariya",
+      url: "https://getyoteam.com",
+    },
+    keywords: project.tech.join(", "),
+    ...(project.liveUrl ? { installUrl: project.liveUrl } : {}),
+  };
+
   return (
     <div className="pt-24 pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 

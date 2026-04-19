@@ -61,7 +61,7 @@ export default function TechStack() {
             const colors = colorClasses[ci % colorClasses.length];
             return (
               <div key={cat.label} className="card-glass p-5 border border-purple-900/20">
-                <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">{cat.label}</p>
+                <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">{cat.label}</h3>
                 <div className="flex flex-wrap gap-2">
                   {cat.items.map((item) => (
                     <span

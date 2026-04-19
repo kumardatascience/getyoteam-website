@@ -37,9 +37,9 @@ export default function Achievements() {
     <section id="achievements" className="py-10 sm:py-14 border-y border-purple-900/20 bg-[#0a0a14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <p className="text-center text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-8">
+        <h2 className="text-center text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-8">
           Verified Credentials &amp; Achievements
-        </p>
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {achievements.map((b) => (

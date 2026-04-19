@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Nav */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Navigation</p>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Navigation</h3>
             <ul className="space-y-2">
               {nav.map((l) => (
                 <li key={l.href}>
@@ -91,7 +91,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Contact</p>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Contact</h3>
             <div className="space-y-2 text-sm text-slate-400">
               <p>
                 <a href="mailto:info@getyoteam.com" className="hover:text-white transition-colors">
