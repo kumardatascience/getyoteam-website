@@ -272,21 +272,32 @@ export default function AIAgentsPage() {
               </div>
 
               <h1 className="section-heading text-white mb-5">
-                AI Agent Development<br />
-                <span className="gradient-text">Company</span>
+                AI Agent Development Company<br />
+                <span className="gradient-text">for USA, Europe &amp; Australia</span>
               </h1>
 
               <p className="text-slate-400 leading-relaxed mb-4">
-                Build autonomous LLM agents and AI automation services that research, decide,
-                and act on your behalf — 24 hours a day, without manual intervention.
+                Build autonomous AI agents and LLM-powered agents that research, decide,
+                and act on your behalf — 24/7, without manual intervention. Our AI automation
+                services cover everything from single-task agents to complex multi-agent pipelines.
               </p>
-              <p className="text-slate-400 leading-relaxed mb-8">
-                I design and deploy production-grade multi-agent systems using LangChain, CrewAI,
-                and Claude API. Whether you need a single workflow agent or a complex pipeline
-                where specialised LLM agents collaborate in parallel — every system ships with
-                observability, retries, and graceful error handling. Clients across the
-                USA, Europe, and Australia trust getyoteam to build AI agents that work reliably
-                in production, not just in demos.
+              <p className="text-slate-400 leading-relaxed mb-4">
+                I design and deploy production-grade systems using LangChain, CrewAI, and Claude
+                API. Whether you need a standalone workflow agent or a pipeline where specialised
+                LLM agents collaborate in parallel, every build ships with observability, retries,
+                and graceful error handling. These can also be combined with{" "}
+                <Link href="/services/machine-learning" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                  machine learning solutions
+                </Link>{" "}
+                or{" "}
+                <Link href="/services/data-science" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                  data science consulting
+                </Link>{" "}
+                for end-to-end intelligence pipelines.
+              </p>
+              <p className="text-slate-500 text-sm leading-relaxed mb-8 italic">
+                Unlike generic AI demos, these systems are built for real production environments
+                with reliability, monitoring, and scalability in mind.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -491,8 +502,44 @@ export default function AIAgentsPage() {
         </div>
       </section>
 
-      {/* ── USE CASES ─────────────────────────────────────────────────────── */}
+      {/* ── WHEN DO YOU NEED AI AGENTS ────────────────────────────────────── */}
       <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+              Is This Right for You?
+            </p>
+            <h2 className="section-heading text-white mb-4">
+              When Do You Need <span className="gradient-text">AI Agents?</span>
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              AI agents deliver the most value when human time is the bottleneck.
+              Here are the clearest signals that autonomous AI agents are the right solution.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { icon: "🔁", title: "Repetitive manual workflows", desc: "Your team does the same multi-step task hundreds of times — copy data, send emails, update records. An agent does it in seconds, every time." },
+              { icon: "🧩", title: "Multi-step business processes", desc: "Your workflow involves 3+ decisions or handoffs between tools (CRM → email → spreadsheet → Slack). Agents chain these steps without human glue." },
+              { icon: "📊", title: "Data-heavy decision making", desc: "You need to pull data from multiple sources, analyse it, and act on it — daily or in real time. Agents do this continuously without analyst bottlenecks." },
+              { icon: "📈", title: "Need to scale without hiring", desc: "You want to 10× output without 10× headcount. AI automation services let you scale research, outreach, or support capacity at near-zero marginal cost." },
+              { icon: "🕐", title: "Need 24/7 automation", desc: "Your process can't wait for business hours — customer queries, data ingestion, or monitoring tasks that need to run overnight or across time zones." },
+              { icon: "⚠️", title: "Human error is costing you", desc: "Copy-paste mistakes, missed follow-ups, inconsistent formatting. Autonomous AI agents apply the same logic every single time — no fatigue, no shortcuts." },
+            ].map((item) => (
+              <div key={item.title} className="card-glass p-5 border border-purple-900/20 flex gap-4">
+                <span className="text-2xl shrink-0 mt-0.5">{item.icon}</span>
+                <div>
+                  <h3 className="font-semibold text-white text-sm mb-1">{item.title}</h3>
+                  <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── USE CASES ─────────────────────────────────────────────────────── */}
+      <section className="py-16 bg-[#0a0a14]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
@@ -706,7 +753,8 @@ export default function AIAgentsPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Case study card */}
+            {/* Case studies column */}
+            <div className="flex flex-col gap-4">
             <div className="card-glass p-6 border border-purple-900/20">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">RAG Agent</span>
@@ -757,6 +805,25 @@ export default function AIAgentsPage() {
               <Link href="/portfolio/rag-chatbot" className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
                 View full case study →
               </Link>
+            </div>
+
+            {/* Mini case: sales automation */}
+            <div className="card-glass p-5 border border-sky-900/20">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xs px-2.5 py-1 rounded-full bg-sky-900/30 text-sky-300 border border-sky-800/30">Sales Agent</span>
+                <span className="text-xs text-slate-500">Mini Case</span>
+              </div>
+              <h3 className="font-bold text-white text-sm mb-2">Outbound Sales Automation Agent</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Built a multi-step sales agent that researches prospects, personalises outreach
+                emails using company context scraped from their website, schedules follow-ups,
+                and logs every interaction to the client&apos;s CRM — replacing 3 hours of
+                manual SDR work per day with a fully autonomous{" "}
+                <Link href="/services/nlp-chatbots" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                  LLM-powered workflow
+                </Link>.
+              </p>
+            </div>
             </div>
 
             {/* Testimonials */}
@@ -887,8 +954,8 @@ export default function AIAgentsPage() {
                 Available for new AI agent projects
               </div>
               <h2 className="section-heading text-white mb-4">
-                Stop Doing It Manually.<br />
-                <span className="gradient-text">Let an AI Agent Do It.</span>
+                Stop Doing It Manually —<br />
+                <span className="gradient-text">Let AI Agents Handle It for You</span>
               </h2>
               <p className="text-slate-400 max-w-xl mx-auto mb-3 leading-relaxed">
                 Describe the repetitive process costing your team the most time.
