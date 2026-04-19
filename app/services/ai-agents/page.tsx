@@ -266,17 +266,13 @@ export default function AIAgentsPage() {
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: copy */}
             <div>
+              <h1 className="section-heading text-white mb-4">
+                AI Agent Development <span className="gradient-text">Company</span>
+              </h1>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-900/20 text-xs font-medium text-purple-300 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                 Serving clients in USA · Europe · Australia
               </div>
-
-              <h1 className="section-heading text-white mb-2">
-                AI Agent Development <span className="gradient-text">Company</span>
-              </h1>
-              <p className="text-slate-400 text-base sm:text-lg font-medium mb-5">
-                Serving clients across USA, Europe &amp; Australia
-              </p>
 
               <p className="text-slate-400 leading-relaxed mb-4">
                 Build autonomous AI agents and LLM-powered agents that research, decide,
