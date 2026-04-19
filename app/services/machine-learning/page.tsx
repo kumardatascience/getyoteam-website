@@ -44,42 +44,42 @@ const useCases = [
   {
     icon: "🚗",
     title: "Price Optimization & Prediction",
-    desc: "Built regression models to predict used car prices using historical data — helping businesses optimize pricing strategy and improve revenue with high-accuracy predictive analytics.",
+    desc: "Regression model for used car price prediction — helping businesses set competitive prices and improve revenue using ML-driven predictive analytics on historical transaction data.",
   },
   {
     icon: "💹",
     title: "Financial Behavior Analysis",
-    desc: "Analyzed trader behavior patterns to surface actionable insights — delivering ML-powered decision support for fintech analytics and financial risk management systems.",
+    desc: "Financial behavior analysis using ML to identify trader patterns and surface actionable insights — decision support for fintech analytics and risk management systems.",
   },
   {
     icon: "🏥",
     title: "Healthcare AI & Medical Diagnosis",
-    desc: "Developed deep learning models to detect pneumonia from chest X-rays — improving diagnostic support systems with image classification achieving clinical-grade accuracy.",
+    desc: "Medical imaging model using deep learning to detect pneumonia from chest X-rays — production-grade AI system for clinical diagnostic support with high accuracy.",
   },
   {
     icon: "🖼️",
     title: "Image Classification Systems",
-    desc: "Built CNN-based image classification models applicable to quality inspection, product categorization, and visual search — scalable to millions of images.",
+    desc: "CNN-based image classification system for quality inspection, product categorization, and visual search — scalable ML solutions applicable to millions of images.",
   },
   {
     icon: "📉",
     title: "Customer Churn Prediction",
-    desc: "End-to-end churn models using XGBoost and LightGBM — enabling businesses to identify at-risk customers before they leave and take targeted retention action.",
+    desc: "End-to-end churn predictive models using XGBoost and LightGBM — identify at-risk customers before they leave and drive targeted retention with data-backed scoring.",
   },
   {
     icon: "🔍",
     title: "Anomaly & Fraud Detection",
-    desc: "Real-time anomaly detection pipelines for financial transactions and operational data — flagging outliers with low false-positive rates using ensemble ML models.",
+    desc: "Real-time anomaly detection pipelines for financial transactions and operations — ensemble ML models flagging outliers with low false-positive rates.",
   },
   {
     icon: "📦",
     title: "Demand Forecasting",
-    desc: "Time series forecasting models (Prophet, LSTM, XGBoost) for inventory optimization and supply chain planning — reducing stockouts and overstock costs.",
+    desc: "Time series forecasting models (Prophet, LSTM, XGBoost) for inventory and supply chain — reducing stockout and overstock costs with accurate forward-looking predictions.",
   },
   {
     icon: "🎯",
     title: "Lead Scoring & Conversion",
-    desc: "ML pipelines that score inbound leads by conversion probability — helping sales teams prioritize effort and increase close rates with data-driven ranking.",
+    desc: "ML pipelines scoring inbound leads by conversion probability — sales teams prioritize effort on the highest-value opportunities with explainable, data-driven ranking.",
   },
 ];
 
@@ -232,29 +232,28 @@ export default function MachineLearningPage() {
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: copy */}
             <div>
-              <h1 className="section-heading text-white mb-4">
+              <h1 className="section-heading text-white mb-2">
                 Machine Learning <span className="gradient-text">Development Services</span>
               </h1>
+              <p className="text-lg font-medium text-slate-300 mb-4">
+                Predictive Analytics &amp; AI Models for Real-World Business Problems
+              </p>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-violet-500/30 bg-violet-900/20 text-xs font-medium text-violet-300 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                 Serving clients in USA · Europe · Australia
               </div>
 
               <p className="text-slate-400 leading-relaxed mb-4">
-                Build predictive analytics systems and AI models that turn your historical data
-                into competitive advantage. Our machine learning services cover everything from
-                ML model development and time series forecasting to production AI model
-                deployment — grounded in your real business data, not synthetic demos.
+                Turn your historical data into a competitive advantage with production-grade
+                predictive analytics and AI model development. From time series forecasting
+                to ML model deployment — every system is built for real business impact,
+                not a notebook demo.
               </p>
               <p className="text-slate-400 leading-relaxed mb-4">
-                As a machine learning development company, I build scalable predictive analytics
-                systems, recommendation engines, and time series forecasting models for
-                real-world business use cases. If you&apos;re looking to hire a machine learning
-                expert to build predictive models or production-ready AI systems, I can help
-                you design and deploy solutions tailored to your data.
-              </p>
-              <p className="text-slate-400 leading-relaxed mb-4">
-                These ML systems integrate naturally with{" "}
+                Looking to hire a machine learning engineer? I design and deploy custom ML
+                solutions — churn models, fraud detectors, demand forecasts, and recommendation
+                engines — tailored to your data and business goals. These systems integrate
+                naturally with{" "}
                 <Link href="/services/ai-agents" className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">
                   AI agents
                 </Link>{" "}
@@ -262,16 +261,15 @@ export default function MachineLearningPage() {
                 <Link href="/services/nlp-chatbots" className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">
                   RAG &amp; LLM applications
                 </Link>{" "}
-                for intelligent knowledge retrieval, or{" "}
+                for knowledge retrieval, or{" "}
                 <Link href="/services/data-science" className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">
                   data science solutions
                 </Link>{" "}
-                for end-to-end analytical pipelines.
+                for end-to-end pipelines.
               </p>
               <p className="text-slate-500 text-sm leading-relaxed mb-8 italic">
-                Unlike one-off model notebooks, every delivery is production-ready — with
-                feature pipelines, cross-validation, SHAP explanations, and API deployment
-                built in from day one.
+                Built for production — not just notebooks. Every delivery includes feature
+                pipelines, cross-validation, SHAP explanations, and API deployment from day one.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -587,7 +585,7 @@ export default function MachineLearningPage() {
               The ML Development <span className="gradient-text">Process</span>
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Every machine learning project I deliver follows the same rigorous pipeline —
+              Every project follows the same rigorous machine learning development process —
               from raw data to production-deployed, high-accuracy predictive models.
             </p>
           </div>
@@ -626,6 +624,7 @@ export default function MachineLearningPage() {
             <p className="text-slate-400 max-w-2xl mx-auto">
               Businesses in the USA, Europe, and Australia choose getyoteam because
               production ML is harder than a notebook demo — and we get it right the first time.
+              Focused on business outcomes, not just model accuracy.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -699,7 +698,7 @@ export default function MachineLearningPage() {
             {[
               { icon: "🧮", title: "Modelling", desc: "XGBoost, LightGBM, CatBoost, and scikit-learn ensembles — tuned with Optuna for optimized performance on your data." },
               { icon: "🔍", title: "Explainability", desc: "SHAP values for global and local feature importance — every prediction is traceable and stakeholder-presentable." },
-              { icon: "🚀", title: "Deployment", desc: "FastAPI + Docker on any cloud or on-premise — with input validation, logging, and automated retraining pipelines." },
+              { icon: "🚀", title: "Deployment", desc: "FastAPI + Docker on any cloud or on-premise — complete production deployment with input validation, logging, and automated retraining pipelines." },
             ].map((item) => (
               <div key={item.title} className="card-glass p-5 border border-violet-900/20 text-center">
                 <span className="text-2xl block mb-2">{item.icon}</span>
@@ -736,24 +735,22 @@ export default function MachineLearningPage() {
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-red-400 mb-1">The Problem</p>
                     <p className="text-slate-400 text-sm leading-relaxed">
-                      A fintech firm needed to assess company-level financial distress risk across
-                      thousands of candidates. Manual analysis of 94 financial ratios per company
-                      was infeasible. Existing rule-based scoring missed non-linear risk patterns
-                      and produced too many false negatives.
+                      A fintech firm needed to screen thousands of companies for financial distress
+                      risk. Manual analysis of 94 ratios per company was infeasible, and rule-based
+                      scoring missed non-linear patterns — producing too many false negatives.
                     </p>
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-1">The Solution</p>
                     <p className="text-slate-400 text-sm leading-relaxed">
-                      Built an ensemble stacking model combining XGBoost, LightGBM, and logistic
-                      regression — trained on 6,819 companies with 94 financial features.
-                      SHAP explanations made every risk flag interpretable. Deployed via FastAPI
-                      with a batch-scoring endpoint for portfolio-level screening. Pairs naturally
-                      with{" "}
+                      Built an ensemble stacking model (XGBoost + LightGBM + logistic regression)
+                      trained on 6,819 companies across 94 financial features. SHAP explanations
+                      made every risk flag interpretable. Deployed via FastAPI for batch portfolio
+                      screening — pairs with{" "}
                       <Link href="/services/data-science" className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">
                         data science pipelines
                       </Link>{" "}
-                      for automated report generation.
+                      for automated reporting.
                     </p>
                   </div>
                   <div>
