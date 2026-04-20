@@ -238,10 +238,6 @@ export default function MachineLearningPage() {
               <p className="text-lg font-medium text-slate-300 mb-4">
                 Predictive Analytics &amp; AI Models for Real-World Business Problems
               </p>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-violet-500/30 bg-violet-900/20 text-xs font-medium text-violet-300 mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                Serving clients in USA · Europe · Australia
-              </div>
 
               <p className="text-slate-400 leading-relaxed mb-4">
                 Turn your historical data into a competitive advantage with production-grade

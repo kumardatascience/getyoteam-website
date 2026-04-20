@@ -268,10 +268,6 @@ export default function RAGLLMPage() {
                 RAG &amp; LLM Application<br />
                 <span className="gradient-text">Development Services</span>
               </h1>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-500/30 bg-sky-900/20 text-xs font-medium text-sky-300 mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                Serving clients in USA · Europe · Australia
-              </div>
 
               <p className="text-slate-400 leading-relaxed mb-4">
                 Build AI chatbots with RAG and custom LLM applications that answer from <em>your</em> data —

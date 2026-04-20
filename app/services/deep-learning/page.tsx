@@ -234,10 +234,6 @@ export default function DeepLearningPage() {
               <p className="text-lg font-medium text-slate-300 mb-4">
                 CNNs, Transformers &amp; Neural Networks for Production AI
               </p>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-900/20 text-xs font-medium text-indigo-300 mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                Serving clients in USA · Europe · Australia
-              </div>
 
               <p className="text-slate-400 leading-relaxed mb-4">
                 Build deep learning systems for computer vision, NLP, and audio AI that solve
