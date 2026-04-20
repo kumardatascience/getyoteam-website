@@ -1023,13 +1023,13 @@ export default function DeepLearningPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm"
+                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm whitespace-nowrap"
                 >
                   Start My Deep Learning Project →
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-slate-300 border border-indigo-700/40 hover:border-indigo-500/60 hover:text-white transition-all text-sm"
+                  className="px-8 py-3.5 rounded-full font-semibold text-slate-300 border border-indigo-700/40 hover:border-indigo-500/60 hover:text-white transition-all text-sm whitespace-nowrap"
                 >
                   Book a Free Consultation
                 </Link>
@@ -1037,7 +1037,7 @@ export default function DeepLearningPage() {
                   href="https://www.upwork.com/freelancers/aimlengineer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-3.5 rounded-full font-semibold text-green-300 border border-green-800/40 hover:border-green-600/60 hover:text-green-200 transition-all text-sm"
+                  className="px-8 py-3.5 rounded-full font-semibold text-green-300 border border-green-800/40 hover:border-green-600/60 hover:text-green-200 transition-all text-sm whitespace-nowrap"
                 >
                   Hire on Upwork (Top Rated)
                 </a>
