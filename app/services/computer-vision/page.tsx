@@ -1027,10 +1027,10 @@ export default function ComputerVisionPage() {
               <p className="text-xs text-slate-500 mb-8">
                 Trusted by businesses in the USA, UK, Europe &amp; Australia · Top Rated Plus · 100% Job Success
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm"
+                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm whitespace-nowrap"
                 >
                   Start My Computer Vision Project →
                 </Link>
