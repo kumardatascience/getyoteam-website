@@ -118,7 +118,7 @@ export default function Footer() {
         <div className="border-t border-purple-900/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} getyoteam · Kumar Katariya. All rights reserved.</p>
           <p>
-            Machine Learning Development Services · Predictive Analytics Solutions · AI Model Development Company ·{" "}
+            Computer Vision Development Services · Image Recognition Solutions · Object Detection AI · AI Model Development Company · getyoteam ·{" "}
             <a href="/contact" className="hover:text-purple-400 transition-colors">getyoteam</a>
           </p>
         </div>

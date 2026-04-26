@@ -241,29 +241,33 @@ export default function ComputerVisionPage() {
               </p>
 
               <p className="text-slate-400 leading-relaxed mb-4">
-                Build computer vision development services that extract real insights from images
-                and video at scale. From image classification models and object detection systems
-                to video analytics AI and OCR document processing — our computer vision solutions
-                are built for production environments, not research notebooks.
+                Build production-grade computer vision solutions that extract real insights from
+                images and video at scale. From image recognition and object detection to
+                real-time video analytics and OCR systems — our computer vision development
+                services are designed for businesses that need accuracy, speed, and scalability
+                in production environments.
               </p>
               <p className="text-slate-400 leading-relaxed mb-4">
-                As a specialist computer vision development company, I design and deploy visual AI
-                systems using PyTorch, YOLO, OpenCV, and ResNet. Whether you need automated visual
-                inspection, real-time surveillance AI, or intelligent document processing, every
-                system ships with optimized inference, deployment-ready APIs, and full production
-                monitoring. These pipelines integrate naturally with{" "}
-                <Link href="/services/deep-learning" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
-                  deep learning
-                </Link>{" "}
-                infrastructure,{" "}
-                <Link href="/services/machine-learning" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                As a leading computer vision development company, I help startups and enterprises
+                design, train, and deploy custom computer vision models tailored to real-world use
+                cases. If you&apos;re looking to hire computer vision developers or build AI-powered
+                visual systems, I deliver end-to-end solutions — from data annotation to deployment
+                and monitoring.
+              </p>
+              <p className="text-slate-400 leading-relaxed mb-4">
+                These systems integrate naturally with{" "}
+                <Link href="/services/deep-learning/" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                  deep learning development
+                </Link>
+                ,{" "}
+                <Link href="/services/machine-learning/" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
                   machine learning solutions
                 </Link>
-                , or{" "}
-                <Link href="/services/nlp-chatbots" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                , and{" "}
+                <Link href="/services/rag-llm/" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
                   RAG &amp; LLM applications
                 </Link>{" "}
-                for end-to-end AI systems.
+                — enabling fully integrated AI systems across your business.
               </p>
               <p className="text-slate-500 text-sm leading-relaxed mb-8 italic">
                 Built for production — not demos. Every delivery includes annotation pipelines,
