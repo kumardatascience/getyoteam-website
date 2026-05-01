@@ -38,14 +38,10 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact.php", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          subject: "New Lead from getyoteam Website",
-          ...form,
-        }),
+        body: JSON.stringify(form),
       });
       const data = await res.json();
       if (data.success) {

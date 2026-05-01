@@ -38,6 +38,20 @@ jobs:
       - name: Build static export
         run: npm run build
 
+      - name: Inject Resend API key into contact.php
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          if [ -z "$RESEND_API_KEY" ]; then
+            echo "ERROR: RESEND_API_KEY secret is not set"
+            exit 1
+          fi
+          sed -i "s|__RESEND_API_KEY__|${RESEND_API_KEY}|g" out/api/contact.php
+          if grep -q "__RESEND_API_KEY__" out/api/contact.php; then
+            echo "ERROR: Failed to inject API key into contact.php"
+            exit 1
+          fi
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
