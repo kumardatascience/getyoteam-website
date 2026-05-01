@@ -37,10 +37,10 @@ export default function Home() {
       <Achievements />
       <Services />
       <Portfolio />
+      <TechStack />
       <KaggleSection />
       <About />
       <Testimonials />
-      <TechStack />
       <Contact />
     </>
   );
