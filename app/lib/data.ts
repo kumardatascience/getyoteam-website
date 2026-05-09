@@ -206,6 +206,38 @@ export const services: Service[] = [
 
 export const projects: Project[] = [
   {
+    slug: "research-agent",
+    title: "Multi-Source Research Agent",
+    shortDesc:
+      "Autonomous AI research agent that searches the live web, scrapes full article content, and synthesises a downloadable PDF report — built on a 4-node LangGraph workflow with Gemini & Groq backends, deployed live on Hugging Face Spaces.",
+    problem:
+      "Manual research is slow — opening dozens of browser tabs, skimming for relevance, copy-pasting fragments, then synthesising it all into a coherent report. Generic LLMs like ChatGPT help with the writing but only know what was in their training data — they never see live sources. Teams needed an agent that searches the real web, reads full article content (not just snippets), and produces a structured, citable report on demand.",
+    solution:
+      "Built a LangGraph agent with a 4-node workflow: (1) the LLM decomposes the topic into 4 targeted research questions; (2) Tavily API searches the web and returns 2 URLs per question; (3) BeautifulSoup scrapes the full article content from each URL; (4) a router decides whether enough material has been gathered or to loop back for more depth, then a final LLM node synthesises a structured report. Dual-backend support — Google Gemini 2.5 Flash or Groq Llama 3.3 — selectable at runtime. ReportLab renders the synthesis as a professional PDF for download. Packaged as a Streamlit app and deployed on Hugging Face Spaces via Docker — always active, never sleeps.",
+    tech: ["LangGraph", "LangChain", "Gemini 2.5 Flash", "Groq Llama 3.3", "Tavily", "BeautifulSoup4", "ReportLab", "Streamlit", "Python"],
+    metric: "4-node agent · live web sources · PDF export",
+    metricIcon: "🔍",
+    highlights: [
+      { value: "4", label: "LangGraph Nodes" },
+      { value: "2", label: "AI Backends" },
+      { value: "Live Web", label: "Data Source" },
+      { value: "PDF", label: "Report Export" },
+    ],
+    results: [
+      "4-node LangGraph workflow — question generation → web search → scraping → synthesis",
+      "Answers grounded in live web sources via Tavily — not stale model training data",
+      "Dual-backend support: Google Gemini 2.5 Flash and Groq Llama 3.3, switchable at runtime",
+      "Smart router loops for more depth when initial results are insufficient",
+      "Professional PDF reports generated via ReportLab — ready to share",
+      "Deployed live on Hugging Face Spaces with Docker — always-on, zero cold starts",
+    ],
+    category: ["All", "AI Agents", "NLP"],
+    liveUrl: "https://huggingface.co/spaces/kumardatascience/research-agent",
+    githubUrl: "https://github.com/kumardatascience/research-agent",
+    gradient: "from-blue-600/30 via-indigo-600/20 to-violet-600/30",
+    accent: "#6366f1",
+  },
+  {
     slug: "rag-chatbot",
     title: "RAG Document Chatbot",
     shortDesc:

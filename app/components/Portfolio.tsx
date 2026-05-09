@@ -4,7 +4,7 @@ import Link from "next/link";
 import { projects } from "@/app/lib/data";
 
 export default function Portfolio() {
-  const featured = projects.slice(0, 9);
+  const featured = projects.slice(0, 6);
 
   return (
     <section id="portfolio" className="py-12 sm:py-16 bg-[#0a0a14]">
