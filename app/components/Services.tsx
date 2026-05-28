@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { services } from "@/app/lib/data";
 
+// Cool azure-family palette (purple/violet/indigo retired) so cards
+// stay varied without reintroducing the old default-AI purple.
 const colorMap: Record<string, { border: string; badge: string; glow: string }> = {
-  purple: { border: "group-hover:border-purple-500/50",  badge: "bg-purple-900/40 text-purple-300",  glow: "group-hover:shadow-purple-500/10" },
+  purple: { border: "group-hover:border-sky-500/50",     badge: "bg-sky-900/40 text-sky-300",         glow: "group-hover:shadow-sky-500/10" },
   sky:    { border: "group-hover:border-sky-500/50",     badge: "bg-sky-900/40 text-sky-300",         glow: "group-hover:shadow-sky-500/10" },
-  violet: { border: "group-hover:border-violet-500/50",  badge: "bg-violet-900/40 text-violet-300",   glow: "group-hover:shadow-violet-500/10" },
+  violet: { border: "group-hover:border-cyan-500/50",    badge: "bg-cyan-900/40 text-cyan-300",       glow: "group-hover:shadow-cyan-500/10" },
   blue:   { border: "group-hover:border-blue-500/50",    badge: "bg-blue-900/40 text-blue-300",       glow: "group-hover:shadow-blue-500/10" },
-  indigo: { border: "group-hover:border-indigo-500/50",  badge: "bg-indigo-900/40 text-indigo-300",   glow: "group-hover:shadow-indigo-500/10" },
+  indigo: { border: "group-hover:border-teal-500/50",    badge: "bg-teal-900/40 text-teal-300",       glow: "group-hover:shadow-teal-500/10" },
   cyan:   { border: "group-hover:border-cyan-500/50",    badge: "bg-cyan-900/40 text-cyan-300",       glow: "group-hover:shadow-cyan-500/10" },
   teal:   { border: "group-hover:border-teal-500/50",    badge: "bg-teal-900/40 text-teal-300",       glow: "group-hover:shadow-teal-500/10" },
 };
@@ -17,7 +19,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-10">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             What I Build
           </p>
           <h2 className="section-heading text-white mb-4">
@@ -34,7 +36,7 @@ export default function Services() {
             return (
               <div
                 key={s.title}
-                className={`group card-glass p-6 border border-purple-900/20 ${c.border} transition-all duration-300 shadow-xl ${c.glow} hover:shadow-2xl flex flex-col`}
+                className={`group card-glass p-6 border border-brand/15 ${c.border} transition-all duration-300 shadow-xl ${c.glow} hover:shadow-2xl flex flex-col`}
               >
                 <div className="text-3xl mb-4">{s.icon}</div>
                 <h3 className="text-base font-bold text-white mb-2">{s.title}</h3>
@@ -49,7 +51,7 @@ export default function Services() {
                 {s.slug && (
                   <Link
                     href={`/services/${s.slug}`}
-                    className="text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors mt-auto"
+                    className="text-xs font-semibold text-brand hover:text-white transition-colors mt-auto"
                   >
                     Learn More →
                   </Link>
@@ -62,7 +64,7 @@ export default function Services() {
         <div className="mt-10 text-center">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-slate-300 border border-purple-900/30 hover:border-purple-500/50 hover:text-white bg-white/[0.03] transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-slate-300 border border-brand/25 hover:border-brand/50 hover:text-white bg-white/[0.03] transition-all"
           >
             View All Services →
           </Link>

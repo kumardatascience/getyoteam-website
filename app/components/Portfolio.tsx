@@ -7,11 +7,11 @@ export default function Portfolio() {
   const featured = projects.slice(0, 6);
 
   return (
-    <section id="portfolio" className="py-12 sm:py-16 bg-[#0a0a14]">
+    <section id="portfolio" className="py-12 sm:py-16 bg-[#0f0f11]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-8">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Real Projects, Real Results
           </p>
           <h2 className="section-heading text-white mb-4">
@@ -26,7 +26,7 @@ export default function Portfolio() {
           {featured.map((p) => (
             <div
               key={p.slug}
-              className="group flex flex-col rounded-2xl border border-purple-900/20 bg-[#0f0f1a] overflow-hidden hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-900/20"
+              className="group flex flex-col rounded-2xl border border-brand/15 bg-[#131316] overflow-hidden hover:border-brand/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand/15"
             >
               <div className={`bg-gradient-to-br ${p.gradient} relative overflow-hidden px-5 py-5`}>
                 <div className="absolute inset-0 bg-black/40" />
@@ -61,14 +61,14 @@ export default function Portfolio() {
               </div>
 
               <div className="flex flex-col flex-1 p-5">
-                <h3 className="text-base font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-base font-bold text-white mb-2 group-hover:text-brand transition-colors">
                   {p.title}
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-4 flex-1">{p.shortDesc}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.tech.slice(0, 4).map((t) => (
-                    <span key={t} className="text-xs px-2.5 py-0.5 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">
+                    <span key={t} className="text-xs px-2.5 py-0.5 rounded-full bg-brand/12 text-brand border border-brand/25">
                       {t}
                     </span>
                   ))}
@@ -114,7 +114,7 @@ export default function Portfolio() {
         <div className="mt-10 text-center">
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-slate-300 border border-purple-900/30 hover:border-purple-500/50 hover:text-white bg-white/[0.03] transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-slate-300 border border-brand/25 hover:border-brand/50 hover:text-white bg-white/[0.03] transition-all"
           >
             View All Projects →
           </Link>

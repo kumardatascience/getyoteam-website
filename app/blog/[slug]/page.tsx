@@ -40,10 +40,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const categoryColor: Record<string, string> = {
-  "AI":               "bg-purple-900/40 text-purple-300 border-purple-800/30",
+  "AI":               "bg-brand/40 text-brand border-brand/30",
   "Machine Learning": "bg-sky-900/40 text-sky-300 border-sky-800/30",
-  "NLP":              "bg-violet-900/40 text-violet-300 border-violet-800/30",
-  "Computer Vision":  "bg-indigo-900/40 text-indigo-300 border-indigo-800/30",
+  "NLP":              "bg-brand/40 text-brand border-brand/30",
+  "Computer Vision":  "bg-brand/40 text-brand border-brand/30",
   "Tutorials":        "bg-teal-900/40 text-teal-300 border-teal-800/30",
 };
 
@@ -74,10 +74,10 @@ function renderBlock(block: BodyBlock, i: number) {
 
     case "callout":
       return (
-        <div key={i} className="flex gap-4 p-5 rounded-xl border border-purple-800/40 bg-purple-900/10 my-6">
+        <div key={i} className="flex gap-4 p-5 rounded-xl border border-brand/40 bg-brand/10 my-6">
           <span className="text-2xl shrink-0 mt-0.5" role="img" aria-label={block.label}>{block.emoji}</span>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-purple-400 mb-1.5">{block.label}</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand mb-1.5">{block.label}</p>
             <p className="text-sm text-slate-300 leading-relaxed">{block.text}</p>
           </div>
         </div>
@@ -85,10 +85,10 @@ function renderBlock(block: BodyBlock, i: number) {
 
     case "diagram":
       return (
-        <div key={i} className="my-6 rounded-xl border border-purple-800/40 bg-[#080810] overflow-hidden">
+        <div key={i} className="my-6 rounded-xl border border-brand/40 bg-[#080810] overflow-hidden">
           {block.title && (
-            <div className="px-4 py-2.5 border-b border-purple-900/30 bg-purple-900/10">
-              <p className="text-xs font-bold uppercase tracking-widest text-purple-400">{block.title}</p>
+            <div className="px-4 py-2.5 border-b border-brand/30 bg-brand/10">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand">{block.title}</p>
             </div>
           )}
           <pre className="p-5 text-sm text-slate-300 font-mono leading-7 overflow-x-auto whitespace-pre">
@@ -101,7 +101,7 @@ function renderBlock(block: BodyBlock, i: number) {
       return (
         <div key={i} className="space-y-3 my-6">
           {block.items.map((item, j) => (
-            <div key={j} className="flex gap-4 p-4 rounded-xl border border-purple-900/20 bg-white/[0.02] hover:border-purple-800/40 transition-colors">
+            <div key={j} className="flex gap-4 p-4 rounded-xl border border-brand/20 bg-white/[0.02] hover:border-brand/40 transition-colors">
               <span className="text-2xl shrink-0 mt-0.5" role="img" aria-label={item.title}>{item.icon}</span>
               <div>
                 <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
@@ -116,7 +116,7 @@ function renderBlock(block: BodyBlock, i: number) {
       return (
         <div key={i} className="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
           {block.items.map((item, j) => (
-            <div key={j} className="p-4 rounded-xl border border-purple-900/20 bg-white/[0.02] text-center">
+            <div key={j} className="p-4 rounded-xl border border-brand/20 bg-white/[0.02] text-center">
               <p className="text-2xl font-extrabold gradient-text mb-1">{item.value}</p>
               <p className="text-xs text-slate-400">{item.label}</p>
             </div>
@@ -204,7 +204,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.title}
           </h1>
 
-          <p className="text-slate-400 text-lg leading-relaxed mb-10 border-l-2 border-purple-600 pl-4 italic">
+          <p className="text-slate-400 text-lg leading-relaxed mb-10 border-l-2 border-brand pl-4 italic">
             {post.excerpt}
           </p>
 
@@ -214,9 +214,9 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2 mt-10 pt-8 border-t border-purple-900/20">
+          <div className="flex flex-wrap gap-2 mt-10 pt-8 border-t border-brand/20">
             {post.tags.map((t) => (
-              <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-purple-900/20 text-purple-400 border border-purple-900/30">
+              <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-brand/20 text-brand border border-brand/30">
                 #{t}
               </span>
             ))}
@@ -224,7 +224,7 @@ export default async function BlogPostPage({ params }: Props) {
         </article>
 
         {/* Related Services — internal linking */}
-        <div className="mt-10 p-6 rounded-2xl border border-purple-900/20 bg-white/[0.02]">
+        <div className="mt-10 p-6 rounded-2xl border border-brand/20 bg-white/[0.02]">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-4">Need This Built for Your Business?</h2>
           <p className="text-slate-400 text-sm mb-4">
             Kumar Katariya builds production-grade AI systems like this. Explore related services or get in touch.
@@ -234,14 +234,14 @@ export default async function BlogPostPage({ params }: Props) {
               <Link
                 key={s.href}
                 href={s.href}
-                className="text-xs font-semibold px-4 py-2 rounded-full border border-purple-800/40 text-purple-300 hover:border-purple-500/60 hover:text-white transition-all"
+                className="text-xs font-semibold px-4 py-2 rounded-full border border-brand/40 text-brand hover:border-brand/60 hover:text-white transition-all"
               >
                 {s.label} →
               </Link>
             ))}
             <Link
               href="/contact"
-              className="text-xs font-semibold px-4 py-2 rounded-full gradient-bg text-white hover:opacity-90 transition-opacity"
+              className="text-xs font-semibold px-4 py-2 rounded-full btn-accent"
             >
               Start Your AI Project →
             </Link>
@@ -249,7 +249,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Author card */}
-        <div className="mt-6 card-glass p-6 border border-purple-900/20 flex items-start gap-4">
+        <div className="mt-6 card-glass p-6 border border-brand/20 flex items-start gap-4">
           <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold shrink-0" aria-label="Kumar Katariya">
             KK
           </div>
@@ -260,7 +260,7 @@ export default async function BlogPostPage({ params }: Props) {
               <Link href="/about" className="text-xs font-semibold text-slate-400 hover:text-white transition-colors">
                 About me →
               </Link>
-              <Link href="/contact" className="text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+              <Link href="/contact" className="text-xs font-semibold text-brand hover:text-white transition-colors">
                 Work with me →
               </Link>
             </div>
@@ -268,17 +268,17 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Prev / Next */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 pt-8 border-t border-purple-900/20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 pt-8 border-t border-brand/20">
           {prev ? (
-            <Link href={`/blog/${prev.slug}`} className="group flex flex-col p-4 rounded-xl border border-purple-900/20 hover:border-purple-500/30 transition-all">
+            <Link href={`/blog/${prev.slug}`} className="group flex flex-col p-4 rounded-xl border border-brand/20 hover:border-brand/30 transition-all">
               <span className="text-xs text-slate-500 mb-1">← Previous Post</span>
-              <span className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">{prev.title}</span>
+              <span className="text-sm font-semibold text-white group-hover:text-brand transition-colors">{prev.title}</span>
             </Link>
           ) : <div />}
           {next && (
-            <Link href={`/blog/${next.slug}`} className="group flex flex-col p-4 rounded-xl border border-purple-900/20 hover:border-purple-500/30 transition-all text-right ml-auto w-full">
+            <Link href={`/blog/${next.slug}`} className="group flex flex-col p-4 rounded-xl border border-brand/20 hover:border-brand/30 transition-all text-right ml-auto w-full">
               <span className="text-xs text-slate-500 mb-1">Next Post →</span>
-              <span className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">{next.title}</span>
+              <span className="text-sm font-semibold text-white group-hover:text-brand transition-colors">{next.title}</span>
             </Link>
           )}
         </div>

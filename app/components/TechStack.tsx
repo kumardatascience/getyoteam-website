@@ -41,20 +41,20 @@ const categories: Category[] = [
 ];
 
 const colorClasses = [
-  "border-purple-700/40 text-purple-300 bg-purple-900/15",
   "border-sky-700/40 text-sky-300 bg-sky-900/15",
-  "border-violet-700/40 text-violet-300 bg-violet-900/15",
+  "border-cyan-700/40 text-cyan-300 bg-cyan-900/15",
+  "border-teal-700/40 text-teal-300 bg-teal-900/15",
   "border-green-700/40 text-green-300 bg-green-900/15",
   "border-orange-700/40 text-orange-300 bg-orange-900/15",
 ];
 
 export default function TechStack() {
   return (
-    <section className="py-12 sm:py-16 bg-[#0a0a14]">
+    <section className="py-12 sm:py-16 bg-[#0f0f11]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-10">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Tools &amp; Technologies
           </p>
           <h2 className="section-heading text-white mb-4">
@@ -69,7 +69,7 @@ export default function TechStack() {
           {categories.map((cat, ci) => {
             const colors = colorClasses[ci % colorClasses.length];
             return (
-              <div key={cat.label} className="card-glass p-6 border border-purple-900/20 flex flex-col">
+              <div key={cat.label} className="card-glass p-6 border border-brand/15 flex flex-col">
                 <div className="flex items-center gap-2.5 mb-2.5">
                   <span className="text-2xl leading-none">{cat.icon}</span>
                   <h3 className="text-base font-bold text-white">{cat.label}</h3>

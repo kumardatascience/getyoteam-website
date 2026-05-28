@@ -3,12 +3,46 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
 }
 
+/* ──────────────────────────────────────────────────────────────
+   Site-wide palette — Azure brand + Neon-Lime accent on true black.
+   See AGENTS.md for the rules:
+     • brand (azure)  = links, borders, eyebrows, headings, hover targets
+     • accent (lime)  = PRIMARY CTAs and availability status ONLY
+     • hovers always resolve to brand (azure); never lime
+   ────────────────────────────────────────────────────────────── */
 :root {
-  --background: #07070f;
-  --foreground: #e2e8f0;
+  --background: #0a0a0b;
+  --foreground: #ececee;
+
+  /* brand / accent */
+  --brand: #00a8f0;
+  --brand-deep: #0086c2;
+  --accent: #b6ff3c;
+  --accent-ink: #15200a;
+  --accent-hover: #c7ff5e;
+
+  /* gradient-text stops (headings) */
+  --grad-1: #22d3ee;
+  --grad-2: #00a8f0;
+  --grad-3: #0ea5e9;
+  --grad-4: #22d3ee;
+
+  /* gradient-bg (solid fill) stops */
+  --fill-1: #00a8f0;
+  --fill-2: #22d3ee;
+
+  /* card-glass surface */
+  --card-bg: rgba(19, 19, 22, 0.85);
+  --card-border: rgba(0, 168, 240, 0.16);
+  --card-border-hover: rgba(0, 168, 240, 0.45);
+  --card-shadow: rgba(0, 168, 240, 0.15);
+  --card-shadow-ring: rgba(182, 255, 60, 0.12);
 }
 
 body {
@@ -19,9 +53,9 @@ body {
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #07070f; }
+::-webkit-scrollbar-track { background: var(--background); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #7c3aed, #0ea5e9);
+  background: linear-gradient(180deg, var(--brand), var(--grad-1));
   border-radius: 3px;
 }
 
@@ -40,8 +74,8 @@ body {
   100% { background-position: 0% 50%; }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
-  50%       { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6), 0 0 60px rgba(14, 165, 233, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 168, 240, 0.3); }
+  50%       { box-shadow: 0 0 40px rgba(0, 168, 240, 0.6), 0 0 60px rgba(182, 255, 60, 0.25); }
 }
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -59,14 +93,14 @@ body {
 .animate-blink      { animation: blink 1s step-end infinite; }
 
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 40%, #0ea5e9 80%, #38bdf8 100%);
+  background: linear-gradient(135deg, var(--grad-1) 0%, var(--grad-2) 40%, var(--grad-3) 80%, var(--grad-4) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-animate {
-  background: linear-gradient(270deg, #a78bfa, #7c3aed, #0ea5e9, #38bdf8);
+  background: linear-gradient(270deg, var(--grad-1), var(--grad-2), var(--grad-3), var(--grad-4));
   background-size: 300% 300%;
   animation: gradientShift 4s ease infinite;
   -webkit-background-clip: text;
@@ -75,20 +109,28 @@ body {
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #7c3aed, #0ea5e9);
+  background: linear-gradient(135deg, var(--fill-1), var(--fill-2));
 }
 
+/* Solid lime fill — primary call-to-action buttons (and ONLY those). */
+.btn-accent {
+  background: var(--accent);
+  color: var(--accent-ink);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-accent:hover { background: var(--accent-hover); }
+
 .card-glass {
-  background: rgba(15, 15, 26, 0.85);
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(124, 58, 237, 0.15);
+  border: 1px solid var(--card-border);
   border-radius: 16px;
   transition: all 0.3s ease;
 }
 .card-glass:hover {
-  border-color: rgba(14, 165, 233, 0.4);
+  border-color: var(--card-border-hover);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15), 0 0 0 1px rgba(14, 165, 233, 0.1);
+  box-shadow: 0 20px 40px var(--card-shadow), 0 0 0 1px var(--card-shadow-ring);
 }
 
 .section-heading {
@@ -100,4 +142,3 @@ body {
 @media (max-width: 768px) {
   .section-heading { font-size: 1.875rem; }
 }
-

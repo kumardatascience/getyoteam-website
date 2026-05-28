@@ -128,8 +128,8 @@ const techStack = [
   { name: "SQL",            color: "border-emerald-700/40 text-emerald-300 bg-emerald-900/15" },
   { name: "Tableau",        color: "border-orange-700/40 text-orange-300 bg-orange-900/15" },
   { name: "Power BI",       color: "border-yellow-700/40 text-yellow-300 bg-yellow-900/15" },
-  { name: "Matplotlib",     color: "border-indigo-700/40 text-indigo-300 bg-indigo-900/15" },
-  { name: "Plotly",         color: "border-violet-700/40 text-violet-300 bg-violet-900/15" },
+  { name: "Matplotlib",     color: "border-brand/40 text-brand bg-brand/15" },
+  { name: "Plotly",         color: "border-brand/40 text-brand bg-brand/15" },
   { name: "Jupyter",        color: "border-amber-700/40 text-amber-300 bg-amber-900/15" },
   { name: "SciPy / Statsmodels", color: "border-cyan-700/40 text-cyan-300 bg-cyan-900/15" },
   { name: "scikit-learn",   color: "border-green-700/40 text-green-300 bg-green-900/15" },
@@ -281,7 +281,7 @@ export default function DataSciencePage() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm whitespace-nowrap"
+                  className="px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm whitespace-nowrap"
                 >
                   Start My Data Science Project →
                 </Link>
@@ -400,7 +400,7 @@ export default function DataSciencePage() {
       </section>
 
       {/* ── WHAT IS DATA SCIENCE ─────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
@@ -514,7 +514,7 @@ export default function DataSciencePage() {
       </section>
 
       {/* ── USE CASES ─────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
@@ -575,7 +575,7 @@ export default function DataSciencePage() {
       </section>
 
       {/* ── PROCESS ───────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
@@ -671,7 +671,7 @@ export default function DataSciencePage() {
       </section>
 
       {/* ── TECH STACK ────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
@@ -847,7 +847,7 @@ export default function DataSciencePage() {
       </section>
 
       {/* ── DATA SCIENCE VS ML VS BI ─────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">
@@ -965,7 +965,7 @@ export default function DataSciencePage() {
       </section>
 
       {/* ── RELATED SERVICES ──────────────────────────────────────────────── */}
-      <section className="py-12 bg-[#0a0a14]">
+      <section className="py-12 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 text-center">
             Commonly Paired With
@@ -995,7 +995,7 @@ export default function DataSciencePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-3xl overflow-hidden border border-teal-700/30">
             <div className="absolute inset-0 gradient-bg opacity-10" />
-            <div className="absolute inset-0 bg-[#07070f]/80" />
+            <div className="absolute inset-0 bg-[#0a0a0b]/80" />
             <div
               className="absolute inset-0 opacity-[0.04]"
               style={{
@@ -1024,7 +1024,7 @@ export default function DataSciencePage() {
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm whitespace-nowrap"
+                  className="px-8 py-3.5 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/35 text-sm whitespace-nowrap"
                 >
                   Start My Data Science Project →
                 </Link>

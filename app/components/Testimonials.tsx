@@ -18,7 +18,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-8">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Client Reviews
           </p>
           <h2 className="section-heading text-white mb-4">
@@ -31,14 +31,14 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((t) => (
-            <div key={t.name} className="card-glass p-6 border border-purple-900/20 flex flex-col gap-4">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-purple-700/50 shrink-0" aria-hidden="true">
+            <div key={t.name} className="card-glass p-6 border border-brand/15 flex flex-col gap-4">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-brand/40 shrink-0" aria-hidden="true">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
               </svg>
 
               <p className="text-slate-300 leading-relaxed text-sm flex-1">&ldquo;{t.text}&rdquo;</p>
 
-              <div className="flex items-center gap-3 pt-2 border-t border-purple-900/20">
+              <div className="flex items-center gap-3 pt-2 border-t border-brand/15">
                 <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
                   {t.initials}
                 </div>

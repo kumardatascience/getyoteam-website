@@ -26,11 +26,11 @@ export const metadata: Metadata = {
 };
 
 const colorMap: Record<string, { bg: string; border: string; badge: string }> = {
-  purple: { bg: "from-purple-900/20 to-transparent", border: "border-purple-700/30 hover:border-purple-500/50", badge: "bg-purple-900/40 text-purple-300" },
+  purple: { bg: "from-brand/20 to-transparent", border: "border-brand/30 hover:border-brand/50", badge: "bg-brand/40 text-brand" },
   sky:    { bg: "from-sky-900/20 to-transparent",    border: "border-sky-700/30 hover:border-sky-500/50",       badge: "bg-sky-900/40 text-sky-300" },
-  violet: { bg: "from-violet-900/20 to-transparent", border: "border-violet-700/30 hover:border-violet-500/50", badge: "bg-violet-900/40 text-violet-300" },
+  violet: { bg: "from-brand/20 to-transparent", border: "border-brand/30 hover:border-brand/50", badge: "bg-brand/40 text-brand" },
   blue:   { bg: "from-blue-900/20 to-transparent",   border: "border-blue-700/30 hover:border-blue-500/50",     badge: "bg-blue-900/40 text-blue-300" },
-  indigo: { bg: "from-indigo-900/20 to-transparent", border: "border-indigo-700/30 hover:border-indigo-500/50", badge: "bg-indigo-900/40 text-indigo-300" },
+  indigo: { bg: "from-brand/20 to-transparent", border: "border-brand/30 hover:border-brand/50", badge: "bg-brand/40 text-brand" },
   cyan:   { bg: "from-cyan-900/20 to-transparent",   border: "border-cyan-700/30 hover:border-cyan-500/50",     badge: "bg-cyan-900/40 text-cyan-300" },
   teal:   { bg: "from-teal-900/20 to-transparent",   border: "border-teal-700/30 hover:border-teal-500/50",     badge: "bg-teal-900/40 text-teal-300" },
 };
@@ -58,7 +58,7 @@ export default function ServicesPage() {
         <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Services" }]} />
 
         <div className="mt-8 text-center mb-16">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             What I Build
           </p>
           <h1 className="section-heading text-white mb-4">
@@ -77,10 +77,10 @@ export default function ServicesPage() {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className={`group flex flex-col p-6 rounded-2xl bg-gradient-to-br ${c.bg} border ${c.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-900/20`}
+                className={`group flex flex-col p-6 rounded-2xl bg-gradient-to-br ${c.bg} border ${c.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand/20`}
               >
                 <span className="text-4xl mb-4" role="img" aria-label={s.title}>{s.icon}</span>
-                <h2 className="text-base font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <h2 className="text-base font-bold text-white mb-2 group-hover:text-brand transition-colors">
                   {s.title}
                 </h2>
                 <p className="text-sm text-slate-400 leading-relaxed mb-4 flex-1">{s.shortDesc}</p>
@@ -89,7 +89,7 @@ export default function ServicesPage() {
                     <span key={t} className={`text-xs px-2 py-0.5 rounded-full font-medium ${c.badge}`}>{t}</span>
                   ))}
                 </div>
-                <span className="text-xs font-semibold text-purple-400 group-hover:text-purple-300 transition-colors">
+                <span className="text-xs font-semibold text-brand group-hover:text-brand transition-colors">
                   Learn More →
                 </span>
               </Link>
@@ -99,23 +99,23 @@ export default function ServicesPage() {
 
         {/* Internal links */}
         <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm">
-          <Link href="/portfolio" className="text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+          <Link href="/portfolio" className="text-brand hover:text-white underline underline-offset-4 transition-colors">
             View Portfolio →
           </Link>
-          <Link href="/about" className="text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+          <Link href="/about" className="text-brand hover:text-white underline underline-offset-4 transition-colors">
             About Kumar →
           </Link>
         </div>
 
         {/* CTA */}
-        <div className="text-center p-8 rounded-2xl border border-purple-900/20 bg-white/[0.02]">
+        <div className="text-center p-8 rounded-2xl border border-brand/20 bg-white/[0.02]">
           <h2 className="text-xl font-bold text-white mb-3">Not sure which service fits your project?</h2>
           <p className="text-slate-400 mb-6 text-sm max-w-md mx-auto">
             Tell me what you&apos;re trying to build and I&apos;ll recommend the right approach.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm"
           >
             Start a Conversation →
           </Link>

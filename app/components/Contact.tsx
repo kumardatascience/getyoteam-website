@@ -59,7 +59,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-8">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Let&apos;s Build Together
           </p>
           <h2 className="section-heading text-white mb-4">
@@ -77,7 +77,7 @@ export default function Contact() {
             {[
               {
                 icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 text-purple-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 text-brand">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 ),
@@ -87,7 +87,7 @@ export default function Contact() {
               },
               {
                 icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 text-purple-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 text-brand">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                 ),
@@ -97,7 +97,7 @@ export default function Contact() {
               },
               {
                 icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 text-purple-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 text-brand">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
@@ -108,13 +108,13 @@ export default function Contact() {
               },
             ].map((item) => (
               <div key={item.label} className="flex gap-4 items-start">
-                <div className="p-2.5 rounded-lg bg-purple-900/30 border border-purple-800/30 shrink-0">
+                <div className="p-2.5 rounded-lg bg-brand/12 border border-brand/25 shrink-0">
                   {item.icon}
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 mb-0.5">{item.label}</p>
                   {item.href ? (
-                    <a href={item.href} className="text-sm text-white hover:text-purple-300 transition-colors font-medium">
+                    <a href={item.href} className="text-sm text-white hover:text-brand transition-colors font-medium">
                       {item.value}
                     </a>
                   ) : (
@@ -138,7 +138,7 @@ export default function Contact() {
             </a>
 
             {/* Response time */}
-            <div className="p-4 rounded-xl border border-purple-900/20 bg-white/[0.02]">
+            <div className="p-4 rounded-xl border border-brand/15 bg-white/[0.02]">
               <p className="text-xs text-slate-400 leading-relaxed">
                 <span className="text-green-400 font-semibold">⚡ Fast response:</span> I typically reply within
                 a few hours during IST business hours (Mon–Sat, 9am–7pm).
@@ -149,7 +149,7 @@ export default function Contact() {
           {/* Right — form */}
           <div className="lg:col-span-3">
             {status === "sent" ? (
-              <div className="card-glass p-10 border border-purple-900/20 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
+              <div className="card-glass p-10 border border-brand/15 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
                 <div className="w-14 h-14 rounded-full gradient-bg flex items-center justify-center mb-5">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -161,7 +161,7 @@ export default function Contact() {
                 </p>
                 <button
                   onClick={() => { setStatus("idle"); setForm({ name:"",email:"",company:"",service:"",budget:"",message:"" }); }}
-                  className="mt-6 px-6 py-2.5 rounded-full text-sm font-semibold gradient-bg text-white hover:opacity-90 transition-opacity"
+                  className="mt-6 px-6 py-2.5 rounded-full text-sm font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/25"
                 >
                   Send Another
                 </button>
@@ -176,7 +176,7 @@ export default function Contact() {
                 <h3 className="text-xl font-bold text-white mb-2">Something went wrong.</h3>
                 <p className="text-slate-400 text-sm max-w-sm">
                   Please email{" "}
-                  <a href="mailto:info@getyoteam.com" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">
+                  <a href="mailto:info@getyoteam.com" className="text-brand hover:text-white underline underline-offset-2">
                     info@getyoteam.com
                   </a>
                 </p>
@@ -188,14 +188,14 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="card-glass p-6 sm:p-8 border border-purple-900/20 space-y-5">
+              <form onSubmit={handleSubmit} className="card-glass p-6 sm:p-8 border border-brand/15 space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-medium text-slate-400 mb-1.5" htmlFor="name">Full Name *</label>
                     <input
                       id="name" name="name" required value={form.name} onChange={handleChange}
                       placeholder="John Smith"
-                      className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-purple-900/30 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-purple-500/60 focus:bg-white/[0.07] transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-brand/20 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand/60 focus:bg-white/[0.07] transition-all"
                     />
                   </div>
                   <div>
@@ -203,7 +203,7 @@ export default function Contact() {
                     <input
                       id="email" name="email" type="email" required value={form.email} onChange={handleChange}
                       placeholder="john@company.com"
-                      className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-purple-900/30 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-purple-500/60 focus:bg-white/[0.07] transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-brand/20 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand/60 focus:bg-white/[0.07] transition-all"
                     />
                   </div>
                 </div>
@@ -213,7 +213,7 @@ export default function Contact() {
                   <input
                     id="company" name="company" value={form.company} onChange={handleChange}
                     placeholder="Acme Corp (optional)"
-                    className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-purple-900/30 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-purple-500/60 focus:bg-white/[0.07] transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-brand/20 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand/60 focus:bg-white/[0.07] transition-all"
                   />
                 </div>
 
@@ -222,7 +222,7 @@ export default function Contact() {
                     <label className="block text-xs font-medium text-slate-400 mb-1.5" htmlFor="service">Service Needed *</label>
                     <select
                       id="service" name="service" required value={form.service} onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg bg-[#0f0f1a] border border-purple-900/30 text-slate-300 text-sm focus:outline-none focus:border-purple-500/60 transition-all appearance-none"
+                      className="w-full px-4 py-2.5 rounded-lg bg-[#131316] border border-brand/20 text-slate-300 text-sm focus:outline-none focus:border-brand/60 transition-all appearance-none"
                     >
                       <option value="">Select a service…</option>
                       {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -232,7 +232,7 @@ export default function Contact() {
                     <label className="block text-xs font-medium text-slate-400 mb-1.5" htmlFor="budget">Budget Range</label>
                     <select
                       id="budget" name="budget" value={form.budget} onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg bg-[#0f0f1a] border border-purple-900/30 text-slate-300 text-sm focus:outline-none focus:border-purple-500/60 transition-all appearance-none"
+                      className="w-full px-4 py-2.5 rounded-lg bg-[#131316] border border-brand/20 text-slate-300 text-sm focus:outline-none focus:border-brand/60 transition-all appearance-none"
                     >
                       <option value="">Select budget…</option>
                       {BUDGETS.map((b) => <option key={b} value={b}>{b}</option>)}
@@ -246,14 +246,14 @@ export default function Contact() {
                     id="message" name="message" required value={form.message} onChange={handleChange}
                     rows={5}
                     placeholder="Describe your project, goals, and any relevant context…"
-                    className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-purple-900/30 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-purple-500/60 focus:bg-white/[0.07] transition-all resize-none"
+                    className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-brand/20 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand/60 focus:bg-white/[0.07] transition-all resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-all shadow-lg shadow-purple-600/25 disabled:opacity-60 disabled:cursor-not-allowed text-sm flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 hover:shadow-[#b6ff3c]/45 disabled:opacity-60 disabled:cursor-not-allowed text-sm flex items-center justify-center gap-2"
                 >
                   {status === "sending" ? (
                     <>

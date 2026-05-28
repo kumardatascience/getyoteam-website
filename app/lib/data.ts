@@ -234,8 +234,8 @@ export const projects: Project[] = [
     category: ["All", "AI Agents", "NLP"],
     liveUrl: "https://huggingface.co/spaces/kumardatascience/research-agent",
     githubUrl: "https://github.com/kumardatascience/research-agent",
-    gradient: "from-blue-600/30 via-indigo-600/20 to-violet-600/30",
-    accent: "#6366f1",
+    gradient: "from-blue-600/30 via-cyan-600/20 to-brand/30",
+    accent: "#22d3ee",
   },
   {
     slug: "rag-chatbot",
@@ -265,8 +265,8 @@ export const projects: Project[] = [
     category: ["All", "NLP", "RAG"],
     liveUrl: "https://rag-document-chatbotgit-dqeamxetxufcy6vzaj7q9s.streamlit.app",
     githubUrl: "https://github.com/kumardatascience/rag-document-chatbot",
-    gradient: "from-purple-600/30 via-violet-600/20 to-indigo-600/30",
-    accent: "#7c3aed",
+    gradient: "from-brand/30 via-cyan-600/20 to-sky-500/30",
+    accent: "#00a8f0",
   },
   {
     slug: "pneumonia-detector",
@@ -298,7 +298,7 @@ export const projects: Project[] = [
     liveUrl: "https://pneumonia-app-cnn.onrender.com",
     githubUrl: "https://github.com/kumardatascience/pneumonia-app-cnn",
     gradient: "from-sky-600/30 via-blue-600/20 to-cyan-600/30",
-    accent: "#0ea5e9",
+    accent: "#00a8f0",
   },
   {
     slug: "bankruptcy-prediction",
@@ -422,8 +422,8 @@ export const projects: Project[] = [
     category: ["All", "ML"],
     liveUrl: null,
     githubUrl: "https://github.com/kumardatascience",
-    gradient: "from-violet-600/30 via-purple-600/20 to-fuchsia-600/30",
-    accent: "#8b5cf6",
+    gradient: "from-cyan-600/30 via-brand/20 to-teal-500/30",
+    accent: "#22d3ee",
   },
 ];
 
@@ -765,7 +765,7 @@ export const testimonials: Testimonial[] = [
     text: "Kumar acted with utmost professionalism and skill, working tirelessly to complete the project according to my standards. Highly recommended for any AI or ML project.",
     rating: 5,
     initials: "ES",
-    color: "from-purple-600 to-violet-600",
+    color: "from-brand to-brand",
   },
   {
     name: "Zhanna Shekhtmeyster",
@@ -841,7 +841,7 @@ export const achievements: Achievement[] = [
     title: "IBM Certified",
     sub: "Machine Learning & Data Science",
     badge: "Professional Cert",
-    color: "from-blue-500/20 to-indigo-500/10",
+    color: "from-blue-500/20 to-brand/10",
     border: "border-blue-500/20",
     glow: "shadow-blue-500/10",
   },
@@ -963,7 +963,7 @@ export const mobileApps: MobileApp[] = [
     tech: ["iOS", "Swift", "Education"],
     iosUrl: "https://apps.apple.com/us/app/abc-observe/id1545908680",
     androidUrl: null,
-    gradient: "from-violet-600 to-purple-900",
+    gradient: "from-brand to-brand",
   },
   {
     title: "Behavior Observation Made Easy",

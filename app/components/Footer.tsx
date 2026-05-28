@@ -49,7 +49,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-purple-900/20 bg-[#07070f]">
+    <footer className="border-t border-brand/20 bg-[#0a0a0b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
 
@@ -67,7 +67,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-purple-900/30 border border-purple-900/20 hover:border-purple-700/40 transition-all"
+                  className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-brand/30 border border-brand/20 hover:border-brand/40 transition-all"
                 >
                   {s.icon}
                 </a>
@@ -105,8 +105,8 @@ export default function Footer() {
               </p>
               <p>S.G Road, Ahmedabad 380051, India</p>
               <p className="pt-1">
-                <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-green-900/20 border border-green-800/30 text-green-400">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-accent/[0.06] border border-accent/35 text-accent">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                   Available for hire
                 </span>
               </p>
@@ -115,11 +115,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-purple-900/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="border-t border-brand/15 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} getyoteam · Kumar Katariya. All rights reserved.</p>
           <p>
             Computer Vision Development Services · Image Recognition Solutions · Object Detection AI · AI Model Development Company · getyoteam ·{" "}
-            <a href="/contact" className="hover:text-purple-400 transition-colors">getyoteam</a>
+            <a href="/contact" className="hover:text-brand transition-colors">getyoteam</a>
           </p>
         </div>
       </div>

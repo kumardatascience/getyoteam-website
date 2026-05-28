@@ -2,13 +2,13 @@ import { aboutHighlights } from "@/app/lib/data";
 
 export default function About() {
   return (
-    <section id="about" className="py-12 sm:py-16 bg-[#0a0a14]">
+    <section id="about" className="py-12 sm:py-16 bg-[#0f0f11]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left — text */}
           <div>
-            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
               About Me
             </p>
             <h2 className="section-heading text-white mb-6">
@@ -20,7 +20,7 @@ export default function About() {
               globally to solve their hardest problems using the latest in AI, LLMs, and data science.
             </p>
             <p className="text-slate-400 leading-relaxed mb-5">
-              As a <strong className="text-purple-300">Top Rated Plus freelancer</strong> on Upwork (Top 3% globally),
+              As a <strong className="text-brand">Top Rated Plus freelancer</strong> on Upwork (Top 3% globally),
               I&apos;ve delivered 117+ projects across industries including healthcare, finance, e-commerce,
               and enterprise — maintaining a perfect 100% Job Success Score throughout.
             </p>
@@ -33,7 +33,7 @@ export default function About() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="px-6 py-2.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-all shadow-lg shadow-purple-600/25 text-sm"
+                className="px-6 py-2.5 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/25 hover:shadow-[#b6ff3c]/40 text-sm"
               >
                 Start a Project
               </a>
@@ -41,7 +41,7 @@ export default function About() {
                 href="https://www.upwork.com/freelancers/aimlengineer"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2.5 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
+                className="px-6 py-2.5 rounded-full font-semibold text-slate-300 border border-brand/35 hover:border-brand/70 hover:text-white transition-all text-sm"
               >
                 View Upwork Profile →
               </a>
@@ -54,7 +54,7 @@ export default function About() {
               {aboutHighlights.map((h) => (
                 <div
                   key={h.label}
-                  className="card-glass p-5 border border-purple-900/20 text-center"
+                  className="card-glass p-5 border border-brand/15 text-center"
                 >
                   <p className="text-3xl font-extrabold gradient-text mb-1">{h.num}</p>
                   <p className="text-xs text-slate-400 font-medium">{h.label}</p>
@@ -62,7 +62,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="card-glass p-6 border border-purple-900/20 space-y-3">
+            <div className="card-glass p-6 border border-brand/15 space-y-3">
               {[
                 ["Location",     "Ahmedabad, India (GMT+5:30)"],
                 ["Email",        "info@getyoteam.com"],

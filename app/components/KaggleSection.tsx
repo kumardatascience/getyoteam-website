@@ -44,7 +44,7 @@ export default function KaggleSection() {
 
                 <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-purple-500 to-orange-400 transition-all"
+                    className="h-full rounded-full bg-gradient-to-r from-[#00a8f0] to-orange-400 transition-all"
                     style={{ width: `${barPct}%` }}
                   />
                 </div>
@@ -56,7 +56,7 @@ export default function KaggleSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {kaggleMedals.map((m) => (
-            <div key={m.label} className="flex items-center gap-4 p-4 rounded-xl border border-purple-900/20 bg-white/[0.03] hover:border-purple-500/30 transition-all">
+            <div key={m.label} className="flex items-center gap-4 p-4 rounded-xl border border-brand/15 bg-white/[0.03] hover:border-brand/40 transition-all">
               <span className="text-4xl shrink-0" role="img" aria-label={m.label}>{m.emoji}</span>
               <div>
                 <p className="text-sm font-semibold text-white">{m.label}</p>

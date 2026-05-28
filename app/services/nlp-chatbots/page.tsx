@@ -154,14 +154,14 @@ const process = [
 
 const techStack = [
   { name: "LangChain",    color: "border-green-700/40 text-green-300 bg-green-900/15" },
-  { name: "LlamaIndex",   color: "border-purple-700/40 text-purple-300 bg-purple-900/15" },
+  { name: "LlamaIndex",   color: "border-brand/40 text-brand bg-brand/15" },
   { name: "OpenAI",       color: "border-emerald-700/40 text-emerald-300 bg-emerald-900/15" },
   { name: "Claude API",   color: "border-orange-700/40 text-orange-300 bg-orange-900/15" },
   { name: "ChromaDB",     color: "border-sky-700/40 text-sky-300 bg-sky-900/15" },
   { name: "Pinecone",     color: "border-blue-700/40 text-blue-300 bg-blue-900/15" },
   { name: "FAISS",        color: "border-teal-700/40 text-teal-300 bg-teal-900/15" },
-  { name: "Weaviate",     color: "border-violet-700/40 text-violet-300 bg-violet-900/15" },
-  { name: "Python",       color: "border-indigo-700/40 text-indigo-300 bg-indigo-900/15" },
+  { name: "Weaviate",     color: "border-brand/40 text-brand bg-brand/15" },
+  { name: "Python",       color: "border-brand/40 text-brand bg-brand/15" },
   { name: "FastAPI",      color: "border-cyan-700/40 text-cyan-300 bg-cyan-900/15" },
   { name: "Streamlit",    color: "border-red-700/40 text-red-300 bg-red-900/15" },
   { name: "Docker",       color: "border-yellow-700/40 text-yellow-300 bg-yellow-900/15" },
@@ -243,12 +243,12 @@ export default function RAGLLMPage() {
       <section className="relative overflow-hidden pb-20">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-sky-700/15 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-brand/10 rounded-full blur-3xl" />
           <div
             className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(14,165,233,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.5) 1px,transparent 1px)",
+                "linear-gradient(rgba(0, 168, 240,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(0, 168, 240,0.5) 1px,transparent 1px)",
               backgroundSize: "60px 60px",
             }}
           />
@@ -309,7 +309,7 @@ export default function RAGLLMPage() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm"
+                  className="px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm"
                 >
                   Start My RAG Project →
                 </Link>
@@ -346,7 +346,7 @@ export default function RAGLLMPage() {
               <div className="grid grid-cols-2 gap-2 mb-3">
                 {[
                   { label: "Chunking", color: "bg-sky-900/30 border-sky-700/40 text-sky-300" },
-                  { label: "Embedding", color: "bg-violet-900/30 border-violet-700/40 text-violet-300" },
+                  { label: "Embedding", color: "bg-brand/30 border-brand/40 text-brand" },
                 ].map((a) => (
                   <div key={a.label} className={`rounded-lg border px-2 py-2 text-center text-xs font-medium ${a.color}`}>
                     {a.label}
@@ -359,7 +359,7 @@ export default function RAGLLMPage() {
 
               {/* Vector DB */}
               <div className="flex justify-center mb-3">
-                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-900/40 border border-purple-600/40 text-sm font-semibold text-purple-200 shadow-lg shadow-purple-900/30">
+                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand/40 border border-brand/40 text-sm font-semibold text-brand shadow-lg shadow-brand/30">
                   <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582 4-8 4s8 1.79 8 4" />
                   </svg>
@@ -428,7 +428,7 @@ export default function RAGLLMPage() {
       </section>
 
       {/* ── WHAT IS RAG ──────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-3">
@@ -477,13 +477,13 @@ export default function RAGLLMPage() {
                 icon: "🤖",
                 label: "RAG + Agent System",
                 points: ["Retrieves and acts autonomously", "Multi-source knowledge base", "Updates data in real time", "Full end-to-end automation"],
-                accent: "border-purple-600/60",
+                accent: "border-brand/60",
                 bad: false,
               },
             ].map((card) => (
               <div
                 key={card.label}
-                className={`card-glass p-6 border ${card.accent} ${card.accent === "border-purple-600/60" ? "shadow-lg shadow-purple-900/20" : ""}`}
+                className={`card-glass p-6 border ${card.accent} ${card.accent === "border-brand/60" ? "shadow-lg shadow-brand/20" : ""}`}
               >
                 <div className="text-3xl mb-3">{card.icon}</div>
                 <h3 className="font-bold text-white mb-4">{card.label}</h3>
@@ -540,7 +540,7 @@ export default function RAGLLMPage() {
       </section>
 
       {/* ── USE CASES ─────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-3">
@@ -558,7 +558,7 @@ export default function RAGLLMPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {useCases.map((uc) => (
               <div key={uc.title} className="card-glass p-5 border border-sky-900/20 group">
-                <div className="mb-3 p-2.5 rounded-xl bg-sky-900/20 border border-sky-800/30 w-fit text-sky-400 group-hover:text-purple-400 transition-colors">
+                <div className="mb-3 p-2.5 rounded-xl bg-sky-900/20 border border-sky-800/30 w-fit text-sky-400 group-hover:text-brand transition-colors">
                   {uc.icon}
                 </div>
                 <h3 className="font-semibold text-white text-sm mb-2">{uc.title}</h3>
@@ -601,7 +601,7 @@ export default function RAGLLMPage() {
       </section>
 
       {/* ── PROCESS ───────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-3">
@@ -696,7 +696,7 @@ export default function RAGLLMPage() {
       </section>
 
       {/* ── TECH STACK ────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-3">
@@ -803,9 +803,9 @@ export default function RAGLLMPage() {
               </div>
 
               {/* Mini case */}
-              <div className="card-glass p-5 border border-purple-900/20">
+              <div className="card-glass p-5 border border-brand/20">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">Legal RAG</span>
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-brand/30 text-brand border border-brand/30">Legal RAG</span>
                   <span className="text-xs text-slate-500">Mini Case</span>
                 </div>
                 <h3 className="font-bold text-white text-sm mb-2">Legal Contract Q&A System</h3>
@@ -829,7 +829,7 @@ export default function RAGLLMPage() {
                   name: "Erika Shapiro",
                   role: "CEO, Study Song LLC",
                   initials: "ES",
-                  color: "from-purple-600 to-violet-600",
+                  color: "from-brand to-brand",
                 },
                 {
                   quote: "Kumar and his team did a wonderful job. I now consider them an extension of my team. Their expertise in AI and attention to detail is outstanding.",
@@ -906,7 +906,7 @@ export default function RAGLLMPage() {
               {
                 label: "Fine-Tuned LLM",
                 icon: "🧠",
-                color: "border-purple-700/40",
+                color: "border-brand/40",
                 best: false,
                 pros: ["Deep domain knowledge", "Consistent tone & style", "Good for structured tasks"],
                 cons: ["Expensive to retrain on new data", "Cannot cite sources", "Outdated when data changes"],
@@ -957,7 +957,7 @@ export default function RAGLLMPage() {
       </section>
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold uppercase tracking-widest text-sky-400 mb-3">
@@ -1021,12 +1021,12 @@ export default function RAGLLMPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-3xl overflow-hidden border border-sky-700/30">
             <div className="absolute inset-0 gradient-bg opacity-10" />
-            <div className="absolute inset-0 bg-[#07070f]/80" />
+            <div className="absolute inset-0 bg-[#0a0a0b]/80" />
             <div
               className="absolute inset-0 opacity-[0.04]"
               style={{
                 backgroundImage:
-                  "linear-gradient(rgba(14,165,233,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.8) 1px,transparent 1px)",
+                  "linear-gradient(rgba(0, 168, 240,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(0, 168, 240,0.8) 1px,transparent 1px)",
                 backgroundSize: "40px 40px",
               }}
             />
@@ -1050,7 +1050,7 @@ export default function RAGLLMPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm"
+                  className="px-8 py-3.5 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/35 text-sm"
                 >
                   Start My RAG Project →
                 </Link>

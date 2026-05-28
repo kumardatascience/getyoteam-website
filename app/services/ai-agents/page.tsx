@@ -156,17 +156,17 @@ const process = [
 
 const techStack = [
   { name: "LangChain",   color: "border-green-700/40 text-green-300 bg-green-900/15" },
-  { name: "CrewAI",      color: "border-purple-700/40 text-purple-300 bg-purple-900/15" },
+  { name: "CrewAI",      color: "border-brand/40 text-brand bg-brand/15" },
   { name: "Claude API",  color: "border-orange-700/40 text-orange-300 bg-orange-900/15" },
   { name: "AutoGen",     color: "border-sky-700/40 text-sky-300 bg-sky-900/15" },
   { name: "OpenAI",      color: "border-emerald-700/40 text-emerald-300 bg-emerald-900/15" },
   { name: "FastAPI",     color: "border-teal-700/40 text-teal-300 bg-teal-900/15" },
   { name: "Python",      color: "border-blue-700/40 text-blue-300 bg-blue-900/15" },
   { name: "Docker",      color: "border-cyan-700/40 text-cyan-300 bg-cyan-900/15" },
-  { name: "PostgreSQL",  color: "border-indigo-700/40 text-indigo-300 bg-indigo-900/15" },
+  { name: "PostgreSQL",  color: "border-brand/40 text-brand bg-brand/15" },
   { name: "Redis",       color: "border-red-700/40 text-red-300 bg-red-900/15" },
   { name: "AWS Lambda",  color: "border-yellow-700/40 text-yellow-300 bg-yellow-900/15" },
-  { name: "Langfuse",    color: "border-violet-700/40 text-violet-300 bg-violet-900/15" },
+  { name: "Langfuse",    color: "border-brand/40 text-brand bg-brand/15" },
 ];
 
 const faqs = [
@@ -244,13 +244,13 @@ export default function AIAgentsPage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden pb-20">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-700/15 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand/15 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl" />
           <div
             className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(124,58,237,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.5) 1px,transparent 1px)",
+                "linear-gradient(rgba(0, 168, 240,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(0, 168, 240,0.5) 1px,transparent 1px)",
               backgroundSize: "60px 60px",
             }}
           />
@@ -280,11 +280,11 @@ export default function AIAgentsPage() {
                 API. Whether you need a standalone workflow agent or a pipeline where specialised
                 LLM agents collaborate in parallel, every build ships with observability, retries,
                 and graceful error handling. These can also be combined with{" "}
-                <Link href="/services/machine-learning" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/machine-learning" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   machine learning solutions
                 </Link>{" "}
                 or{" "}
-                <Link href="/services/data-science" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/data-science" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   data science consulting
                 </Link>{" "}
                 for end-to-end intelligence pipelines.
@@ -296,7 +296,7 @@ export default function AIAgentsPage() {
 
               <div className="flex flex-wrap gap-3 mb-8">
                 {["LangChain", "CrewAI", "Claude API", "AutoGen"].map((t) => (
-                  <span key={t} className="text-xs px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30 font-medium">
+                  <span key={t} className="text-xs px-3 py-1 rounded-full bg-brand/30 text-brand border border-brand/30 font-medium">
                     {t}
                   </span>
                 ))}
@@ -305,13 +305,13 @@ export default function AIAgentsPage() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm"
+                  className="px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm"
                 >
                   Start My AI Agent Project →
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
+                  className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-brand/40 hover:border-brand/60 hover:text-white transition-all text-sm"
                 >
                   See AI Agent Examples
                 </Link>
@@ -319,8 +319,8 @@ export default function AIAgentsPage() {
             </div>
 
             {/* Right: agent architecture diagram */}
-            <div className="card-glass p-6 border border-purple-900/30">
-              <p className="text-xs font-bold uppercase tracking-widest text-purple-400 mb-5">
+            <div className="card-glass p-6 border border-brand/30">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand mb-5">
                 Multi-Agent Architecture
               </p>
 
@@ -334,12 +334,12 @@ export default function AIAgentsPage() {
                 </div>
               </div>
               <div className="flex justify-center mb-3">
-                <div className="w-px h-6 bg-purple-700/50" />
+                <div className="w-px h-6 bg-brand/50" />
               </div>
 
               {/* Orchestrator */}
               <div className="flex justify-center mb-3">
-                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-900/40 border border-purple-600/40 text-sm font-semibold text-purple-200 shadow-lg shadow-purple-900/30">
+                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand/40 border border-brand/40 text-sm font-semibold text-brand shadow-lg shadow-brand/30">
                   <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
                   </svg>
@@ -350,22 +350,22 @@ export default function AIAgentsPage() {
               {/* Branch lines */}
               <div className="flex justify-center gap-16 mb-3">
                 <div className="flex flex-col items-center">
-                  <div className="w-px h-4 bg-purple-700/50" />
+                  <div className="w-px h-4 bg-brand/50" />
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-px h-4 bg-sky-700/50" />
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="w-px h-4 bg-violet-700/50" />
+                  <div className="w-px h-4 bg-brand/50" />
                 </div>
               </div>
 
               {/* Sub-agents */}
               <div className="grid grid-cols-3 gap-2 mb-3">
                 {[
-                  { label: "Research Agent", color: "bg-purple-900/30 border-purple-700/40 text-purple-300" },
+                  { label: "Research Agent", color: "bg-brand/30 border-brand/40 text-brand" },
                   { label: "Writing Agent",  color: "bg-sky-900/30 border-sky-700/40 text-sky-300" },
-                  { label: "Tool Agent",     color: "bg-violet-900/30 border-violet-700/40 text-violet-300" },
+                  { label: "Tool Agent",     color: "bg-brand/30 border-brand/40 text-brand" },
                 ].map((a) => (
                   <div key={a.label} className={`rounded-lg border px-2 py-2 text-center text-xs font-medium ${a.color}`}>
                     {a.label}
@@ -411,7 +411,7 @@ export default function AIAgentsPage() {
               { value: "Top 3%",  label: "Upwork Globally" },
               { value: "24h",     label: "Response Time" },
             ].map((s) => (
-              <div key={s.label} className="text-center p-4 rounded-xl border border-purple-900/20 bg-white/[0.02]">
+              <div key={s.label} className="text-center p-4 rounded-xl border border-brand/20 bg-white/[0.02]">
                 <p className="text-2xl font-extrabold gradient-text mb-1">{s.value}</p>
                 <p className="text-xs text-slate-400">{s.label}</p>
               </div>
@@ -421,10 +421,10 @@ export default function AIAgentsPage() {
       </section>
 
       {/* ── WHAT ARE AI AGENTS ─────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Understanding AI Agents
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -435,14 +435,14 @@ export default function AIAgentsPage() {
               of actions, use tools to execute those actions, observe the results, and iterate
               until the goal is achieved — all without a human steering every step.
             </p>
-            <div className="p-5 rounded-2xl bg-purple-900/15 border border-purple-700/30 text-left max-w-2xl mx-auto">
+            <div className="p-5 rounded-2xl bg-brand/15 border border-brand/30 text-left max-w-2xl mx-auto">
               <p className="text-sm text-slate-300 leading-relaxed">
-                <span className="font-semibold text-purple-300">New to AI agents?</span>{" "}
+                <span className="font-semibold text-brand">New to AI agents?</span>{" "}
                 Think of it this way: if ChatGPT answers your questions, an AI agent is that
                 same intelligence — but one that can also open your browser, do the research,
                 send the email, update your CRM, and report back when it&apos;s done. It acts,
                 not just responds. Many of our clients pair AI agents with{" "}
-                <Link href="/services/nlp-chatbots" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/nlp-chatbots" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   RAG & LLM applications
                 </Link>{" "}
                 for even richer automation.
@@ -470,20 +470,20 @@ export default function AIAgentsPage() {
                 icon: "🤖",
                 label: "Multi-Agent System",
                 points: ["Parallel specialised agents", "Orchestrator + sub-agents", "Complex pipelines", "Production-grade reliability"],
-                accent: "border-purple-600/60",
+                accent: "border-brand/60",
                 bad: false,
               },
             ].map((card) => (
               <div
                 key={card.label}
-                className={`card-glass p-6 border ${card.accent} ${card.accent === "border-purple-600/60" ? "shadow-lg shadow-purple-900/20" : ""}`}
+                className={`card-glass p-6 border ${card.accent} ${card.accent === "border-brand/60" ? "shadow-lg shadow-brand/20" : ""}`}
               >
                 <div className="text-3xl mb-3">{card.icon}</div>
                 <h3 className="font-bold text-white mb-4">{card.label}</h3>
                 <ul className="space-y-2">
                   {card.points.map((pt) => (
                     <li key={pt} className="flex items-start gap-2 text-sm text-slate-400">
-                      <span className={`mt-0.5 shrink-0 ${card.bad ? "text-slate-600" : "text-purple-400"}`}>
+                      <span className={`mt-0.5 shrink-0 ${card.bad ? "text-slate-600" : "text-brand"}`}>
                         {card.bad ? "○" : "✓"}
                       </span>
                       {pt}
@@ -500,7 +500,7 @@ export default function AIAgentsPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Is This Right for You?
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -520,7 +520,7 @@ export default function AIAgentsPage() {
               { icon: "🕐", title: "Need 24/7 automation", desc: "Your process can't wait for business hours — customer queries, data ingestion, or monitoring tasks that need to run overnight or across time zones." },
               { icon: "⚠️", title: "Human error is costing you", desc: "Copy-paste mistakes, missed follow-ups, inconsistent formatting. Autonomous AI agents apply the same logic every single time — no fatigue, no shortcuts." },
             ].map((item) => (
-              <div key={item.title} className="card-glass p-5 border border-purple-900/20 flex gap-4">
+              <div key={item.title} className="card-glass p-5 border border-brand/20 flex gap-4">
                 <span className="text-2xl shrink-0 mt-0.5">{item.icon}</span>
                 <div>
                   <h3 className="font-semibold text-white text-sm mb-1">{item.title}</h3>
@@ -533,10 +533,10 @@ export default function AIAgentsPage() {
       </section>
 
       {/* ── USE CASES ─────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Applications
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -550,8 +550,8 @@ export default function AIAgentsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {useCases.map((uc) => (
-              <div key={uc.title} className="card-glass p-5 border border-purple-900/20 group">
-                <div className="mb-3 p-2.5 rounded-xl bg-purple-900/20 border border-purple-800/30 w-fit text-purple-400 group-hover:text-sky-400 transition-colors">
+              <div key={uc.title} className="card-glass p-5 border border-brand/20 group">
+                <div className="mb-3 p-2.5 rounded-xl bg-brand/20 border border-brand/30 w-fit text-brand group-hover:text-sky-400 transition-colors">
                   {uc.icon}
                 </div>
                 <h3 className="font-semibold text-white text-sm mb-2">{uc.title}</h3>
@@ -563,10 +563,10 @@ export default function AIAgentsPage() {
       </section>
 
       {/* ── INDUSTRIES ────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Who We Serve
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -582,7 +582,7 @@ export default function AIAgentsPage() {
             {industries.map((ind) => (
               <div
                 key={ind.name}
-                className="card-glass p-5 border border-purple-900/20 text-center group hover:border-purple-500/30 transition-all"
+                className="card-glass p-5 border border-brand/20 text-center group hover:border-brand/30 transition-all"
               >
                 <span className="text-3xl block mb-2">{ind.icon}</span>
                 <h3 className="font-semibold text-white text-sm mb-1">{ind.name}</h3>
@@ -597,7 +597,7 @@ export default function AIAgentsPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               How We Work
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -618,7 +618,7 @@ export default function AIAgentsPage() {
                     {step.step}
                   </div>
                   {i < process.length - 1 && (
-                    <div className="w-px flex-1 bg-gradient-to-b from-purple-700/50 to-transparent my-1" style={{ minHeight: "2.5rem" }} />
+                    <div className="w-px flex-1 bg-gradient-to-b from-brand/50 to-transparent my-1" style={{ minHeight: "2.5rem" }} />
                   )}
                 </div>
 
@@ -634,10 +634,10 @@ export default function AIAgentsPage() {
       </section>
 
       {/* ── WHY WORK WITH ME ──────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Why getyoteam
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -681,7 +681,7 @@ export default function AIAgentsPage() {
                 desc: "Every engagement includes a 30-day support window after deployment. AI agents need real-world tuning — I stay available until your system runs exactly as expected.",
               },
             ].map((item) => (
-              <div key={item.title} className="card-glass p-6 border border-purple-900/20">
+              <div key={item.title} className="card-glass p-6 border border-brand/20">
                 <span className="text-2xl block mb-3">{item.icon}</span>
                 <h3 className="font-bold text-white text-sm mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
@@ -695,7 +695,7 @@ export default function AIAgentsPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Technology
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -724,7 +724,7 @@ export default function AIAgentsPage() {
               { icon: "🔍", title: "Observability", desc: "Langfuse traces every agent decision — full auditability in production." },
               { icon: "🚀", title: "Deployment", desc: "FastAPI + Docker on AWS Lambda or any cloud — scale from 0 to thousands of runs per day." },
             ].map((item) => (
-              <div key={item.title} className="card-glass p-5 border border-purple-900/20 text-center">
+              <div key={item.title} className="card-glass p-5 border border-brand/20 text-center">
                 <span className="text-2xl block mb-2">{item.icon}</span>
                 <h3 className="font-semibold text-white text-sm mb-2">{item.title}</h3>
                 <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
@@ -738,7 +738,7 @@ export default function AIAgentsPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Proven Results
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -749,9 +749,9 @@ export default function AIAgentsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Case studies column */}
             <div className="flex flex-col gap-4">
-            <div className="card-glass p-6 border border-purple-900/20">
+            <div className="card-glass p-6 border border-brand/20">
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">RAG Agent</span>
+                <span className="text-xs px-2.5 py-1 rounded-full bg-brand/30 text-brand border border-brand/30">RAG Agent</span>
                 <span className="text-xs text-slate-500">Case Study</span>
               </div>
               <h3 className="font-bold text-white mb-4">RAG Document Intelligence Agent</h3>
@@ -769,7 +769,7 @@ export default function AIAgentsPage() {
                   <p className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-1">The Solution</p>
                   <p className="text-slate-400 text-sm leading-relaxed">
                     Built a 6-step{" "}
-                    <Link href="/services/nlp-chatbots" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                    <Link href="/services/nlp-chatbots" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                       RAG pipeline
                     </Link>{" "}
                     using LangChain + ChromaDB + Gemini 1.5 Flash. Documents are chunked,
@@ -790,13 +790,13 @@ export default function AIAgentsPage() {
                   { value: "6",    label: "Pipeline steps" },
                   { value: "Free", label: "Hosting cost" },
                 ].map((m) => (
-                  <div key={m.label} className="rounded-xl bg-purple-900/20 border border-purple-800/20 p-3 text-center">
+                  <div key={m.label} className="rounded-xl bg-brand/20 border border-brand/20 p-3 text-center">
                     <p className="text-xl font-extrabold gradient-text">{m.value}</p>
                     <p className="text-xs text-slate-400 mt-0.5">{m.label}</p>
                   </div>
                 ))}
               </div>
-              <Link href="/portfolio/rag-chatbot" className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
+              <Link href="/portfolio/rag-chatbot" className="text-sm text-brand hover:text-white transition-colors">
                 View full case study →
               </Link>
             </div>
@@ -813,7 +813,7 @@ export default function AIAgentsPage() {
                 emails using company context scraped from their website, schedules follow-ups,
                 and logs every interaction to the client&apos;s CRM — replacing 3 hours of
                 manual SDR work per day with a fully autonomous{" "}
-                <Link href="/services/nlp-chatbots" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/nlp-chatbots" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   LLM-powered workflow
                 </Link>.
               </p>
@@ -828,7 +828,7 @@ export default function AIAgentsPage() {
                   name: "Erika Shapiro",
                   role: "CEO, Study Song LLC",
                   initials: "ES",
-                  color: "from-purple-600 to-violet-600",
+                  color: "from-brand to-brand",
                 },
                 {
                   quote: "Kumar and his team did a wonderful job. I now consider them an extension of my team. Their expertise in AI and attention to detail is outstanding.",
@@ -838,7 +838,7 @@ export default function AIAgentsPage() {
                   color: "from-sky-600 to-blue-600",
                 },
               ].map((t) => (
-                <div key={t.name} className="card-glass p-5 border border-purple-900/20">
+                <div key={t.name} className="card-glass p-5 border border-brand/20">
                   <div className="flex mb-2 gap-0.5">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <svg key={i} className="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -864,10 +864,10 @@ export default function AIAgentsPage() {
       </section>
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Common Questions
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -879,14 +879,14 @@ export default function AIAgentsPage() {
             {faqs.map((faq) => (
               <details
                 key={faq.q}
-                className="card-glass border border-purple-900/20 group"
+                className="card-glass border border-brand/20 group"
               >
                 <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
                   <h3 className="text-sm font-semibold text-white leading-snug">{faq.q}</h3>
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
-                    className="w-4 h-4 text-purple-400 shrink-0 transition-transform group-open:rotate-180"
+                    className="w-4 h-4 text-brand shrink-0 transition-transform group-open:rotate-180"
                     stroke="currentColor"
                     strokeWidth={2}
                   >
@@ -913,11 +913,11 @@ export default function AIAgentsPage() {
               <Link
                 key={rs.slug}
                 href={`/services/${rs.slug}`}
-                className="card-glass p-5 border border-purple-900/20 flex items-center gap-4 group"
+                className="card-glass p-5 border border-brand/20 flex items-center gap-4 group"
               >
                 <span className="text-2xl">{rs.icon}</span>
                 <div>
-                  <p className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">
+                  <p className="text-sm font-semibold text-white group-hover:text-brand transition-colors">
                     {rs.title}
                   </p>
                   <p className="text-xs text-slate-500 mt-0.5">View service →</p>
@@ -931,14 +931,14 @@ export default function AIAgentsPage() {
       {/* ── FINAL CTA ─────────────────────────────────────────────────────── */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden border border-purple-700/30">
+          <div className="relative rounded-3xl overflow-hidden border border-brand/30">
             <div className="absolute inset-0 gradient-bg opacity-10" />
-            <div className="absolute inset-0 bg-[#07070f]/80" />
+            <div className="absolute inset-0 bg-[#0a0a0b]/80" />
             <div
               className="absolute inset-0 opacity-[0.04]"
               style={{
                 backgroundImage:
-                  "linear-gradient(rgba(124,58,237,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.8) 1px,transparent 1px)",
+                  "linear-gradient(rgba(0, 168, 240,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(0, 168, 240,0.8) 1px,transparent 1px)",
                 backgroundSize: "40px 40px",
               }}
             />
@@ -963,13 +963,13 @@ export default function AIAgentsPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm"
+                  className="px-8 py-3.5 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/35 text-sm"
                 >
                   Start My AI Agent Project →
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="px-8 py-3.5 rounded-full font-semibold text-slate-300 border border-purple-700/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
+                  className="px-8 py-3.5 rounded-full font-semibold text-slate-300 border border-brand/40 hover:border-brand/60 hover:text-white transition-all text-sm"
                 >
                   See AI Agent Examples
                 </Link>

@@ -93,7 +93,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <div className="mt-10 mb-10">
           <div className="flex flex-wrap gap-2 mb-4">
             {project.category.filter((c) => c !== "All").map((c) => (
-              <span key={c} className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-400 border border-purple-800/30">
+              <span key={c} className="text-xs px-2.5 py-1 rounded-full bg-brand/30 text-brand border border-brand/30">
                 {c}
               </span>
             ))}
@@ -137,18 +137,18 @@ export default async function CaseStudyPage({ params }: Props) {
 
         {/* Problem / Solution */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="card-glass p-6 border border-purple-900/20">
+          <div className="card-glass p-6 border border-brand/20">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-3">The Problem</h2>
             <p className="text-slate-300 text-sm leading-relaxed">{project.problem}</p>
           </div>
-          <div className="card-glass p-6 border border-purple-900/20">
+          <div className="card-glass p-6 border border-brand/20">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-3">The Solution</h2>
             <p className="text-slate-300 text-sm leading-relaxed">{project.solution}</p>
           </div>
         </div>
 
         {/* Results */}
-        <div className="card-glass p-6 border border-purple-900/20 mb-8">
+        <div className="card-glass p-6 border border-brand/20 mb-8">
           <h2 className="text-base font-bold text-white mb-4">Results & Metrics</h2>
           <ul className="space-y-3">
             {project.results.map((r) => (
@@ -165,11 +165,11 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
 
         {/* Tech stack */}
-        <div className="card-glass p-6 border border-purple-900/20 mb-8">
+        <div className="card-glass p-6 border border-brand/20 mb-8">
           <h2 className="text-base font-bold text-white mb-4">Tech Stack</h2>
           <div className="flex flex-wrap gap-2">
             {project.tech.map((t) => (
-              <span key={t} className="text-xs px-3 py-1.5 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30 font-medium">
+              <span key={t} className="text-xs px-3 py-1.5 rounded-full bg-brand/30 text-brand border border-brand/30 font-medium">
                 {t}
               </span>
             ))}
@@ -205,7 +205,7 @@ export default async function CaseStudyPage({ params }: Props) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/25"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -215,24 +215,24 @@ export default async function CaseStudyPage({ params }: Props) {
           )}
           <Link
             href="/contact"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-purple-400 border border-purple-800/40 hover:border-purple-500/60 hover:text-purple-300 transition-all"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-brand border border-brand/40 hover:border-brand/60 hover:text-brand transition-all"
           >
             Build Something Similar →
           </Link>
         </div>
 
         {/* Prev / Next */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-purple-900/20 pt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-brand/20 pt-8">
           {prev ? (
-            <Link href={`/portfolio/${prev.slug}`} className="group flex flex-col p-4 rounded-xl border border-purple-900/20 hover:border-purple-500/30 transition-all">
+            <Link href={`/portfolio/${prev.slug}`} className="group flex flex-col p-4 rounded-xl border border-brand/20 hover:border-brand/30 transition-all">
               <span className="text-xs text-slate-500 mb-1">← Previous</span>
-              <span className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">{prev.title}</span>
+              <span className="text-sm font-semibold text-white group-hover:text-brand transition-colors">{prev.title}</span>
             </Link>
           ) : <div />}
           {next && (
-            <Link href={`/portfolio/${next.slug}`} className="group flex flex-col p-4 rounded-xl border border-purple-900/20 hover:border-purple-500/30 transition-all text-right ml-auto w-full">
+            <Link href={`/portfolio/${next.slug}`} className="group flex flex-col p-4 rounded-xl border border-brand/20 hover:border-brand/30 transition-all text-right ml-auto w-full">
               <span className="text-xs text-slate-500 mb-1">Next →</span>
-              <span className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">{next.title}</span>
+              <span className="text-sm font-semibold text-white group-hover:text-brand transition-colors">{next.title}</span>
             </Link>
           )}
         </div>

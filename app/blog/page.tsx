@@ -50,7 +50,7 @@ export default function BlogPage() {
         <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
 
         <div className="mt-8 mb-12">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Insights & Tutorials
           </p>
           <h1 className="section-heading text-white mb-4">

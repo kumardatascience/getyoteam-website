@@ -118,18 +118,18 @@ export default async function ServicePage({ params }: Props) {
         </div>
 
         {/* Description */}
-        <div className="card-glass p-6 border border-purple-900/20 mb-8">
+        <div className="card-glass p-6 border border-brand/20 mb-8">
           <h2 className="text-base font-bold text-white mb-3">Overview</h2>
           <p className="text-slate-400 leading-relaxed">{service.longDesc}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {/* Tech stack */}
-          <div className="card-glass p-6 border border-purple-900/20">
+          <div className="card-glass p-6 border border-brand/20">
             <h2 className="text-base font-bold text-white mb-4">Tech Stack</h2>
             <div className="flex flex-wrap gap-2">
               {service.tech.map((t) => (
-                <span key={t} className="text-xs px-3 py-1.5 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30 font-medium">
+                <span key={t} className="text-xs px-3 py-1.5 rounded-full bg-brand/30 text-brand border border-brand/30 font-medium">
                   {t}
                 </span>
               ))}
@@ -137,12 +137,12 @@ export default async function ServicePage({ params }: Props) {
           </div>
 
           {/* Use cases */}
-          <div className="card-glass p-6 border border-purple-900/20">
+          <div className="card-glass p-6 border border-brand/20">
             <h2 className="text-base font-bold text-white mb-4">Use Cases</h2>
             <ul className="space-y-2">
               {service.useCases.map((u) => (
                 <li key={u} className="flex items-start gap-2 text-sm text-slate-400">
-                  <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
+                  <span className="text-brand mt-0.5 shrink-0">✓</span>
                   {u}
                 </li>
               ))}
@@ -151,7 +151,7 @@ export default async function ServicePage({ params }: Props) {
         </div>
 
         {/* CTA */}
-        <div className="rounded-2xl border border-purple-900/20 bg-white/[0.02] p-8 text-center">
+        <div className="rounded-2xl border border-brand/20 bg-white/[0.02] p-8 text-center">
           <h2 className="text-xl font-bold text-white mb-2">Ready to build with {service.title}?</h2>
           <p className="text-slate-400 text-sm mb-6">
             Tell me about your project and I&apos;ll get back to you within 24 hours.
@@ -159,13 +159,13 @@ export default async function ServicePage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm"
+              className="px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm"
             >
               Start Your AI Project →
             </Link>
             <Link
               href="/portfolio"
-              className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
+              className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-brand/40 hover:border-brand/60 hover:text-white transition-all text-sm"
             >
               See Related Work
             </Link>

@@ -56,7 +56,7 @@ function PhoneIcon() {
 // ── Mobile app card ───────────────────────────────────────────────────────────
 function MobileAppCard({ app }: { app: MobileApp }) {
   return (
-    <div className="group flex flex-col rounded-2xl border border-purple-900/20 bg-[#0f0f1a] overflow-hidden hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-900/20">
+    <div className="group flex flex-col rounded-2xl border border-brand/20 bg-[#131316] overflow-hidden hover:border-brand/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand/20">
 
       {/* Stats thumbnail */}
       <div className={`bg-gradient-to-br ${app.gradient} relative overflow-hidden px-5 py-5`}>
@@ -95,7 +95,7 @@ function MobileAppCard({ app }: { app: MobileApp }) {
 
       {/* Card body */}
       <div className="flex flex-col flex-1 p-5">
-        <h2 className="text-base font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+        <h2 className="text-base font-bold text-white mb-2 group-hover:text-brand transition-colors">
           {app.title}
         </h2>
         <p className="text-sm text-slate-400 leading-relaxed mb-4 flex-1">{app.shortDesc}</p>
@@ -103,7 +103,7 @@ function MobileAppCard({ app }: { app: MobileApp }) {
         {/* Tech tags */}
         <div className="flex flex-wrap gap-1.5 mb-4">
           {app.tech.map((t) => (
-            <span key={t} className="text-xs px-2.5 py-0.5 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">
+            <span key={t} className="text-xs px-2.5 py-0.5 rounded-full bg-brand/30 text-brand border border-brand/30">
               {t}
             </span>
           ))}
@@ -151,7 +151,7 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="pt-24 pb-20 bg-[#07070f]">
+    <div className="pt-24 pb-20 bg-[#0a0a0b]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -161,7 +161,7 @@ export default function PortfolioPage() {
         <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Portfolio" }]} />
 
         <div className="mt-8 text-center mb-14">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-3">
             Real Projects, Real Results
           </p>
           <h1 className="section-heading text-white mb-4">
@@ -178,7 +178,7 @@ export default function PortfolioPage() {
             <Link
               key={p.slug}
               href={`/portfolio/${p.slug}`}
-              className="group flex flex-col rounded-2xl border border-purple-900/20 bg-[#0f0f1a] overflow-hidden hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-900/20"
+              className="group flex flex-col rounded-2xl border border-brand/20 bg-[#131316] overflow-hidden hover:border-brand/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand/20"
             >
               <div className={`bg-gradient-to-br ${p.gradient} relative overflow-hidden px-5 py-5`}>
                 <div className="absolute inset-0 bg-black/40" />
@@ -213,11 +213,11 @@ export default function PortfolioPage() {
               </div>
 
               <div className="flex flex-col flex-1 p-5">
-                <h2 className="text-base font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <h2 className="text-base font-bold text-white mb-2 group-hover:text-brand transition-colors">
                   {p.title}
                 </h2>
                 <p className="text-sm text-slate-400 leading-relaxed flex-1">{p.shortDesc}</p>
-                <span className="mt-4 text-xs font-semibold text-purple-400 group-hover:text-purple-300 transition-colors">
+                <span className="mt-4 text-xs font-semibold text-brand group-hover:text-brand transition-colors">
                   Read Case Study →
                 </span>
               </div>
@@ -234,10 +234,10 @@ export default function PortfolioPage() {
         <div className="mt-12 text-center space-y-3">
           <p className="text-slate-400 text-sm">Interested in working together?</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm">
+            <Link href="/contact" className="px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm">
               Start a Project →
             </Link>
-            <Link href="/services" className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm">
+            <Link href="/services" className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-brand/40 hover:border-brand/60 hover:text-white transition-all text-sm">
               View Services
             </Link>
           </div>

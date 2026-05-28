@@ -55,7 +55,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#07070f]/90 backdrop-blur-xl border-b border-purple-900/30 shadow-lg shadow-purple-900/10"
+          ? "bg-[#0a0a0b]/90 backdrop-blur-xl border-b border-brand/30 shadow-lg shadow-brand/10"
           : "bg-transparent"
       }`}
     >
@@ -91,26 +91,26 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-                <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-500 to-sky-400 group-hover:w-full transition-all duration-300 rounded-full" />
+                <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-gradient-to-r from-brand to-sky-400 group-hover:w-full transition-all duration-300 rounded-full" />
               </button>
 
               {dropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 rounded-xl border border-purple-900/30 bg-[#0f0f1a]/95 backdrop-blur-xl shadow-2xl shadow-purple-900/20 py-1.5 z-50">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 rounded-xl border border-brand/30 bg-[#131316]/95 backdrop-blur-xl shadow-2xl shadow-brand/20 py-1.5 z-50">
                   {SERVICE_LINKS.map((s) => (
                     <Link
                       key={s.href}
                       href={s.href}
                       onClick={closeAll}
-                      className="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-purple-900/25 transition-all"
+                      className="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-brand/25 transition-all"
                     >
                       {s.label}
                     </Link>
                   ))}
-                  <div className="border-t border-purple-900/20 mt-1.5 pt-1.5">
+                  <div className="border-t border-brand/20 mt-1.5 pt-1.5">
                     <Link
                       href="/services"
                       onClick={closeAll}
-                      className="block px-4 py-2 text-sm font-semibold text-purple-400 hover:text-purple-300 hover:bg-purple-900/25 transition-all"
+                      className="block px-4 py-2 text-sm font-semibold text-brand hover:text-white hover:bg-brand/25 transition-all"
                     >
                       View All Services →
                     </Link>
@@ -127,7 +127,7 @@ export default function Navbar() {
                   className="hover:text-white transition-colors relative group"
                 >
                   {l.label}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-500 to-sky-400 group-hover:w-full transition-all duration-300 rounded-full" />
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-gradient-to-r from-brand to-sky-400 group-hover:w-full transition-all duration-300 rounded-full" />
                 </Link>
               </li>
             ))}
@@ -138,7 +138,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={closeAll}
-              className="px-5 py-2 rounded-full text-sm font-semibold gradient-bg text-white hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 animate-pulse-glow"
+              className="px-5 py-2 rounded-full text-sm font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 hover:shadow-[#b6ff3c]/45"
             >
               Start Your AI Project
             </Link>
@@ -165,14 +165,14 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#0f0f1a]/95 backdrop-blur-xl border-t border-purple-900/30">
+        <div className="md:hidden bg-[#131316]/95 backdrop-blur-xl border-t border-brand/30">
           <ul className="flex flex-col gap-1 px-4 py-4">
 
             {/* Services accordion */}
             <li>
               <button
                 onClick={() => setMobileServicesOpen((o) => !o)}
-                className="flex items-center justify-between w-full py-3 px-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-purple-900/20 rounded-lg transition-all"
+                className="flex items-center justify-between w-full py-3 px-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-brand/20 rounded-lg transition-all"
               >
                 Services
                 <svg
@@ -183,13 +183,13 @@ export default function Navbar() {
                 </svg>
               </button>
               {mobileServicesOpen && (
-                <ul className="ml-3 mt-1 border-l border-purple-900/30 pl-3 space-y-1">
+                <ul className="ml-3 mt-1 border-l border-brand/30 pl-3 space-y-1">
                   {SERVICE_LINKS.map((s) => (
                     <li key={s.href}>
                       <Link
                         href={s.href}
                         onClick={closeAll}
-                        className="block py-2 px-2 text-xs text-slate-400 hover:text-white hover:bg-purple-900/20 rounded-md transition-all"
+                        className="block py-2 px-2 text-xs text-slate-400 hover:text-white hover:bg-brand/20 rounded-md transition-all"
                       >
                         {s.label}
                       </Link>
@@ -199,7 +199,7 @@ export default function Navbar() {
                     <Link
                       href="/services"
                       onClick={closeAll}
-                      className="block py-2 px-2 text-xs font-semibold text-purple-400 hover:text-purple-300 rounded-md transition-all"
+                      className="block py-2 px-2 text-xs font-semibold text-brand hover:text-white rounded-md transition-all"
                     >
                       View All →
                     </Link>
@@ -213,7 +213,7 @@ export default function Navbar() {
                 <Link
                   href={l.href}
                   onClick={closeAll}
-                  className="block py-3 px-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-purple-900/20 rounded-lg transition-all"
+                  className="block py-3 px-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-brand/20 rounded-lg transition-all"
                 >
                   {l.label}
                 </Link>
@@ -224,7 +224,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={closeAll}
-                className="block text-center py-3 px-3 text-sm font-semibold gradient-bg text-white rounded-full hover:opacity-90 transition-opacity"
+                className="block text-center py-3 px-3 text-sm font-semibold btn-accent rounded-full"
               >
                 Start Your AI Project
               </Link>

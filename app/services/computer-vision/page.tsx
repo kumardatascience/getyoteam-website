@@ -124,16 +124,16 @@ const process = [
 const techStack = [
   { name: "PyTorch",              color: "border-orange-700/40 text-orange-300 bg-orange-900/15" },
   { name: "TensorFlow",          color: "border-yellow-700/40 text-yellow-300 bg-yellow-900/15" },
-  { name: "OpenCV",              color: "border-indigo-700/40 text-indigo-300 bg-indigo-900/15" },
+  { name: "OpenCV",              color: "border-brand/40 text-brand bg-brand/15" },
   { name: "YOLO",                color: "border-sky-700/40 text-sky-300 bg-sky-900/15" },
   { name: "ResNet / EfficientNet", color: "border-blue-700/40 text-blue-300 bg-blue-900/15" },
-  { name: "U-Net",               color: "border-violet-700/40 text-violet-300 bg-violet-900/15" },
+  { name: "U-Net",               color: "border-brand/40 text-brand bg-brand/15" },
   { name: "Hugging Face",        color: "border-amber-700/40 text-amber-300 bg-amber-900/15" },
   { name: "Tesseract / PaddleOCR", color: "border-teal-700/40 text-teal-300 bg-teal-900/15" },
   { name: "scikit-learn",        color: "border-cyan-700/40 text-cyan-300 bg-cyan-900/15" },
   { name: "FastAPI",             color: "border-green-700/40 text-green-300 bg-green-900/15" },
   { name: "Docker",              color: "border-red-700/40 text-red-300 bg-red-900/15" },
-  { name: "ONNX Runtime",        color: "border-purple-700/40 text-purple-300 bg-purple-900/15" },
+  { name: "ONNX Runtime",        color: "border-brand/40 text-brand bg-brand/15" },
 ];
 
 const faqs = [
@@ -211,7 +211,7 @@ export default function ComputerVisionPage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden pb-20">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-700/15 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand/15 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
           <div
             className="absolute inset-0 opacity-[0.03]"
@@ -256,15 +256,15 @@ export default function ComputerVisionPage() {
               </p>
               <p className="text-slate-400 leading-relaxed mb-4">
                 These systems integrate naturally with{" "}
-                <Link href="/services/deep-learning/" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/deep-learning/" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   deep learning development
                 </Link>
                 ,{" "}
-                <Link href="/services/machine-learning/" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/machine-learning/" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   machine learning solutions
                 </Link>
                 , and{" "}
-                <Link href="/services/rag-llm/" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/rag-llm/" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   RAG &amp; LLM applications
                 </Link>{" "}
                 — enabling fully integrated AI systems across your business.
@@ -276,7 +276,7 @@ export default function ComputerVisionPage() {
 
               <div className="flex flex-wrap gap-3 mb-8">
                 {["PyTorch", "YOLO", "OpenCV", "ResNet"].map((t) => (
-                  <span key={t} className="text-xs px-3 py-1 rounded-full bg-indigo-900/30 text-indigo-300 border border-indigo-800/30 font-medium">
+                  <span key={t} className="text-xs px-3 py-1 rounded-full bg-brand/30 text-brand border border-brand/30 font-medium">
                     {t}
                   </span>
                 ))}
@@ -285,13 +285,13 @@ export default function ComputerVisionPage() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm whitespace-nowrap"
+                  className="px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm whitespace-nowrap"
                 >
                   Start My Computer Vision Project →
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-indigo-800/40 hover:border-indigo-500/60 hover:text-white transition-all text-sm whitespace-nowrap"
+                  className="px-6 py-3 rounded-full font-semibold text-slate-300 border border-brand/40 hover:border-brand/60 hover:text-white transition-all text-sm whitespace-nowrap"
                 >
                   See Computer Vision Projects
                 </Link>
@@ -299,8 +299,8 @@ export default function ComputerVisionPage() {
             </div>
 
             {/* Right: computer vision pipeline diagram */}
-            <div className="card-glass p-6 border border-indigo-900/30">
-              <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-5">
+            <div className="card-glass p-6 border border-brand/30">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand mb-5">
                 Computer Vision Pipeline Architecture
               </p>
 
@@ -315,13 +315,13 @@ export default function ComputerVisionPage() {
                 </div>
               </div>
               <div className="flex justify-center mb-3">
-                <div className="w-px h-5 bg-indigo-700/50" />
+                <div className="w-px h-5 bg-brand/50" />
               </div>
 
               {/* Preprocessing + Feature Extraction */}
               <div className="grid grid-cols-2 gap-2 mb-3">
                 {[
-                  { label: "Preprocessing (resize, normalize)", color: "bg-indigo-900/30 border-indigo-700/40 text-indigo-300" },
+                  { label: "Preprocessing (resize, normalize)", color: "bg-brand/30 border-brand/40 text-brand" },
                   { label: "Feature Extraction (CNNs)",          color: "bg-blue-900/30 border-blue-700/40 text-blue-300" },
                 ].map((a) => (
                   <div key={a.label} className={`rounded-lg border px-2 py-2 text-center text-xs font-medium ${a.color}`}>
@@ -330,12 +330,12 @@ export default function ComputerVisionPage() {
                 ))}
               </div>
               <div className="flex justify-center mb-3">
-                <div className="w-px h-5 bg-indigo-700/50" />
+                <div className="w-px h-5 bg-brand/50" />
               </div>
 
               {/* Model inference */}
               <div className="flex justify-center mb-3">
-                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-900/40 border border-indigo-600/40 text-sm font-semibold text-indigo-200 shadow-lg shadow-indigo-900/30">
+                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand/40 border border-brand/40 text-sm font-semibold text-brand shadow-lg shadow-brand/30">
                   <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -350,7 +350,7 @@ export default function ComputerVisionPage() {
               <div className="grid grid-cols-2 gap-2 mb-3">
                 {[
                   { label: "Model Inference",        color: "bg-slate-800/60 border-slate-700/50 text-slate-300" },
-                  { label: "Evaluation (mAP, F1)",   color: "bg-indigo-900/30 border-indigo-700/40 text-indigo-300" },
+                  { label: "Evaluation (mAP, F1)",   color: "bg-brand/30 border-brand/40 text-brand" },
                 ].map((a) => (
                   <div key={a.label} className={`rounded-lg border px-2 py-2 text-center text-xs font-medium ${a.color}`}>
                     {a.label}
@@ -363,7 +363,7 @@ export default function ComputerVisionPage() {
 
               {/* Deployment */}
               <div className="flex justify-center mb-3">
-                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-900/40 border border-purple-600/40 text-sm font-semibold text-purple-200">
+                <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand/40 border border-brand/40 text-sm font-semibold text-brand">
                   <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
@@ -394,7 +394,7 @@ export default function ComputerVisionPage() {
               { value: "86%+", label: "Model Accuracy (CV)" },
               { value: "24h",  label: "Response Time" },
             ].map((s) => (
-              <div key={s.label} className="text-center p-4 rounded-xl border border-indigo-900/20 bg-white/[0.02]">
+              <div key={s.label} className="text-center p-4 rounded-xl border border-brand/20 bg-white/[0.02]">
                 <p className="text-2xl font-extrabold gradient-text mb-1">{s.value}</p>
                 <p className="text-xs text-slate-400">{s.label}</p>
               </div>
@@ -404,10 +404,10 @@ export default function ComputerVisionPage() {
       </section>
 
       {/* ── WHAT IS COMPUTER VISION ──────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Understanding Computer Vision
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -419,16 +419,16 @@ export default function ComputerVisionPage() {
               giving machines the ability to interpret visual information the way humans do, but
               faster, more consistently, and without fatigue.
             </p>
-            <div className="p-5 rounded-2xl bg-indigo-900/15 border border-indigo-700/30 text-left max-w-2xl mx-auto">
+            <div className="p-5 rounded-2xl bg-brand/15 border border-brand/30 text-left max-w-2xl mx-auto">
               <p className="text-sm text-slate-300 leading-relaxed">
-                <span className="font-semibold text-indigo-300">New to computer vision?</span>{" "}
+                <span className="font-semibold text-brand">New to computer vision?</span>{" "}
                 Think of a CNN as a visual cortex trained on millions of images — it has learned
                 to recognize edges, shapes, objects, and context without being told what to look
                 for. Computer vision solutions apply this capability to practical problems: reading
                 documents, inspecting products, tracking objects in video, and analyzing visual
                 patterns that would take humans hours to review. Many clients pair computer vision
                 pipelines with{" "}
-                <Link href="/services/nlp-chatbots" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                <Link href="/services/nlp-chatbots" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                   RAG &amp; LLM applications
                 </Link>{" "}
                 for multimodal AI systems that see and reason simultaneously.
@@ -456,20 +456,20 @@ export default function ComputerVisionPage() {
                 icon: "👁️",
                 label: "Computer Vision AI",
                 points: ["Handles raw images, video & documents", "Learns visual features automatically", "Generalizes across lighting, angles & conditions", "State-of-the-art accuracy at production scale"],
-                accent: "border-indigo-600/60",
+                accent: "border-brand/60",
                 bad: false,
               },
             ].map((card) => (
               <div
                 key={card.label}
-                className={`card-glass p-6 border ${card.accent} ${card.accent === "border-indigo-600/60" ? "shadow-lg shadow-indigo-900/20" : ""}`}
+                className={`card-glass p-6 border ${card.accent} ${card.accent === "border-brand/60" ? "shadow-lg shadow-brand/20" : ""}`}
               >
                 <div className="text-3xl mb-3">{card.icon}</div>
                 <h3 className="font-bold text-white mb-4">{card.label}</h3>
                 <ul className="space-y-2">
                   {card.points.map((pt) => (
                     <li key={pt} className="flex items-start gap-2 text-sm text-slate-400">
-                      <span className={`mt-0.5 shrink-0 ${card.bad ? "text-slate-600" : "text-indigo-400"}`}>
+                      <span className={`mt-0.5 shrink-0 ${card.bad ? "text-slate-600" : "text-brand"}`}>
                         {card.bad ? "○" : "✓"}
                       </span>
                       {pt}
@@ -486,7 +486,7 @@ export default function ComputerVisionPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Is This Right for You?
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -506,7 +506,7 @@ export default function ComputerVisionPage() {
               { icon: "🏭", title: "Quality control and defect detection", desc: "Manufacturing and logistics operations with visual inspection requirements can deploy CNN-based defect classifiers that catch anomalies at line speed — dramatically reducing scrap rates and recall risk." },
               { icon: "📄", title: "Document and OCR automation required", desc: "If your workflow involves manually extracting data from invoices, forms, or PDFs, an image processing solution combining OCR with document AI can automate extraction, validation, and routing end-to-end." },
             ].map((item) => (
-              <div key={item.title} className="card-glass p-5 border border-indigo-900/20 flex gap-4">
+              <div key={item.title} className="card-glass p-5 border border-brand/20 flex gap-4">
                 <span className="text-2xl shrink-0 mt-0.5">{item.icon}</span>
                 <div>
                   <h3 className="font-semibold text-white text-sm mb-1">{item.title}</h3>
@@ -519,10 +519,10 @@ export default function ComputerVisionPage() {
       </section>
 
       {/* ── USE CASES ─────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Applications
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -536,8 +536,8 @@ export default function ComputerVisionPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {useCases.map((uc) => (
-              <div key={uc.title} className="card-glass p-5 border border-indigo-900/20 group">
-                <div className="mb-3 p-2.5 rounded-xl bg-indigo-900/20 border border-indigo-800/30 w-fit text-indigo-400 group-hover:text-blue-400 transition-colors text-xl">
+              <div key={uc.title} className="card-glass p-5 border border-brand/20 group">
+                <div className="mb-3 p-2.5 rounded-xl bg-brand/20 border border-brand/30 w-fit text-brand group-hover:text-blue-400 transition-colors text-xl">
                   {uc.icon}
                 </div>
                 <h3 className="font-semibold text-white text-sm mb-2">{uc.title}</h3>
@@ -552,7 +552,7 @@ export default function ComputerVisionPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Who We Serve
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -568,7 +568,7 @@ export default function ComputerVisionPage() {
             {industries.map((ind) => (
               <div
                 key={ind.name}
-                className="card-glass p-5 border border-indigo-900/20 text-center group hover:border-indigo-500/30 transition-all"
+                className="card-glass p-5 border border-brand/20 text-center group hover:border-brand/30 transition-all"
               >
                 <span className="text-3xl block mb-2">{ind.icon}</span>
                 <h3 className="font-semibold text-white text-sm mb-1">{ind.name}</h3>
@@ -580,10 +580,10 @@ export default function ComputerVisionPage() {
       </section>
 
       {/* ── PROCESS ───────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               How We Build
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -603,7 +603,7 @@ export default function ComputerVisionPage() {
                     {step.step}
                   </div>
                   {i < process.length - 1 && (
-                    <div className="w-px flex-1 bg-gradient-to-b from-indigo-700/50 to-transparent my-1" style={{ minHeight: "2.5rem" }} />
+                    <div className="w-px flex-1 bg-gradient-to-b from-brand/50 to-transparent my-1" style={{ minHeight: "2.5rem" }} />
                   )}
                 </div>
                 <div className="pb-10">
@@ -620,7 +620,7 @@ export default function ComputerVisionPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Why getyoteam
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -665,7 +665,7 @@ export default function ComputerVisionPage() {
                 desc: "Visual distribution shifts and edge cases surface after deployment. I stay engaged for 30 days to monitor model confidence, retrain on failure cases, and refine until the system performs as expected in production.",
               },
             ].map((item) => (
-              <div key={item.title} className="card-glass p-6 border border-indigo-900/20">
+              <div key={item.title} className="card-glass p-6 border border-brand/20">
                 <span className="text-2xl block mb-3">{item.icon}</span>
                 <h3 className="font-bold text-white text-sm mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
@@ -676,10 +676,10 @@ export default function ComputerVisionPage() {
       </section>
 
       {/* ── TECH STACK ────────────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Technology
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -705,7 +705,7 @@ export default function ComputerVisionPage() {
               { icon: "👁️", title: "Vision & Preprocessing", desc: "OpenCV for image preprocessing, augmentation, and frame extraction. Tesseract and PaddleOCR for document intelligence. ONNX for cross-platform inference." },
               { icon: "🚀", title: "Deployment", desc: "FastAPI and ONNX Runtime — containerized with Docker on any cloud or edge device. Models are quantized for production latency and monitored for input distribution drift." },
             ].map((item) => (
-              <div key={item.title} className="card-glass p-5 border border-indigo-900/20 text-center">
+              <div key={item.title} className="card-glass p-5 border border-brand/20 text-center">
                 <span className="text-2xl block mb-2">{item.icon}</span>
                 <h3 className="font-semibold text-white text-sm mb-2">{item.title}</h3>
                 <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
@@ -719,7 +719,7 @@ export default function ComputerVisionPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Proven Results
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -730,9 +730,9 @@ export default function ComputerVisionPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="flex flex-col gap-4">
               {/* Main case study */}
-              <div className="card-glass p-6 border border-indigo-900/20">
+              <div className="card-glass p-6 border border-brand/20">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-indigo-900/30 text-indigo-300 border border-indigo-800/30">Computer Vision</span>
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-brand/30 text-brand border border-brand/30">Computer Vision</span>
                   <span className="text-xs text-slate-500">Case Study</span>
                 </div>
                 <h3 className="font-bold text-white mb-4">Medical Imaging: Pneumonia Detection from X-Rays</h3>
@@ -747,7 +747,7 @@ export default function ComputerVisionPage() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-1">The Solution</p>
+                    <p className="text-xs font-bold uppercase tracking-widest text-brand mb-1">The Solution</p>
                     <p className="text-slate-400 text-sm leading-relaxed">
                       Fine-tuned a ResNet-based CNN image classification model on a labeled clinical
                       X-ray dataset using transfer learning from ImageNet weights. Data augmentation
@@ -755,7 +755,7 @@ export default function ComputerVisionPage() {
                       Deployed as a REST API with confidence scores and Grad-CAM visualizations showing
                       the model&apos;s attention regions — providing both predictions and explainability.
                       These{" "}
-                      <Link href="/services/deep-learning" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                      <Link href="/services/deep-learning" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                         deep learning techniques
                       </Link>{" "}
                       are central to modern medical imaging AI.
@@ -772,21 +772,21 @@ export default function ComputerVisionPage() {
                     { value: "Grad-CAM", label: "Explainability" },
                     { value: "REST API", label: "Production Deploy" },
                   ].map((m) => (
-                    <div key={m.label} className="rounded-xl bg-indigo-900/20 border border-indigo-800/20 p-3 text-center">
+                    <div key={m.label} className="rounded-xl bg-brand/20 border border-brand/20 p-3 text-center">
                       <p className="text-xl font-extrabold gradient-text">{m.value}</p>
                       <p className="text-xs text-slate-400 mt-0.5">{m.label}</p>
                     </div>
                   ))}
                 </div>
-                <Link href="/portfolio/pneumonia-detector" className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+                <Link href="/portfolio/pneumonia-detector" className="text-sm text-brand hover:text-white transition-colors">
                   View full case study →
                 </Link>
               </div>
 
               {/* Mini case */}
-              <div className="card-glass p-5 border border-purple-900/20">
+              <div className="card-glass p-5 border border-brand/20">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">Object Detection</span>
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-brand/30 text-brand border border-brand/30">Object Detection</span>
                   <span className="text-xs text-slate-500">Mini Case</span>
                 </div>
                 <h3 className="font-bold text-white text-sm mb-2">Real-Time Object Detection System</h3>
@@ -795,7 +795,7 @@ export default function ComputerVisionPage() {
                   monitoring in-store customer behavior and shelf occupancy. The system processes
                   live CCTV feeds at 30+ FPS, detecting and classifying objects with bounding
                   boxes in real time. Integrated with a{" "}
-                  <Link href="/services/machine-learning" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+                  <Link href="/services/machine-learning" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
                     machine learning
                   </Link>{" "}
                   analytics pipeline for footfall reporting and planogram compliance alerts.
@@ -811,14 +811,14 @@ export default function ComputerVisionPage() {
                   name: "Erika Shapiro",
                   role: "CEO, Study Song LLC",
                   initials: "ES",
-                  color: "from-indigo-600 to-violet-600",
+                  color: "from-brand to-brand",
                 },
                 {
                   quote: "Kumar and his team did a wonderful job. I now consider them an extension of my team. Their expertise in AI and attention to detail is outstanding.",
                   name: "Zhanna Shekhtmeyster",
                   role: "Founder, ABC Observe",
                   initials: "ZS",
-                  color: "from-blue-600 to-indigo-600",
+                  color: "from-blue-600 to-brand",
                 },
                 {
                   quote: "Excellent work from Kumar and Team. The AI solution they built has transformed our workflow. Will definitely hire again and again.",
@@ -828,7 +828,7 @@ export default function ComputerVisionPage() {
                   color: "from-orange-600 to-amber-600",
                 },
               ].map((t) => (
-                <div key={t.name} className="card-glass p-5 border border-indigo-900/20">
+                <div key={t.name} className="card-glass p-5 border border-brand/20">
                   <div className="flex mb-2 gap-0.5">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <svg key={i} className="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -854,10 +854,10 @@ export default function ComputerVisionPage() {
       </section>
 
       {/* ── CV VS ML VS RULES ─────────────────────────────────────────────── */}
-      <section className="py-16 bg-[#0a0a14]">
+      <section className="py-16 bg-[#0f0f11]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Understand Your Options
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -887,7 +887,7 @@ export default function ComputerVisionPage() {
               {
                 label: "Computer Vision AI",
                 icon: "👁️",
-                color: "border-indigo-600/60",
+                color: "border-brand/60",
                 best: true,
                 pros: ["Handles images, video & documents", "No manual feature engineering", "State-of-the-art accuracy at scale", "Generalizes across real-world conditions"],
                 cons: [],
@@ -895,17 +895,17 @@ export default function ComputerVisionPage() {
               {
                 label: "Rule-Based Image Processing",
                 icon: "📋",
-                color: "border-purple-700/40",
+                color: "border-brand/40",
                 best: false,
                 pros: ["Fully transparent logic", "No training data required", "Deterministic output"],
                 cons: ["Breaks on lighting and angle changes", "Cannot handle novel visual conditions", "Manual updates for every edge case"],
               },
             ].map((opt) => (
-              <div key={opt.label} className={`card-glass p-6 border ${opt.color} ${opt.best ? "shadow-lg shadow-indigo-900/20" : ""}`}>
+              <div key={opt.label} className={`card-glass p-6 border ${opt.color} ${opt.best ? "shadow-lg shadow-brand/20" : ""}`}>
                 <div className="text-3xl mb-3">{opt.icon}</div>
                 <h3 className="font-bold text-white mb-2">{opt.label}</h3>
                 {opt.best && (
-                  <span className="inline-block text-xs px-2.5 py-0.5 rounded-full bg-indigo-900/30 text-indigo-300 border border-indigo-800/30 mb-3">
+                  <span className="inline-block text-xs px-2.5 py-0.5 rounded-full bg-brand/30 text-brand border border-brand/30 mb-3">
                     Best for visual data problems
                   </span>
                 )}
@@ -930,7 +930,7 @@ export default function ComputerVisionPage() {
           </div>
           <p className="text-center text-xs text-slate-500 mt-6">
             Not sure which approach fits your use case?{" "}
-            <Link href="/contact" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">
+            <Link href="/contact" className="text-brand hover:text-white underline underline-offset-2 transition-colors">
               Book a free consultation →
             </Link>
           </p>
@@ -941,7 +941,7 @@ export default function ComputerVisionPage() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">
               Common Questions
             </p>
             <h2 className="section-heading text-white mb-4">
@@ -951,12 +951,12 @@ export default function ComputerVisionPage() {
 
           <div className="space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="card-glass border border-indigo-900/20 group">
+              <details key={faq.q} className="card-glass border border-brand/20 group">
                 <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
                   <h3 className="text-sm font-semibold text-white leading-snug">{faq.q}</h3>
                   <svg
                     viewBox="0 0 24 24" fill="none"
-                    className="w-4 h-4 text-indigo-400 shrink-0 transition-transform group-open:rotate-180"
+                    className="w-4 h-4 text-brand shrink-0 transition-transform group-open:rotate-180"
                     stroke="currentColor" strokeWidth={2}
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -972,7 +972,7 @@ export default function ComputerVisionPage() {
       </section>
 
       {/* ── RELATED SERVICES ──────────────────────────────────────────────── */}
-      <section className="py-12 bg-[#0a0a14]">
+      <section className="py-12 bg-[#0f0f11]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 text-center">
             Commonly Paired With
@@ -982,11 +982,11 @@ export default function ComputerVisionPage() {
               <Link
                 key={rs.slug}
                 href={`/services/${rs.slug}`}
-                className="card-glass p-5 border border-indigo-900/20 flex items-center gap-4 group"
+                className="card-glass p-5 border border-brand/20 flex items-center gap-4 group"
               >
                 <span className="text-2xl">{rs.icon}</span>
                 <div>
-                  <p className="text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors">
+                  <p className="text-sm font-semibold text-white group-hover:text-brand transition-colors">
                     {rs.title}
                   </p>
                   <p className="text-xs text-slate-500 mt-0.5">View service →</p>
@@ -1000,9 +1000,9 @@ export default function ComputerVisionPage() {
       {/* ── FINAL CTA ─────────────────────────────────────────────────────── */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden border border-indigo-700/30">
+          <div className="relative rounded-3xl overflow-hidden border border-brand/30">
             <div className="absolute inset-0 gradient-bg opacity-10" />
-            <div className="absolute inset-0 bg-[#07070f]/80" />
+            <div className="absolute inset-0 bg-[#0a0a0b]/80" />
             <div
               className="absolute inset-0 opacity-[0.04]"
               style={{
@@ -1030,13 +1030,13 @@ export default function ComputerVisionPage() {
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/30 text-sm whitespace-nowrap"
+                  className="px-8 py-3.5 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/35 text-sm whitespace-nowrap"
                 >
                   Start My Computer Vision Project →
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 rounded-full font-semibold text-slate-300 border border-indigo-700/40 hover:border-indigo-500/60 hover:text-white transition-all text-sm whitespace-nowrap"
+                  className="px-8 py-3.5 rounded-full font-semibold text-slate-300 border border-brand/40 hover:border-brand/60 hover:text-white transition-all text-sm whitespace-nowrap"
                 >
                   Discuss Your Vision AI Use Case
                 </Link>

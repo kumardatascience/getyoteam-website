@@ -96,7 +96,7 @@ export default function AboutPage() {
         {/* Intro */}
         <div className="mt-10 mb-14 grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
           <div className="md:col-span-2">
-            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">About Me</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-3">About Me</p>
             <h1 className="section-heading text-white mb-6">
               Kumar Katariya<br /><span className="gradient-text">AI/ML Engineer</span>
             </h1>
@@ -118,13 +118,13 @@ export default function AboutPage() {
               non-technical stakeholders make better decisions.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="px-6 py-2.5 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm">
+              <Link href="/contact" className="px-6 py-2.5 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm">
                 Work with Me
               </Link>
               <a
                 href="https://www.upwork.com/freelancers/aimlengineer"
                 target="_blank" rel="noopener noreferrer"
-                className="px-6 py-2.5 rounded-full font-semibold text-slate-300 border border-purple-800/40 hover:border-purple-500/60 hover:text-white transition-all text-sm"
+                className="px-6 py-2.5 rounded-full font-semibold text-slate-300 border border-brand/40 hover:border-brand/60 hover:text-white transition-all text-sm"
               >
                 Upwork Profile →
               </a>
@@ -132,7 +132,7 @@ export default function AboutPage() {
           </div>
 
           {/* Quick facts */}
-          <div className="card-glass p-6 border border-purple-900/20 space-y-3">
+          <div className="card-glass p-6 border border-brand/20 space-y-3">
             {[
               ["Location",      "Ahmedabad, India"],
               ["Projects",      "117+ completed"],
@@ -154,7 +154,7 @@ export default function AboutPage() {
           <h2 className="text-xl font-bold text-white mb-6">Credentials & Achievements</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {certifications.map((c) => (
-              <div key={c.name} className="flex items-start gap-4 p-4 rounded-xl border border-purple-900/20 bg-white/[0.02] hover:border-purple-500/30 transition-all">
+              <div key={c.name} className="flex items-start gap-4 p-4 rounded-xl border border-brand/20 bg-white/[0.02] hover:border-brand/30 transition-all">
                 <span className="text-3xl shrink-0" role="img" aria-label={c.name}>{c.icon}</span>
                 <div>
                   <p className="text-sm font-bold text-white">{c.name}</p>
@@ -170,11 +170,11 @@ export default function AboutPage() {
           <h2 className="text-xl font-bold text-white mb-6">Skills & Technologies</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {skills.map((s) => (
-              <div key={s.category} className="card-glass p-4 border border-purple-900/20">
+              <div key={s.category} className="card-glass p-4 border border-brand/20">
                 <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">{s.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {s.items.map((item) => (
-                    <span key={item} className="text-xs px-2.5 py-1 rounded-full bg-purple-900/30 text-purple-300 border border-purple-800/30">
+                    <span key={item} className="text-xs px-2.5 py-1 rounded-full bg-brand/30 text-brand border border-brand/30">
                       {item}
                     </span>
                   ))}
@@ -186,24 +186,24 @@ export default function AboutPage() {
 
         {/* Internal links */}
         <div className="flex flex-wrap gap-3 mb-14">
-          <Link href="/portfolio" className="text-sm text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+          <Link href="/portfolio" className="text-sm text-brand hover:text-white underline underline-offset-4 transition-colors">
             View AI/ML Portfolio →
           </Link>
-          <Link href="/services" className="text-sm text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+          <Link href="/services" className="text-sm text-brand hover:text-white underline underline-offset-4 transition-colors">
             Explore Services →
           </Link>
-          <Link href="/blog" className="text-sm text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors">
+          <Link href="/blog" className="text-sm text-brand hover:text-white underline underline-offset-4 transition-colors">
             Read the Blog →
           </Link>
         </div>
 
         {/* CTA */}
-        <div className="text-center p-8 rounded-2xl border border-purple-900/20 bg-white/[0.02]">
+        <div className="text-center p-8 rounded-2xl border border-brand/20 bg-white/[0.02]">
           <h2 className="text-xl font-bold text-white mb-2">Ready to build something together?</h2>
           <p className="text-slate-400 text-sm mb-6 max-w-md mx-auto">
             I&apos;m open to new AI/ML projects. Reach out and let&apos;s discuss what you&apos;re building.
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-purple-600/25 text-sm">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold btn-accent shadow-lg shadow-[#b6ff3c]/30 text-sm">
             Get in Touch →
           </Link>
         </div>

@@ -34,10 +34,10 @@ function AchievementIcon({ iconKey }: { iconKey: Achievement["key"] }) {
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-10 sm:py-14 border-y border-purple-900/20 bg-[#0a0a14]">
+    <section id="achievements" className="py-10 sm:py-14 border-y border-brand/15 bg-[#0f0f11]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h2 className="text-center text-xs sm:text-sm font-semibold uppercase tracking-widest text-purple-400 mb-8">
+        <h2 className="text-center text-xs sm:text-sm font-semibold uppercase tracking-widest text-brand mb-8">
           Verified Credentials &amp; Achievements
         </h2>
 
