@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import { testimonials } from "@/app/lib/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -84,6 +85,8 @@ export default function RootLayout({
     name: "Kumar Katariya",
     jobTitle: "AI/ML Engineer",
     url: "https://getyoteam.com",
+    description:
+      "AI/ML Engineer with a proven Upwork track record: 117+ projects delivered, $400K+ earned on Upwork, 100% Job Success Score, and ranked in the Top 3% on Upwork.",
     email: "info@getyoteam.com",
     telephone: "+91-9106939053",
     image: "https://getyoteam.com/getyoteam-1.png",
@@ -130,6 +133,22 @@ export default function RootLayout({
       "NLP",
       "Data Science",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "4",
+      bestRating: "5",
+    },
+    review: testimonials.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.name },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(t.rating),
+        bestRating: "5",
+      },
+      reviewBody: t.text,
+    })),
   };
 
   return (
