@@ -12,7 +12,7 @@ const ROLES = [
 
 const STATS = [
   { value: 117,    suffix: "+", label: "Projects Completed" },
-  { value: 400,    suffix: "K+", label: "Total Earned ($)" },
+  { value: 400,    suffix: "K+", prefix: "$", label: "Total Earned ($)" },
   { value: 100,    suffix: "%",  label: "Job Success Score" },
   { value: 3,      suffix: "%",  label: "Top Upwork Globally" },
 ];
@@ -46,25 +46,23 @@ function useTypingEffect(words: string[], typingSpeed = 80, deletingSpeed = 45, 
 }
 
 function useCounter(target: number, duration = 1800, start: boolean = false) {
-  const [count, setCount] = useState(0);
-
+  const [count, setCount] = useState(target);
+  const animated = useRef(false);
   useEffect(() => {
-    if (!start) return;
+    if (!start || animated.current) return;
+    animated.current = true;
+    setCount(0);
     let startTime: number | null = null;
-
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1);
+      const progress = Math.min((timestamp - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       setCount(Math.floor(eased * target));
       if (progress < 1) requestAnimationFrame(step);
       else setCount(target);
     };
-
     requestAnimationFrame(step);
   }, [target, duration, start]);
-
   return count;
 }
 
@@ -73,7 +71,7 @@ function StatCard({ stat, trigger }: { stat: typeof STATS[0]; trigger: boolean }
   return (
     <div className="text-center px-4 py-3">
       <div className="text-3xl sm:text-4xl font-extrabold gradient-text tabular-nums">
-        {count}{stat.suffix}
+        {stat.prefix ?? ""}{count}{stat.suffix}
       </div>
       <div className="mt-1 text-xs sm:text-sm text-slate-400 font-medium">{stat.label}</div>
     </div>
