@@ -39,7 +39,7 @@
 # ─── Trailing Slash (Next.js static export) ───────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /new/
+  RewriteBase /
 
   # Serve index.html for directory requests
   RewriteCond %{REQUEST_FILENAME} !-f
