@@ -39,11 +39,6 @@
 # ─── Trailing Slash (Next.js static export) ───────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
-  # Force www → non-www (301) — must run first, survives every deploy
-  RewriteCond %{HTTP_HOST} ^www\.getyoteam\.com [NC]
-  RewriteRule ^(.*)$ https://getyoteam.com/$1 [L,R=301]
-
   RewriteBase /new/
 
   # Serve index.html for directory requests
