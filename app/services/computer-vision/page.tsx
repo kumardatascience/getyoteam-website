@@ -161,6 +161,18 @@ const faqs = [
     q: "How does computer vision differ from deep learning?",
     a: "Computer vision is the application domain — building systems that understand images and video. Deep learning is the underlying technology that powers modern computer vision models (CNNs, YOLO, Transformers). Computer vision systems use deep learning for feature extraction and pattern recognition, but the computer vision pipeline also includes preprocessing (OpenCV), annotation, model evaluation (mAP), and deployment infrastructure. Most production computer vision work sits at the intersection of both disciplines.",
   },
+  {
+    q: "Do you offer custom object detection services?",
+    a: "Yes. Object detection services build models that locate and classify multiple objects within an image or video frame — drawing bounding boxes with class labels and confidence scores, often in real time. I deliver end-to-end object detection services using YOLOv8/v9 for most production cases: dataset annotation, training on your domain-specific objects, evaluation with mAP, and deployment as a low-latency API. Typical applications include security and surveillance, retail shelf analytics, manufacturing defect detection, and traffic or vehicle analysis.",
+  },
+  {
+    q: "What does an image recognition software development company actually deliver?",
+    a: "Custom image recognition software development covers the full pipeline — data collection and annotation, model training (ResNet or EfficientNet for classification, YOLO for detection), evaluation, and production API deployment — not just a trained model file. As an image recognition software development company, getyoteam builds systems tuned to your specific visual categories rather than reselling a generic off-the-shelf API, which matters when your images differ from the everyday photos public models were trained on. Every delivery includes preprocessing, confidence scoring, and post-launch monitoring so accuracy holds up on real production data.",
+  },
+  {
+    q: "What is the best object detection software for developers?",
+    a: "For most developers, YOLOv8 or YOLOv9 (Ultralytics) is the best object detection software today — it gives the strongest speed-to-accuracy tradeoff, a clean Python and CLI API, and straightforward export to ONNX or TensorRT for deployment. If you need instance segmentation, Detectron2 (Mask R-CNN) is worth the extra complexity; RT-DETR is a strong transformer-based alternative; and OpenCV's DNN module is fine for running pre-trained models without a training pipeline. These frameworks are all free and open source — the real work is annotation quality, domain-specific training, and production optimization, which is exactly where I focus when building object detection systems for clients.",
+  },
 ];
 
 const relatedServices = [
