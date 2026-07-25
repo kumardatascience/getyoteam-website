@@ -5,9 +5,11 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Computer Vision Development Services | Image Recognition, Object Detection & Video AI | getyoteam",
   description:
-    "Expert computer vision development services for image classification, object detection, video analytics, and OCR. Production-ready computer vision solutions for USA, Europe & Australia. 117+ projects · 100% JSS.",
+    "Custom image recognition and object detection services — from data annotation to production API. 117+ projects, 100% JSS. Start with a free quote.",
   keywords: [
     "computer vision development services",
+    "image recognition",
+    "object detection services",
     "computer vision solutions",
     "computer vision development company",
     "image processing solutions",
